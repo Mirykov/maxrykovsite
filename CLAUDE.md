@@ -25,7 +25,7 @@ Colors pulled from the live maxrykov.com WordPress theme's inline styles:
 - `--color-navy` `#273b8a` — secondary section color (Philosophy band)
 - `--color-teal` `#047083` — secondary section color (How We Work band)
 - `--color-paper` `#faf6ef` — warm off-white body background
-- Headline font: Oswald (condensed, uppercase). Body font: Inter.
+- Headline font: Poppins (matches the live site's heading font). Body font: Inter.
 
 ## Site Map
 
@@ -49,11 +49,15 @@ Content data lives in `lib/caseStudies.ts` and `lib/services.ts`.
   need Max's own strategic read, not invented facts. Each is prefixed
   `DRAFT — replace with Max's own read:` and rendered in italic on the case
   study page. Replace before launch.
-- **Photos**: every image slot on the site (hero background, Meet Max photo,
-  case study photos) is an `ImagePlaceholder` component, not a real image.
-  Drop real files into `public/images/` and swap in `<Image>` components.
-  Candidate source photos exist locally in `Desktop/Max Website Photos` and
-  `Desktop/Max Portfolio`.
+- **Photos**: hero background, Meet Max photo, and 4 of 5 case study photos
+  (NICE, Clean Water, Recycled Runway, Birmingham History Center) are real —
+  pulled directly from the live maxrykov.com WordPress media library (Jetpack
+  Photon CDN, resized via `?w=&quality=` query params) and stored in
+  `public/images/`. **The Other Foundation** case study still uses
+  `ImagePlaceholder` — no photo for it exists on the live site. Swap any of
+  these for better/different photos by replacing the file in
+  `public/images/` (same filename) or updating the `image` path in
+  `lib/caseStudies.ts` / `app/page.tsx`.
 - **"Freelance quarterback" YouTube video**: `YouTubeEmbed` component in
   `app/page.tsx` (Meet Max section) has `videoId="REPLACE_ME"` — swap in the
   real YouTube video ID.
@@ -68,8 +72,8 @@ Content data lives in `lib/caseStudies.ts` and `lib/services.ts`.
 - Resend's `from` address (`noreply@maxrykov.com` in
   `app/api/start-project/route.ts`) requires that domain be verified in
   Resend — same setup pattern as the Other Foundation project.
-- No GitHub/Vercel deployment wired up yet as of this build — see project
-  memory / conversation history for current status.
+- Repo is at github.com/Mirykov/maxrykovsite; Vercel deploy was initiated
+  from the dashboard import flow — check Vercel for current live URL.
 
 ## Notes for Claude
 

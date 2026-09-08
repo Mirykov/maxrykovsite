@@ -3,6 +3,7 @@ export type CaseStudy = {
   title: string;
   client: string;
   hook: string;
+  image?: string;
   challenge: string;
   // DRAFT copy below — Max should replace with his own strategic read before launch.
   // These are placeholders written from the surrounding facts, not published facts themselves.
@@ -19,6 +20,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Growing an Organization",
     client: "Nashville International Center for Empowerment (NICE)",
     hook: "Refugee and Immigrant Services",
+    image: "/images/case-nice.jpg",
     challenge:
       "As Director of Development & Communications (2021–2025), Max needed to expand NICE's fundraising capacity and build public understanding of refugee and immigrant needs in Middle Tennessee — including through the Afghan and Ukrainian resettlement surges.",
     insightLabel: "The Insight",
@@ -35,6 +37,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Campaign for Clean Water",
     client: "Central Alabama Water + Alabama Rivers Alliance",
     hook: "Water Conservation & Stewardship",
+    image: "/images/case-clean-water.jpg",
     challenge:
       "During a severe drought, Birmingham's water authority needed to mobilize public engagement around water conservation and stewardship of Lake Purdy, the city's primary drinking water source.",
     insightLabel: "The Insight",
@@ -51,6 +54,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Recycled Runway",
     client: "Bib & Tucker Sew-Op",
     hook: "Sustainable Fashion Fundraiser",
+    image: "/images/case-recycled-runway.jpg",
     challenge:
       "Bib & Tucker Sew-Op needed a new fundraising event that could engage the public while showing off what its sewing-education and sustainability mission actually does for Birmingham's textile community.",
     insightLabel: "The Idea",
@@ -66,6 +70,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Can You Repeat That?",
     client: "Birmingham History Center",
     hook: "Live Game Show",
+    image: "/images/case-birmingham-history.jpg",
     challenge:
       "The Birmingham History Center needed to generate enthusiasm — and financial support — for its mission of preserving artifacts and stories from Birmingham's history.",
     insightLabel: "The Idea",

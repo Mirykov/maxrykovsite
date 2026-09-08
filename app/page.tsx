@@ -1,7 +1,7 @@
+import Image from "next/image";
 import PillButton from "@/components/PillButton";
 import ServiceGrid from "@/components/ServiceGrid";
 import CaseStudyCard from "@/components/CaseStudyCard";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { caseStudies } from "@/lib/caseStudies";
 
@@ -10,7 +10,15 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative flex min-h-[85vh] items-center bg-anchor text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60" />
+        <Image
+          src="/images/hero-crowd.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-anchor/70 via-anchor/60 to-black/80" />
         <div className="relative mx-auto max-w-6xl px-6 py-24">
           <h1 className="font-display font-bold uppercase text-accent leading-[0.95] text-4xl sm:text-6xl md:text-7xl mb-6">
             Making important things
@@ -176,7 +184,15 @@ export default function Home() {
       {/* MEET MAX */}
       <section id="meet-max" className="bg-anchor text-white">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28 grid md:grid-cols-2 gap-12 items-center">
-          <ImagePlaceholder label="Photo of Max" tone="dark" className="h-80 md:h-full rounded-xl" />
+          <div className="relative h-80 md:h-full rounded-xl overflow-hidden">
+            <Image
+              src="/images/meet-max.jpg"
+              alt="Max Rykov hosting an event on stage"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
           <div>
             <h2 className="font-display font-bold uppercase text-3xl sm:text-4xl mb-2">
               Meet Max

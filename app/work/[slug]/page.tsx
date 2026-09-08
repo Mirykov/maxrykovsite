@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { caseStudies, getCaseStudy } from "@/lib/caseStudies";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
@@ -59,7 +60,20 @@ export default async function CaseStudyPage({
         </h1>
         <p className="text-ink/70 text-lg mb-10">{caseStudy.hook}</p>
 
-        <ImagePlaceholder label={`${caseStudy.client} photo`} className="h-64 sm:h-96 w-full rounded-xl mb-12" />
+        {caseStudy.image ? (
+          <div className="relative h-64 sm:h-96 w-full rounded-xl overflow-hidden mb-12">
+            <Image
+              src={caseStudy.image}
+              alt={caseStudy.client}
+              fill
+              sizes="(min-width: 768px) 768px, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+        ) : (
+          <ImagePlaceholder label={`${caseStudy.client} photo`} className="h-64 sm:h-96 w-full rounded-xl mb-12" />
+        )}
 
         <div className="space-y-12">
           {sections.map((section) => (
