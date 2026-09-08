@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Oswald, Inter } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const oswald = Oswald({
-  variable: "--font-oswald",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${oswald.variable} ${inter.variable} h-full antialiased`}
+      className={`${poppins.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <Nav />

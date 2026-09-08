@@ -23,7 +23,7 @@
   --color-ink: var(--color-ink);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-display: var(--font-oswald);
+  --font-display: var(--font-poppins);
   --font-body: var(--font-inter);
 }
 
