@@ -220,7 +220,7 @@ export default function Home() {
             </div>
 
             <div className="mb-6">
-              <YouTubeEmbed videoId="REPLACE_ME" title="Max Rykov — America's Only Freelance Quarterback" />
+              <YouTubeEmbed videoId="jRe-6CudWIM" title="Max Rykov — America's Only Freelance Quarterback" />
             </div>
 
             <p className="font-display uppercase mb-1">The work changes. The question doesn&rsquo;t:</p>
