@@ -1,3 +1,5 @@
+import { amp } from "./Amp";
+
 export default function SectionHeading({
   id,
   title,
@@ -13,7 +15,7 @@ export default function SectionHeading({
     <div className={`mb-10 max-w-3xl ${className}`}>
       {eyebrow && <p className="eyebrow mb-3 text-og-teal-dark">{eyebrow}</p>}
       <h2 id={id} className="font-display text-3xl font-black leading-tight tracking-tight sm:text-5xl">
-        {title}
+        {amp(title)}
       </h2>
     </div>
   );

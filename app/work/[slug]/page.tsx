@@ -1,3 +1,4 @@
+import { amp } from "@/components/og/Amp";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -53,10 +54,10 @@ export default async function CaseStudyPage({
         </Link>
 
         <p className="text-sm font-display uppercase tracking-wide text-anchor mb-2">
-          {caseStudy.client}
+          {amp(caseStudy.client)}
         </p>
         <h1 className="font-display font-bold uppercase text-3xl sm:text-5xl mb-4">
-          {caseStudy.title}
+          {amp(caseStudy.title)}
         </h1>
         <p className="text-ink/70 text-lg mb-10">{caseStudy.hook}</p>
 

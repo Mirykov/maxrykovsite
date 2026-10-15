@@ -50,6 +50,11 @@ body {
   font-variation-settings: "SOFT" 60;
 }
 
+/* Classic ampersand in Fraunces (see components/og/Amp.tsx and app/layout.tsx) */
+.amp {
+  font-family: var(--font-amp), var(--font-display), Georgia, serif;
+}
+
 /* Small-caps labels, letter-spaced like "EVENTS" in the logo */
 .eyebrow {
   font-family: var(--font-body), Arial, sans-serif;

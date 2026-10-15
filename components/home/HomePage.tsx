@@ -1,3 +1,4 @@
+import { amp } from "@/components/og/Amp";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -105,7 +106,7 @@ function ChooseYourFun() {
               </span>
             </div>
             <div className="flex flex-1 flex-col p-6">
-              <h3 className="font-display mb-2 text-2xl font-bold leading-snug">{card.title}</h3>
+              <h3 className="font-display mb-2 text-2xl font-bold leading-snug">{amp(card.title)}</h3>
               <p className="mb-3 font-semibold text-og-teal-dark">{card.for}</p>
               <p className="mb-6 flex-1 text-og-ink/80">{card.body}</p>
               <Link
@@ -138,7 +139,7 @@ function Problem() {
         </div>
         <div>
           <h2 id="problem" className="font-display mb-6 text-3xl font-black leading-tight tracking-tight sm:text-5xl">
-            {home.problem.title}
+            {amp(home.problem.title)}
           </h2>
           <p className="text-lg leading-relaxed text-og-ink/80 sm:text-xl">{home.problem.body}</p>
         </div>
@@ -173,7 +174,7 @@ function SelectedWork() {
                   <ImagePlaceholder label={`[PHOTO: ${p.title}]`} tone="red" className="h-full w-full" />
                 )}
               </div>
-              <h3 className="font-display text-lg font-bold leading-snug group-hover:text-og-red sm:text-xl">{p.title}</h3>
+              <h3 className="font-display text-lg font-bold leading-snug group-hover:text-og-red sm:text-xl">{amp(p.title)}</h3>
               <p className="text-sm font-semibold text-og-teal-dark">{p.client}</p>
             </Link>
           </li>
@@ -199,7 +200,7 @@ function HowItWorks() {
               <span className="font-display mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-og-ink text-3xl font-black text-og-yellow">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-display mb-2 text-2xl font-bold leading-snug">{step.title}</h3>
+              <h3 className="font-display mb-2 text-2xl font-bold leading-snug">{amp(step.title)}</h3>
               <p className="text-og-ink/80">{step.body}</p>
             </li>
           ))}

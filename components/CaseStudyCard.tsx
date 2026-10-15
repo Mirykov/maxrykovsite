@@ -1,3 +1,4 @@
+import { amp } from "@/components/og/Amp";
 import Link from "next/link";
 import Image from "next/image";
 import type { CaseStudy } from "@/lib/caseStudies";
@@ -24,10 +25,10 @@ export default function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
       </div>
       <div className="p-5">
         <p className="text-xs uppercase tracking-wide text-anchor font-display mb-1">
-          {caseStudy.client}
+          {amp(caseStudy.client)}
         </p>
         <h3 className="font-display text-lg uppercase tracking-wide mb-2 group-hover:text-anchor transition-colors">
-          {caseStudy.title}
+          {amp(caseStudy.title)}
         </h3>
         <p className="text-sm text-ink/70">{caseStudy.hook}</p>
       </div>

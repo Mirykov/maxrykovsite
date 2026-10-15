@@ -1,3 +1,4 @@
+import { amp } from "./Amp";
 import Button, { type ButtonVariant } from "./Button";
 import Burst from "./Burst";
 
@@ -32,7 +33,7 @@ export default function CtaBand({
       <div className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 md:py-28">
         <Burst className="mx-auto mb-4 h-12 w-12" />
         <h2 id={id} className="font-display mb-6 text-3xl font-black leading-tight tracking-tight sm:text-5xl">
-          {title}
+          {amp(title)}
         </h2>
         {body && <p className="mx-auto mb-10 max-w-2xl text-lg text-og-ink/80 sm:text-xl">{body}</p>}
         <Ctas buttons={buttons} className="justify-center" />

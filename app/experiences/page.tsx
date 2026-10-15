@@ -1,3 +1,4 @@
+import { amp } from "@/components/og/Amp";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Check, Plus } from "lucide-react";
@@ -19,7 +20,7 @@ function Hero() {
     <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:grid-cols-[1.1fr_1fr] md:pb-20 md:pt-20">
       <div>
         <p className="eyebrow mb-6 text-og-teal-dark">{hero.eyebrow}</p>
-        <h1 className="font-display mb-6 text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-6xl">{hero.title}</h1>
+        <h1 className="font-display mb-6 text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-6xl">{amp(hero.title)}</h1>
         <p className="max-w-xl text-lg leading-relaxed text-og-ink/80 sm:text-xl">{hero.sub}</p>
       </div>
       <div className="relative">
@@ -65,7 +66,7 @@ function Services() {
               <span className="font-display mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-og-ink text-2xl font-black text-og-yellow">
                 {s.number}
               </span>
-              <h3 className="font-display mb-2 text-2xl font-bold leading-snug">{s.name}</h3>
+              <h3 className="font-display mb-2 text-2xl font-bold leading-snug">{amp(s.name)}</h3>
               <p className="mb-5 font-semibold text-og-teal-dark">For {s.for.charAt(0).toLowerCase() + s.for.slice(1)}</p>
               <ul className="mb-6 flex-1 space-y-2.5">
                 {s.includes.map((item) => (
@@ -136,7 +137,7 @@ function Comparison() {
                 {comparison.columns.map((col, i) => (
                   <th scope="col" key={col} className="p-4 text-center align-bottom sm:p-5">
                     <span className="eyebrow mb-1 block text-og-teal-dark">0{i + 1}</span>
-                    <span className="font-display text-lg font-bold leading-tight">{col}</span>
+                    <span className="font-display text-lg font-bold leading-tight">{amp(col)}</span>
                   </th>
                 ))}
               </tr>
