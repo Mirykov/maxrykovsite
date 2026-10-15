@@ -6,7 +6,6 @@ import site from "@/content/site.json";
 import { bookCallSchema, callTypes, HONEYPOT_FIELD, type CallType } from "@/lib/inquiry";
 import { buttonClasses } from "@/components/og/Button";
 import Burst from "@/components/og/Burst";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 type Errors = Partial<Record<"name" | "email" | "callType" | "form", string>>;
 
@@ -255,21 +254,24 @@ export default function BookCall({ initialType }: { initialType: CallType | null
               className="h-[720px] w-full rounded-2xl border-0"
             />
           ) : (
-            <ImagePlaceholder
-              tone="teal"
-              label={`[CALENDLY: “${chosen?.label}” · ${chosen?.minutes} min — calendar appears here once Max's link is added]`}
-              className="h-[420px] w-full rounded-2xl"
-            />
+            // Shown until the Calendly links are added in content/site.json
+            <div className="flex h-[320px] flex-col items-center justify-center rounded-2xl bg-og-teal p-8 text-center text-og-ink">
+              <p className="font-display mb-2 text-2xl font-bold">Online scheduling is coming soon.</p>
+              <p className="max-w-sm">Thanks for your patience while we get the calendar set up.</p>
+            </div>
           )}
         </div>
       )}
 
-      <p className="border-t-2 border-og-ink/10 px-6 py-4 text-center text-sm">
-        Prefer email?{" "}
-        <a href={`mailto:${site.email}`} className="font-semibold text-og-teal-dark underline underline-offset-4">
-          Send us the details.
-        </a>
-      </p>
+      {/* Hidden until Max confirms the real inbox in content/site.json */}
+      {site.emailConfirmed && (
+        <p className="border-t-2 border-og-ink/10 px-6 py-4 text-center text-sm">
+          Prefer email?{" "}
+          <a href={`mailto:${site.email}`} className="font-semibold text-og-teal-dark underline underline-offset-4">
+            Send us the details.
+          </a>
+        </p>
+      )}
     </div>
   );
 }

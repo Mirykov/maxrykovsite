@@ -107,11 +107,6 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
                 )}
               </Section>
             )}
-            {project.descriptionPlaceholder && (
-              <p className="eyebrow inline-block rounded bg-og-yellow px-3 py-2 leading-relaxed text-og-ink">
-                {project.descriptionPlaceholder}
-              </p>
-            )}
           </div>
 
           {project.stats.length > 0 && (

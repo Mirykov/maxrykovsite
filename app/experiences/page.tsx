@@ -127,7 +127,8 @@ function Faq() {
     <section aria-labelledby="faq" className="mx-auto max-w-3xl px-4 py-20 sm:px-6 md:py-28">
       <SectionHeading id="faq" title={faq.title} />
       <div className="divide-y-2 divide-og-ink/10 border-y-2 border-og-ink/10">
-        {faq.items.map((item) => (
+        {/* Questions without an answer yet (a: null) stay hidden until Max supplies one */}
+        {faq.items.filter((item) => item.a).map((item) => (
           <details key={item.q} className="group">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-lg font-bold [&::-webkit-details-marker]:hidden">
               {item.q}
@@ -139,9 +140,7 @@ function Faq() {
               />
             </summary>
             <div className="pb-6 pr-10 text-og-ink/80">
-              {item.a ?? (
-                <span className="eyebrow rounded bg-og-yellow px-2 py-1 text-og-ink">[CONFIRM: Max to answer]</span>
-              )}
+              {item.a}
             </div>
           </details>
         ))}

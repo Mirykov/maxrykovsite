@@ -118,6 +118,16 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
 - **Testimonials are off the Home page** at Max's request. All four live
   on the Emcee page (`content/testimonials.json`).
 
+## Live Site
+
+Published to production (`main` → https://maxrykovsite.vercel.app) on
+2026-10-15 so Max can share it for feedback. The `oddgood-redesign` preview
+is behind Vercel login. Unfinished bits are hidden on the public site, not
+shown as notes: FAQ items with `a: null`, a project's `descriptionPlaceholder`,
+the footer/booking email (until `emailConfirmed: true` in `content/site.json`),
+and social links (until `confirmed`). Book a Call step 2 says "Online
+scheduling is coming soon" until the Calendly links are added.
+
 ## Open [CONFIRM] Items
 
 Max portrait, contact email (`hello@oddgoodevents.com` placeholder in

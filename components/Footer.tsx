@@ -33,11 +33,13 @@ export default function Footer() {
                 Book a call
               </Link>
             </li>
-            <li>
-              <a href={`mailto:${site.email}`} className="hover:text-og-yellow">
-                {site.email}
-              </a>
-            </li>
+            {site.emailConfirmed && (
+              <li>
+                <a href={`mailto:${site.email}`} className="hover:text-og-yellow">
+                  {site.email}
+                </a>
+              </li>
+            )}
             {/* Social links stay hidden until Max confirms the real handles in content/site.json */}
             {site.social.filter((s) => s.confirmed).map((s) => (
               <li key={s.label}>
