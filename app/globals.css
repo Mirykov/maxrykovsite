@@ -64,6 +64,14 @@ body {
   outline-color: var(--og-yellow);
 }
 
+/* Hide the scrollbar on swipeable rows that have their own arrow buttons */
+.og-no-scrollbar {
+  scrollbar-width: none;
+}
+.og-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Burst pop on the primary CTA */
 @keyframes og-burst-pop {
   0% { opacity: 0; transform: scale(0.4) rotate(-10deg); }
@@ -79,47 +87,7 @@ body {
   animation: og-burst-pop 260ms ease-out forwards;
 }
 
-/* Scrolling organization list (components/og/Marquee.tsx) */
-@keyframes og-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.og-marquee {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-}
-.og-marquee-track {
-  display: flex;
-  width: max-content;
-  animation: og-marquee 70s linear infinite;
-}
-.og-marquee:hover .og-marquee-track,
-.og-marquee.is-paused .og-marquee-track {
-  animation-play-state: paused;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .og-marquee {
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
-  .og-marquee-track {
-    animation: none;
-    width: auto;
-    justify-content: center;
-  }
-  .og-marquee-track > ul {
-    flex-shrink: 1;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 0.75rem;
-  }
-  .og-marquee-dup,
-  .og-marquee-toggle {
-    display: none !important;
-  }
   .og-burst-hover:hover .og-burst,
   .og-burst-hover:focus-visible .og-burst {
     animation: none;

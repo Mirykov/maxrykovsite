@@ -9,7 +9,7 @@ import Button from "@/components/og/Button";
 import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
-import Marquee from "@/components/og/Marquee";
+import CategoryCarousel from "@/components/og/CategoryCarousel";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -60,13 +60,17 @@ function Hero() {
   );
 }
 
-function TrustedBy() {
+function WorkedWith() {
+  const { workedWith } = home;
   return (
-    <section aria-labelledby="trusted-by" className="py-16 md:py-20">
-      <h2 id="trusted-by" className="eyebrow mb-8 text-center text-og-ink/60">
-        {home.trustedBy.label}
-      </h2>
-      <Marquee items={home.trustedBy.organizations} label="Organizations Max has worked with" />
+    <section aria-labelledby="worked-with" className="overflow-hidden">
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
+        <h2 id="worked-with" className="font-display mb-4 max-w-3xl text-3xl font-black leading-tight tracking-tight sm:text-5xl">
+          {amp(workedWith.title)}
+        </h2>
+        <p className="mb-8 max-w-2xl text-lg text-og-ink/80">{workedWith.sub}</p>
+        <CategoryCarousel categories={workedWith.categories} label="Organizations by category" />
+      </div>
     </section>
   );
 }
@@ -181,7 +185,7 @@ export default function HomePage() {
       <Problem />
       <SelectedWork />
       <HowItWorks />
-      <TrustedBy />
+      <WorkedWith />
       <CtaBand id="closing" {...home.closing} />
     </>
   );

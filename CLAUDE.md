@@ -85,7 +85,7 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   that page's text). Photos are in `public/images/campaigns/`.
 - **Work cards** (Home and /work) show only the photo and title; no
   organization or subtitle (Max's call). Subtitles remain on event pages.
-- `/about` is still a `ComingSoon` stub.
+- **About** (`content/about.json`): Max's own copy, with inline teal links (freelance quarterback video, otherfoundationbham.org). The photo is cropped from his red-blazer stage shot and has a yellow offset block.
 - Images: `public/images/source/INVENTORY.md` lists everything pulled from
   maxrykov.com. The originals are gitignored (~51 MB); web-sized copies of
   the ones in use are in `public/images/`.
@@ -109,10 +109,12 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   match. Max tried a crossfading slideshow first (commit 98dcb45) and found it
   too busy "for now", so it may come back. The brief's hero video is still
   optional.
-- **Home "Trusted by"** sits below "How it works": a scrolling text marquee
-  (`components/og/Marquee.tsx`, pause button + static list for reduced motion)
-  of the 22 organizations from the old maxrykov.com/work page, without their
-  category headings (`content/home.json` → `trustedBy`).
+- **Home "organizations I've worked with"** sits below "How it works": a
+  swipeable carousel of category cards with arrow buttons
+  (`components/og/CategoryCarousel.tsx`, `content/home.json` → `workedWith`),
+  using the categories and wording from the old maxrykov.com/work page. Arts
+  is split across two cards so heights stay even. This replaced an
+  auto-scrolling marquee, which Max dropped on 2026-10-15.
 - **Testimonials are off the Home page** at Max's request. All four live
   on the Emcee page (`content/testimonials.json`).
 

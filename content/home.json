@@ -90,31 +90,67 @@
       "label": "Let's Plan Something"
     }
   },
-  "trustedBy": {
-    "label": "Trusted by",
-    "organizations": [
-      "Birmingham City Council",
-      "Central Alabama Water",
-      "Birmingham-Jefferson County Transit Authority",
-      "Nashville International Center for Empowerment",
-      "Tennessee Immigrant & Refugee Rights Coalition",
-      "Tennessee Riverkeeper",
-      "Alabama Rivers Alliance",
-      "Redemptive Cycles",
-      "Birmingham Museum of Art",
-      "Studio by the Tracks",
-      "InToto Creative Arts",
-      "The Lyric Theatre",
-      "Bib & Tucker Sew Op",
-      "Desert Island Supply Co.",
-      "Space One Eleven Arts Center",
-      "Alabama Holocaust Education Center",
-      "Birmingham History Center",
-      "Birmingham Education Foundation",
-      "United Way of Greater Nashville",
-      "The Crisis Center",
-      "Alabama Equality",
-      "Offender Alumni Association"
+  "workedWith": {
+    "title": "Here are some of the organizations I've worked with",
+    "sub": "Range of services include: fundraising, marketing, communications, outreach, event hosting, and community engagement.",
+    "categories": [
+      {
+        "name": "Government",
+        "organizations": [
+          "Birmingham City Council",
+          "Central Alabama Water",
+          "Birmingham-Jefferson County Transit Authority"
+        ]
+      },
+      {
+        "name": "Immigrant Rights",
+        "organizations": [
+          "Nashville International Center for Empowerment",
+          "Tennessee Immigrant & Refugee Rights Coalition"
+        ]
+      },
+      {
+        "name": "Advocacy",
+        "organizations": [
+          "Tennessee Riverkeeper",
+          "Alabama Rivers Alliance",
+          "Redemptive Cycles"
+        ]
+      },
+      {
+        "name": "Arts",
+        "organizations": [
+          "Birmingham Museum of Art",
+          "Studio by the Tracks",
+          "InToto Creative Arts",
+          "The Lyric Theatre"
+        ]
+      },
+      {
+        "name": "Arts (continued)",
+        "organizations": [
+          "Bib & Tucker Sew Op",
+          "Desert Island Supply Co.",
+          "Space One Eleven Arts Center"
+        ]
+      },
+      {
+        "name": "Education",
+        "organizations": [
+          "Alabama Holocaust Education Center",
+          "Birmingham History Center",
+          "Birmingham Education Foundation"
+        ]
+      },
+      {
+        "name": "Social Services",
+        "organizations": [
+          "United Way of Greater Nashville",
+          "The Crisis Center",
+          "Alabama Equality",
+          "Offender Alumni Association"
+        ]
+      }
     ]
   },
   "closing": {

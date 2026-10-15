@@ -1,0 +1,27 @@
+{
+  "eyebrow": "About",
+  "title": "Good ideas. Odd approaches. Meaningful results.",
+  "lead": "OddGood Events is led by Max Rykov, a creative thinker, event host, and community engagement professional.",
+  "greeting": "Hi, I'm Max.",
+  "paragraphs": [
+    [
+      { "text": "For over 13 years, I have been creating, producing, and hosting fun events that boost awareness, engagement, and raise money for important causes. There's nothing that lights me up as much as seeing people having meaningful, whimsical fun together while celebrating something they care about. I think that's something we all crave, and as adults - we don't get to do that enough." }
+    ],
+    [
+      { "text": "My professional career has included marketing, non-profit development leadership, and city government communications. I'm also " },
+      { "text": "America's only freelance quarterback", "href": "https://www.youtube.com/watch?v=jRe-6CudWIM" },
+      { "text": "." }
+    ],
+    [
+      { "text": "I'm also the founder of " },
+      { "text": "The Other Foundation", "href": "https://otherfoundationbham.org/" },
+      { "text": ", a giving circle organization that awards monthly micro-grants to community projects that make life better for people in Birmingham, Alabama." }
+    ]
+  ],
+  "image": "/images/about-max-stage.jpg",
+  "imageAlt": "Max in a red blazer on stage, pointing at the audience with a microphone in hand",
+  "closing": {
+    "title": "Your event can be the one people talk about afterward.",
+    "buttons": [{ "href": "/book", "label": "Book a Call", "variant": "primary" }]
+  }
+}
