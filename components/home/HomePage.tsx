@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import home from "@/content/home.json";
-import projects from "@/content/projects.json";
+import { projects } from "@/lib/projects";
+import ProjectCard from "@/components/ProjectCard";
 import testimonials from "@/content/testimonials.json";
 import Button from "@/components/og/Button";
 import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -153,37 +153,13 @@ function SelectedWork() {
   return (
     <section aria-labelledby="work" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
       <SectionHeading id="work" title={home.work.title} />
-      <ul className="mb-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-6 lg:grid-cols-5">
-        {featured.map((p, i) => {
-          // With an odd count, the last card spans the full two-column row on small screens
-          const wide = featured.length % 2 === 1 && i === featured.length - 1;
-          return (
-          <li key={p.slug} className={wide ? "col-span-2 lg:col-span-1" : ""}>
-            <Link href="/work" className="group block">
-              <div className={`relative mb-4 overflow-hidden rounded-3xl ${wide ? "aspect-[3/2] lg:aspect-[4/5]" : "aspect-[4/5]"}`}>
-                {p.image ? (
-                  <Image
-                    src={p.image}
-                    alt={p.imageAlt ?? ""}
-                    fill
-                    sizes={wide ? "(min-width: 1024px) 20vw, 100vw" : "(min-width: 1024px) 20vw, 50vw"}
-                    className="object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
-                    style={{ objectPosition: p.imagePosition }}
-                  />
-                ) : (
-                  <ImagePlaceholder label={`[PHOTO: ${p.title}]`} tone="red" className="h-full w-full" />
-                )}
-              </div>
-              <h3 className="font-display text-lg font-bold leading-snug group-hover:text-og-red sm:text-xl">{amp(p.title)}</h3>
-              <p className="text-sm font-semibold text-og-teal-dark">{p.client}</p>
-            </Link>
+      <ul className="grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-6 lg:grid-cols-3">
+        {featured.map((p) => (
+          <li key={p.slug}>
+            <ProjectCard project={p} sizes="(min-width: 1024px) 33vw, 50vw" />
           </li>
-          );
-        })}
+        ))}
       </ul>
-      <Button href={home.work.cta.href} variant="secondary">
-        {home.work.cta.label}
-      </Button>
     </section>
   );
 }

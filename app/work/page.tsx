@@ -1,43 +1,43 @@
 import type { Metadata } from "next";
-import PillButton from "@/components/PillButton";
-import CaseStudyCard from "@/components/CaseStudyCard";
-import { caseStudies } from "@/lib/caseStudies";
+import { projects } from "@/lib/projects";
+import ProjectCard from "@/components/ProjectCard";
+import CtaBand from "@/components/og/CtaBand";
 
 export const metadata: Metadata = {
   title: "Selected Work",
-  description: "Case studies in fundraising, communications, community engagement, and events.",
+  description:
+    "Game shows, awards shows, and signature fundraising events by OddGood Events, from The Fountys to Recycled Runway and Can You Repeat That?",
 };
 
 export default function WorkPage() {
   return (
-    <section className="bg-paper">
-      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <h1 className="font-display font-bold uppercase text-3xl sm:text-5xl text-anchor mb-4">
-          Selected Work
+    <>
+      <section className="mx-auto max-w-6xl px-4 pb-20 pt-12 sm:px-6 md:pb-28 md:pt-20">
+        <p className="eyebrow mb-6 text-og-teal-dark">Selected Work</p>
+        <h1 className="font-display mb-6 max-w-4xl text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-6xl">
+          Different challenges. Unexpected ideas. Real people getting involved.
         </h1>
-        <p className="text-ink/70 max-w-2xl mb-12 text-lg">
-          Specific stories — each one proof of experience and an example of
-          the kind of problem we can help solve.
+        <p className="mb-14 max-w-2xl text-lg leading-relaxed text-og-ink/80 sm:text-xl">
+          Our work spans interactive events, creative campaigns, and community experiences. The common thread
+          is finding a more interesting way to get people to care, participate, or connect.
         </p>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {caseStudies.map((cs) => (
-            <CaseStudyCard key={cs.slug} caseStudy={cs} />
+        <ul className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-6 lg:grid-cols-3">
+          {projects.map((p) => (
+            <li key={p.slug}>
+              <ProjectCard project={p} sizes="(min-width: 1024px) 33vw, 50vw" showSubtitle />
+            </li>
           ))}
-        </div>
-
-        <div className="rounded-xl border border-ink/10 bg-white/40 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-          <div>
-            <h2 className="font-display uppercase tracking-wide text-anchor mb-2">
-              Got something like this?
-            </h2>
-            <p className="text-ink/70">Let&rsquo;s talk about what you&rsquo;re trying to make happen.</p>
-          </div>
-          <PillButton href="/start" variant="outline-dark">
-            Start a Project
-          </PillButton>
-        </div>
-      </div>
-    </section>
+        </ul>
+      </section>
+      <CtaBand
+        id="closing"
+        title="Want something like this?"
+        body="Tell us what you're planning. We'll figure out the most interesting way to bring it to life."
+        buttons={[
+          { href: "/plan", label: "Start a Project", variant: "primary" },
+          { href: "/book", label: "Book a Call", variant: "secondary" },
+        ]}
+      />
+    </>
   );
 }

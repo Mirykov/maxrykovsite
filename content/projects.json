@@ -2,38 +2,78 @@
   {
     "slug": "the-fountys",
     "title": "The Fountys",
-    "client": "Space One Eleven",
-    "filters": ["Events"],
-    "summary": "Art history awards show.",
-    "image": "/images/work-fountys.jpg",
+    "subtitle": "Art History Awards Show",
+    "partnerLabel": "Client",
+    "partner": "Space One Eleven",
+    "challenge": "Space One Eleven is a visual arts gallery and non-profit that needed a creative fundraising event to match the tone of the organization.",
+    "project": [
+      "I produced, wrote, and emceed an art history awards show featuring some of the city's most beloved artists. Each local artist was cast as an iconic figure from art history, and presented or accepted an award in character. Winners of each category were determined by an online vote.",
+      "Inspired by Marcel Duchamp's infamous 1917 masterpiece \"Fountain\" (the urinal), small golden ceramic replicas (\"Fountys\") were presented to the winners in 12 categories."
+    ],
+    "highlightsTitle": "Winners included:",
+    "highlights": [
+      "Most Whimsical Representation of the Human Body: Pablo Picasso",
+      "Most Posthumous Success: Vincent Van Gogh",
+      "Best Selfie: Frida Kahlo"
+    ],
+    "stats": [
+      { "value": "3,000+", "label": "Votes Cast" },
+      { "value": "200+", "label": "Attendees" },
+      { "value": "32", "label": "Participants" }
+    ],
+    "image": "/images/work/the-fountys-1.jpg",
     "imageAlt": "Three guests dressed as famous artworks holding gold Founty trophies",
+    "gallery": [
+      { "src": "/images/work/the-fountys-2.jpg", "alt": "Artists dressed as Dalí, Frida Kahlo, and Van Gogh posing with a Founty" },
+      { "src": "/images/work/the-fountys-3.jpg", "alt": "A guest in costume posing with a red rotary phone" },
+      { "src": "/images/work/the-fountys-4.jpg", "alt": "Artists in Van Gogh and Frida Kahlo costumes at the microphone" }
+    ],
     "featuredOnHome": true
   },
   {
     "slug": "recycled-runway",
     "title": "Recycled Runway",
-    "client": "Bib & Tucker Sew-Op",
-    "filters": ["Events", "Campaigns"],
-    "summary": "A live fashion-design competition and fundraiser.",
-    "stats": ["$50k+ raised", "700+ attendees"],
-    "image": "/images/work-recycled-runway.jpg",
+    "subtitle": "A New Signature Event",
+    "partnerLabel": "Client",
+    "partner": "Bib & Tucker Sew Op",
+    "challenge": "The Bib & Tucker Sew Op needed a new fundraising event that engaged the public and illustrated the impact of their mission of \"building community through education, economic opportunity, and sustainable practices, using the art of sewing.\" Over three years, Recycled Runway became a favorite event for supporters of Birmingham's textile community.",
+    "project": [
+      "I created, organized, marketed, and emceed an event that highlighted the work of local seamstresses. Teams signed up and were assigned a seamstress and a model. Each team was provided with a mystery box of garments and had 90 minutes to sew together a custom outfit, culminating in a runway fashion show judged by local style influencers."
+    ],
+    "stats": [
+      { "value": "$50k+", "label": "Funds Raised" },
+      { "value": "700+", "label": "Attendees" },
+      { "value": "50+", "label": "Participants/Year" }
+    ],
+    "image": "/images/work/recycled-runway-1.jpg",
     "imageAlt": "A model in a handmade white gown on stage while contestants and the audience watch",
+    "gallery": [
+      { "src": "/images/work/recycled-runway-2.jpg", "alt": "A runway model walking past a packed, cheering audience" },
+      { "src": "/images/work/recycled-runway-3.jpg", "alt": "Guests laughing and holding a Recycled Runway sign" },
+      { "src": "/images/work/recycled-runway-4.jpg", "alt": "Contestants scrambling with garments during the sewing challenge" },
+      { "src": "/images/work/recycled-runway-5.jpg", "alt": "A packed warehouse audience around the runway" }
+    ],
     "featuredOnHome": true
   },
   {
     "slug": "whyd-they-do-that",
     "title": "Why'd They Do That?!",
-    "client": "Saturn Birmingham",
-    "filters": ["Game Shows"],
-    "summary": "Comedy game show about life and politics in Alabama.",
-    "description": "\"Why'd They Do That?!\" a Game Show About Life and Politics in Alabama was a romp through the quizzical, nonsensical, and downright ridiculous moments in the annals of Alabama that make us all ask ourselves \"why'd they do that?!\" Members of local Democratic organizations, elected officials, and comedians competed in this uproarious game show, scoring points for both creativity and correct answers.",
-    "image": "/images/wtdt-contestants-celebrate.jpg",
+    "subtitle": "A Game Show About Life and Politics in Alabama",
+    "partnerLabel": "Client",
+    "partner": "Saturn Birmingham",
+    "challenge": null,
+    "project": [
+      "\"Why'd They Do That?!\" a Game Show About Life and Politics in Alabama was a romp through the quizzical, nonsensical, and downright ridiculous moments in the annals of Alabama that make us all ask ourselves \"why'd they do that?!\"",
+      "Members of local Democratic organizations, elected officials, and comedians competed in this uproarious game show, scoring points for both creativity and correct answers."
+    ],
+    "stats": [],
+    "image": "/images/work/whyd-they-do-that-1.jpg",
     "imageAlt": "Five contestants wearing medals hold hands and raise their arms in celebration on stage",
     "imagePosition": "45% 50%",
     "gallery": [
-      { "src": "/images/wtdt-crowd-cheering.jpg", "alt": "Audience members cheering, laughing, and filming the stage" },
-      { "src": "/images/wtdt-max-hosting.jpg", "alt": "Max on stage with a microphone, arm outstretched toward the audience" },
-      { "src": "/images/wtdt-max-and-contestants.jpg", "alt": "Max hosting while contestants stand behind game-show tables under colored stage lights" }
+      { "src": "/images/work/whyd-they-do-that-2.jpg", "alt": "Audience members cheering, laughing, and filming the stage" },
+      { "src": "/images/work/whyd-they-do-that-3.jpg", "alt": "Max on stage with a microphone, arm outstretched toward the audience" },
+      { "src": "/images/work/whyd-they-do-that-4.jpg", "alt": "Max hosting while contestants stand behind game-show tables under colored stage lights" }
     ],
     "photoCredit": "Thomas Diasio",
     "featuredOnHome": true
@@ -41,40 +81,73 @@
   {
     "slug": "can-you-repeat-that",
     "title": "Can You Repeat That?",
-    "client": "Birmingham History Center",
-    "filters": ["Game Shows"],
-    "summary": "Birmingham history game show.",
-    "image": "/images/work-can-you-repeat-that.jpg",
+    "subtitle": "A Game Show About the Magic City",
+    "partnerLabel": "Client",
+    "partner": "Birmingham History Center",
+    "challenge": "The Birmingham History Center wanted to bring energy and humor to a fundraising event to raise awareness and support for its mission of preserving the artifacts and stories from the Magic City's fascinating past.",
+    "project": [
+      "I wrote, produced, and emceed a sold-out game show about The Magic City called \"Can You Repeat That?\" at the historic Virginia Samford Theater, featuring local luminaries like James Spann, Frank Stitt, former mayor Richard Arrington Jr, and then mayor William Bell."
+    ],
+    "stats": [
+      { "value": "$10k+", "label": "Ticket Sales" },
+      { "value": "312+", "label": "Attendees" },
+      { "value": "14", "label": "Contestants" }
+    ],
+    "image": "/images/work/can-you-repeat-that-1.jpg",
     "imageAlt": "Local celebrity contestants laughing at game-show tables on stage",
+    "gallery": [
+      { "src": "/images/work/can-you-repeat-that-2.jpg", "alt": "A full theater audience facing the lit game-show stage" },
+      { "src": "/images/work/can-you-repeat-that-3.jpg", "alt": "Contestants at their tables while Max hosts from the podium" },
+      { "src": "/images/work/can-you-repeat-that-4.jpg", "alt": "A wide view of the game show on the Virginia Samford Theater stage" },
+      { "src": "/images/work/can-you-repeat-that-5.jpg", "alt": "The Can You Repeat That? show poster" }
+    ],
     "featuredOnHome": true
   },
   {
     "slug": "the-other-awards",
     "title": "The Other Awards",
-    "client": "Birmingham Education Foundation",
-    "filters": ["Events"],
-    "summary": "Celebrating unsung heroes.",
-    "image": "/images/work-other-awards.jpg",
+    "subtitle": "Celebrating Unsung Heroes",
+    "partnerLabel": "Community Partner",
+    "partner": "Birmingham Education Foundation",
+    "challenge": "Too often, awards ceremonies honor prominent and successful local leaders, while those who contribute to the charm and heartbeat of a community go unrecognized.",
+    "project": [
+      "I wrote, produced, and emceed the Other Awards to celebrate unsung heroes in the Birmingham community in categories like: \"Best Birmingham City School Teacher\", \"Most Passionate Neighborhood Association Attendee\", \"Best Service Industry Worker\", and more."
+    ],
+    "stats": [
+      { "value": "11k+", "label": "Votes Cast" },
+      { "value": "300+", "label": "Attendees" },
+      { "value": "24", "label": "Presenters" }
+    ],
+    "image": "/images/work/the-other-awards-1.jpg",
     "imageAlt": "An honoree smiling as she holds her award on stage",
     "imagePosition": "72% 50%",
+    "gallery": [
+      { "src": "/images/work/the-other-awards-2.jpg", "alt": "Award winners hugging on stage" },
+      { "src": "/images/work/the-other-awards-3.jpg", "alt": "An award presentation on stage with the honoree's photo on screen" }
+    ],
     "featuredOnHome": true
   },
   {
-    "slug": "campaign-for-clean-water",
-    "title": "Campaign for Clean Water",
-    "client": "Central Alabama Water + Alabama Rivers Alliance",
-    "filters": ["Campaigns"],
-    "summary": "Creative environmental advocacy.",
-    "image": null,
-    "featuredOnHome": false
-  },
-  {
-    "slug": "the-other-foundation",
-    "title": "The Other Foundation",
-    "client": "Community grant program",
-    "filters": ["Campaigns"],
-    "summary": "A participatory model of local philanthropy.",
-    "image": null,
-    "featuredOnHome": false
+    "slug": "romantically-challenged",
+    "title": "Romantically Challenged",
+    "subtitle": null,
+    "partnerLabel": null,
+    "partner": null,
+    "challenge": null,
+    "project": [],
+    "descriptionPlaceholder": "[CONFIRM: Max to add the description for Romantically Challenged]",
+    "stats": [],
+    "image": "/images/work/romantically-challenged-4.jpg",
+    "imageAlt": "Max and his drag queen co-host on stage while a woman in the audience cheers",
+    "cardImage": "/images/work/romantically-challenged-1.jpg",
+    "cardImageAlt": "Max and a drag queen co-host laughing on stage with a contestant",
+    "cardImagePosition": "50% 30%",
+    "gallery": [
+      { "src": "/images/work/romantically-challenged-1.jpg", "alt": "Max and a drag queen co-host laughing on stage with a contestant" },
+      { "src": "/images/work/romantically-challenged-3.jpg", "alt": "A contestant reacting in mock horror as the co-host holds out the microphone" },
+      { "src": "/images/work/romantically-challenged-2.jpg", "alt": "Max hosting in front of red curtains and Valentine's Day balloons" },
+      { "src": "/images/work/romantically-challenged-5.jpg", "alt": "Two drag queens and a contestant posing with a giant pink teddy bear" }
+    ],
+    "featuredOnHome": true
   }
 ]

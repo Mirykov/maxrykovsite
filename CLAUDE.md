@@ -11,9 +11,9 @@ building any page. It has the exact copy, colors, contrast rules, sitemap,
 and launch checklist. Use the brief's copy as written (Max tightens it later).
 
 An earlier version of this repo was a maxrykov.com redesign (maroon/gold,
-Poppins). `/work`, `/work/[slug]` and `/start` are still from that build and
-will be replaced; their old color classes (`anchor`, `accent`, `paper`, ...)
-are remapped to OddGood colors in `app/globals.css` until then.
+Poppins). Only `/start` (and its `PillButton`) is still from that build and
+will be replaced by `/plan`; its old color classes (`anchor`, `accent`,
+`paper`, ...) are remapped to OddGood colors in `app/globals.css` until then.
 
 ## Tech Stack
 
@@ -69,9 +69,19 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   maxrykov.com. The originals are gitignored (~51 MB); web-sized copies of
   the ones in use are in `public/images/`.
 
-- Featured work (Home), in Max's order: The Fountys, Recycled Runway, Why'd
-  They Do That?!, Can You Repeat That?, The Other Awards. **NICE ("Growing an
-  Organization") is dropped from the site** at Max's request — don't add it back.
+- **Work**: six events in `content/projects.json` (typed in `lib/projects.ts`),
+  in Max's order: The Fountys, Recycled Runway, Why'd They Do That?!, Can You
+  Repeat That?, The Other Awards, Romantically Challenged. Text and photos for
+  the first four are copied from the old maxrykov.com pages (keep that wording);
+  WTDT uses Max's own description; Romantically Challenged's description is a
+  [CONFIRM] placeholder. Home and `/work` show cards (`ProjectCard`) with **no
+  organization names** — those live only on each `/work/[slug]` page (Max's
+  call). Event photos are in `public/images/work/<slug>-N.jpg`.
+- **NICE ("Growing an Organization") is dropped from the site** at Max's
+  request — don't add it back. Clean Water and The Other Foundation are off the
+  Work page for now (likely belong on Campaigns).
+- `next.config.ts` redirects old maxrykov.com paths (/fountys, /runway, ...)
+  and the earlier redesign's case-study URLs.
 
 ## Open [CONFIRM] Items
 

@@ -1,0 +1,37 @@
+import data from "@/content/projects.json";
+
+export type Project = {
+  slug: string;
+  title: string;
+  subtitle: string | null;
+  partnerLabel: string | null;
+  partner: string | null;
+  challenge: string | null;
+  project: string[];
+  highlightsTitle?: string;
+  highlights?: string[];
+  descriptionPlaceholder?: string;
+  stats: { value: string; label: string }[];
+  image: string;
+  imageAlt: string;
+  imagePosition?: string;
+  // Optional different photo for cards (e.g. when the page's wide hero crops badly in a portrait card)
+  cardImage?: string;
+  cardImageAlt?: string;
+  cardImagePosition?: string;
+  gallery: { src: string; alt: string }[];
+  photoCredit?: string;
+  featuredOnHome: boolean;
+};
+
+export const projects = data as Project[];
+
+export function getProject(slug: string) {
+  return projects.find((p) => p.slug === slug);
+}
+
+// The project after this one, wrapping around, for "Next project" links
+export function nextProject(slug: string) {
+  const i = projects.findIndex((p) => p.slug === slug);
+  return projects[(i + 1) % projects.length];
+}
