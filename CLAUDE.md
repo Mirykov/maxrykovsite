@@ -46,9 +46,21 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
 - **Home** built and approved (2026-10-14): Max chose the "Poster" direction
   (cream, split hero, teal "How it works" band) over a full-bleed dark-photo
   alternative. Keep new pages consistent with it. `components/home/HomePage.tsx`.
-- `/experiences`, `/emcee`, `/campaigns`, `/about`, `/plan`, `/book` are
-  `ComingSoon` stubs. Build order after approval: Experiences + /book, then
-  Emcee, then the rest (brief §9).
+- **Experiences** built (`content/experiences.json`). The comparison-grid
+  values and the "Optional" comedians on 02/03 are inferred from the brief's
+  card contents — Max to confirm. Two FAQ answers show a [CONFIRM] tag.
+- **Book a Call** (`/book`, `components/book/BookCall.tsx`): form-first flow
+  Max chose (modeled on The Joy Collective's booking). Step 1 = call type +
+  name + email → POST /api/inquiry (emails Max the lead) → step 2 = Calendly
+  embed prefilled with name/email. Email failures never block booking.
+  `/book?type=host|custom` preselects the call type. Calendly links go in
+  `content/site.json` → `calendly`; while empty, a placeholder shows.
+- **/api/inquiry** handles `book-call`, `plan`, and `emcee` (schemas in
+  `lib/inquiry.ts`) with zod validation, honeypot (`website`), in-memory rate
+  limit, and Resend. Env: `RESEND_API_KEY`, `INQUIRY_TO_EMAIL`,
+  `INQUIRY_FROM_EMAIL` (see `.env.example`).
+- `/emcee`, `/campaigns`, `/about`, `/plan` are still `ComingSoon` stubs —
+  Max is reviewing the site before those are built.
 - Images: `public/images/source/INVENTORY.md` lists everything pulled from
   maxrykov.com. The originals are gitignored (~51 MB); web-sized copies of
   the ones in use are in `public/images/`.

@@ -18,6 +18,11 @@ const variants: Record<ButtonVariant, string> = {
     "bg-og-yellow text-og-ink px-7 py-3.5 shadow-[0_4px_0_#b8953c] hover:bg-[#e8c56c] active:shadow-[0_2px_0_#b8953c]",
 };
 
+// For real <button>s (form submits) that should look like the link buttons
+export function buttonClasses(variant: ButtonVariant = "primary", className = "") {
+  return `${base} ${variants[variant]} ${className}`;
+}
+
 export default function Button({
   href,
   children,
@@ -30,7 +35,7 @@ export default function Button({
   className?: string;
 }) {
   return (
-    <Link href={href} className={`${base} ${variants[variant]} ${className}`}>
+    <Link href={href} className={buttonClasses(variant, className)}>
       {variant === "primary" && (
         <Burst className="pointer-events-none absolute -left-4 -top-4 h-7 w-7" />
       )}

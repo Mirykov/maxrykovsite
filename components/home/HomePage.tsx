@@ -4,23 +4,11 @@ import { ArrowRight } from "lucide-react";
 import home from "@/content/home.json";
 import projects from "@/content/projects.json";
 import testimonials from "@/content/testimonials.json";
-import Button, { type ButtonVariant } from "@/components/og/Button";
+import Button from "@/components/og/Button";
+import CtaBand, { Ctas } from "@/components/og/CtaBand";
+import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
-
-type Cta = { href: string; label: string; variant?: string };
-
-function Ctas({ buttons }: { buttons: Cta[] }) {
-  return (
-    <div className="flex flex-wrap gap-4">
-      {buttons.map((b) => (
-        <Button key={b.href} href={b.href} variant={(b.variant ?? "primary") as ButtonVariant}>
-          {b.label}
-        </Button>
-      ))}
-    </div>
-  );
-}
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -97,14 +85,6 @@ function LogoStrip() {
         </ul>
       </div>
     </section>
-  );
-}
-
-function SectionHeading({ id, title }: { id: string; title: string }) {
-  return (
-    <h2 id={id} className="font-display mb-10 max-w-3xl text-3xl font-black leading-tight tracking-tight sm:text-5xl">
-      {title}
-    </h2>
   );
 }
 
@@ -250,23 +230,6 @@ function FeaturedTestimonial() {
   );
 }
 
-function Closing() {
-  return (
-    <section aria-labelledby="closing" className="border-t border-og-ink/10 bg-white/50">
-      <div className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 md:py-28">
-        <Burst className="mx-auto mb-4 h-12 w-12" />
-        <h2 id="closing" className="font-display mb-6 text-3xl font-black leading-tight tracking-tight sm:text-5xl">
-          {home.closing.title}
-        </h2>
-        <p className="mx-auto mb-10 max-w-2xl text-lg text-og-ink/80 sm:text-xl">{home.closing.body}</p>
-        <div className="flex justify-center">
-          <Ctas buttons={home.closing.buttons} />
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export default function HomePage() {
   return (
     <>
@@ -277,7 +240,7 @@ export default function HomePage() {
       <SelectedWork />
       <HowItWorks />
       <FeaturedTestimonial />
-      <Closing />
+      <CtaBand id="closing" {...home.closing} />
     </>
   );
 }

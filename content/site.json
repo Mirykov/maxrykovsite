@@ -15,5 +15,10 @@
     { "href": "/work", "label": "Work" },
     { "href": "/about", "label": "About" }
   ],
-  "primaryCta": { "href": "/plan", "label": "Plan an Event" }
+  "primaryCta": { "href": "/plan", "label": "Plan an Event" },
+  "calendly": {
+    "_note": "Paste Max's real Calendly event links here. While empty, /book shows a labeled placeholder instead of the calendar.",
+    "host": "",
+    "custom": ""
+  }
 }
