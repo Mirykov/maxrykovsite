@@ -46,7 +46,7 @@ Quality key: **Hero** = sharp and large enough for a full-width hero · **Card**
 | 36 | What-I-Do-Images-3.png | / | Kids shrieking with joy around a giant gong | Home "Creative Campaigns" card | Card | `kids-gong.jpg` |
 | 37 | What-I-Do-Images.png | / | Two smiling women in "It's NICE to have you in Nashville" shirts | NICE (not on new site) | Card | — |
 | 38 | ZSC_3035.jpg | / | Max on stage, red blazer, pointing at the audience under a spotlight | Emcee page hero; Home hero option | Hero | `max-on-stage.jpg` |
-| 39 | ZSC_3229.jpg | / | Gala dinner room with candlelit round tables | "The problem" section (the traditional-dinner image) | Hero | `gala-dinner.jpg` |
+| 39 | ZSC_3229.jpg | / | Gala dinner room with candlelit round tables (a NICE event) | Don't use (NICE is off the site) | Don't use | — |
 | 40 | ZSC_3367.jpg | /nice | Musicians on stage in front of a "Donate" QR screen | NICE (not on new site) | Hero | — |
 | 41 | abridged3.jpg | / | Three panelists laughing at a live talk show | Work gallery | Card | — |
 | 42 | otherawards2.png | /otherawards | Honoree smiling while holding her award | Other Awards card | Card | — |
@@ -61,6 +61,8 @@ Photos by **Thomas Diasio** (watermarked; credit him wherever these appear).
 | wtdt-max-hosting.jpg | Max on stage with mic, arm outstretched | Emcee hero; Home Emcee card | Hero | Home card 02 |
 | wtdt-contestants-celebrate.jpg | Five contestants with medals, arms raised together | WTDT case study hero; Home work card | Hero | Home work card |
 | wtdt-max-and-contestants.jpg | Max hosting, contestants at game-show tables under colored lights | WTDT gallery; Experiences (Hosted Game Show) | Hero | — |
+
+Also supplied (2026-10-15): `tall-bike-joust.png`, a big nighttime outdoor crowd around a tall bike joust (613×490, small). Used in Home "Another dinner and a few speeches?", replacing #39, which was a NICE event.
 
 Web copies of #18 (`home-hero-crowd.jpg`) and #33 (`max-hosting-crowd.jpg`) were replaced on Home by the photos above. They're kept for later pages.
 

@@ -122,7 +122,7 @@ function Problem() {
             alt={home.problem.imageAlt}
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover grayscale-[70%]"
+            className="object-cover"
           />
         </div>
         <div>
