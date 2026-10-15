@@ -110,14 +110,18 @@ function Problem() {
   return (
     <section aria-labelledby="problem" className="bg-white/50">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-2 md:py-28">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-          <Image
-            src={home.problem.image}
-            alt={home.problem.imageAlt}
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
-          />
+        <div className="relative">
+          {/* Yellow offset block (the hero uses teal, top-right; this one sits bottom-left for variety) */}
+          <div aria-hidden="true" className="absolute -bottom-4 -left-4 h-full w-full rounded-[2rem] bg-og-yellow sm:-bottom-6 sm:-left-6" />
+          <div className="relative aspect-[3/2] overflow-hidden rounded-[2rem]">
+            <Image
+              src={home.problem.image}
+              alt={home.problem.imageAlt}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
         <div>
           <h2 id="problem" className="font-display mb-6 text-3xl font-black leading-tight tracking-tight sm:text-5xl">
