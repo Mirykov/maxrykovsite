@@ -10,6 +10,7 @@ import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
 import Marquee from "@/components/og/Marquee";
+import HeroSlideshow from "./HeroSlideshow";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -45,20 +46,7 @@ function Hero() {
         <div className="relative">
           <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] bg-og-teal sm:-right-6 sm:-top-6" />
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[5/6]">
-            <Image
-              src={home.hero.image}
-              alt={home.hero.imageAlt}
-              fill
-              priority
-              sizes="(min-width: 768px) 45vw, 100vw"
-              className="object-cover"
-              style={{ objectPosition: home.hero.imagePosition }}
-            />
-            {!home.hero.videoSrc && (
-              <span className="eyebrow absolute bottom-3 right-3 rounded-full bg-og-cream/90 px-3 py-1.5 text-[0.65rem] tracking-[0.15em] text-og-ink">
-                {home.hero.videoPlaceholder}
-              </span>
-            )}
+            <HeroSlideshow slides={home.hero.slides} />
           </div>
         </div>
       </div>

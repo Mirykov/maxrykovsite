@@ -16,11 +16,38 @@
         "variant": "primary"
       }
     ],
-    "image": "/images/wtdt-crowd-cheering.jpg",
-    "imageAlt": "Audience members cheering, laughing, and filming the stage at Why'd They Do That?!",
-    "imagePosition": "50% 50%",
-    "videoSrc": null,
-    "videoPlaceholder": "[VIDEO: hero loop coming soon]"
+    "slides": [
+      {
+        "src": "/images/wtdt-crowd-cheering.jpg",
+        "alt": "Audience members cheering, laughing, and filming the stage at Why'd They Do That?!",
+        "position": "50% 50%"
+      },
+      {
+        "src": "/images/work/romantically-challenged-1.jpg",
+        "alt": "Max and a drag queen co-host laughing on stage with a contestant at Romantically Challenged",
+        "position": "50% 25%"
+      },
+      {
+        "src": "/images/work/recycled-runway-3.jpg",
+        "alt": "Guests shrieking with excitement and holding a Recycled Runway sign",
+        "position": "72% 50%"
+      },
+      {
+        "src": "/images/work/whyd-they-do-that-3.jpg",
+        "alt": "Max on stage with a microphone, arm outstretched toward the audience",
+        "position": "55% 50%"
+      },
+      {
+        "src": "/images/work/the-other-awards-2.jpg",
+        "alt": "Honorees hugging and celebrating on stage at The Other Awards",
+        "position": "50% 50%"
+      },
+      {
+        "src": "/images/work/recycled-runway-4.jpg",
+        "alt": "Recycled Runway contestants scrambling with garments during the sewing challenge",
+        "position": "50% 50%"
+      }
+    ]
   },
   "chooseYourFun": {
     "title": "Choose your kind of fun",
