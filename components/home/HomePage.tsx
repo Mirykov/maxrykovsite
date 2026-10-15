@@ -17,8 +17,8 @@ function HeroTitle({ className }: { className: string }) {
     <h1 className={className}>
       {before}
       <span className="relative inline-block whitespace-nowrap">
-        {/* Mirrored so the burst radiates from the word's top-right, clear of the line above */}
-        <Burst className="absolute -right-4 -top-3 h-6 w-6 -scale-x-100 sm:-right-6 sm:-top-4 sm:h-8 sm:w-8" />
+        {/* Mirrored so the burst radiates from the word's top-right; sized in em so it never reaches the line above */}
+        <Burst className="absolute -right-[0.42em] top-[0.02em] h-[0.4em] w-[0.4em] -scale-x-100" />
         <span className="relative bg-[linear-gradient(transparent_62%,var(--og-yellow)_62%,var(--og-yellow)_92%,transparent_92%)]">
           {highlight}
         </span>
