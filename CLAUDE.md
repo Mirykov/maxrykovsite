@@ -11,9 +11,7 @@ building any page. It has the exact copy, colors, contrast rules, sitemap,
 and launch checklist. Use the brief's copy as written (Max tightens it later).
 
 An earlier version of this repo was a maxrykov.com redesign (maroon/gold,
-Poppins). Only `/start` (and its `PillButton`) is still from that build and
-will be replaced by `/plan`; its old color classes (`anchor`, `accent`,
-`paper`, ...) are remapped to OddGood colors in `app/globals.css` until then.
+Poppins). Nothing from that build remains.
 
 ## Tech Stack
 
@@ -50,9 +48,18 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
 - **Home** built and approved (2026-10-14): Max chose the "Poster" direction
   (cream, split hero, teal "How it works" band) over a full-bleed dark-photo
   alternative. Keep new pages consistent with it. `components/home/HomePage.tsx`.
-- **Experiences** built (`content/experiences.json`). The comparison-grid
-  values and the "Optional" comedians on 02/03 are inferred from the brief's
-  card contents — Max to confirm. Two FAQ answers show a [CONFIRM] tag.
+- **Experiences** (`content/experiences.json`), as Max revised it on 2026-10-15:
+  four unnumbered cards with no prices (Custom Game Show, Fully Customized
+  Experience, Emcee & Event Hosting, Creative Campaigns). Every card button is
+  a red "Book a Call"; Emcee and Campaigns also get a small text link to their
+  page. The Hosted Game Show tier and the comparison table were removed.
+  Pricing lives only in the FAQ "How much does it cost?" ($2,000–$5,000 for
+  events, emcee from $100/hr, 50/50 deposit). Two FAQ answers still show a
+  [CONFIRM] tag.
+- **Booking is the one call to action.** Max dropped the separate Plan an
+  Event page (redundant with Book a Call): the nav button reads "Let's Work
+  Together" and goes to /book, and /plan, /start and /contact redirect to
+  /book. Use a single "Book a Call" button rather than adding a second CTA.
 - **Book a Call** (`/book`, `components/book/BookCall.tsx`): form-first flow
   Max chose (modeled on The Joy Collective's booking). Step 1 = call type +
   name + email → POST /api/inquiry (emails Max the lead) → step 2 = Calendly
@@ -70,9 +77,15 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   (`components/HeroVideo.tsx`); reduced motion shows the poster. The page also
   has all four testimonials, "Where Max can help" chips, and a closing booking
   CTA. The brief's side-by-side Calendly + emcee form is not built yet; the
-  buttons go to /book?type=host and /plan. The original video is
+  buttons go to /book?type=host. The original video is
   `Downloads/TBJ Short.mp4` (69 MB, 1080p60).
-- `/campaigns`, `/about`, `/plan` are still `ComingSoon` stubs.
+- **Campaigns** (`content/campaigns.json`): the brief's hero and three
+  offering cards, then the Campaign for Clean Water story copied from
+  maxrykov.com/water (three phases, the label quote, stat blocks taken from
+  that page's text). Photos are in `public/images/campaigns/`.
+- **Work cards** (Home and /work) show only the photo and title; no
+  organization or subtitle (Max's call). Subtitles remain on event pages.
+- `/about` is still a `ComingSoon` stub.
 - Images: `public/images/source/INVENTORY.md` lists everything pulled from
   maxrykov.com. The originals are gitignored (~51 MB); web-sized copies of
   the ones in use are in `public/images/`.

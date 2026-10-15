@@ -12,7 +12,10 @@ const nextConfig: NextConfig = {
       ["/water", "/work"],
       ["/otherfoundation", "/work"],
       ["/nice", "/work"],
-      ["/contact", "/plan"],
+      ["/contact", "/book"],
+      // Plan an Event and the old /start form were folded into Book a Call
+      ["/plan", "/book"],
+      ["/start", "/book"],
       ["/work/birmingham-history-center", "/work/can-you-repeat-that"],
       ["/work/nice", "/work"],
       ["/work/clean-water", "/work"],

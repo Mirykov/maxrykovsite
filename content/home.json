@@ -1,7 +1,7 @@
 {
   "hero": {
     "eyebrow": "OddGood Events · Real Meaningful Fun.",
-    "title": "We create unique events that get people laughing, participating, and connecting.",
+    "title": "We create unique events and campaigns that get people laughing, participating, and connecting.",
     "highlight": "laughing",
     "sub": "From company parties that break the usual mold to nonprofit fundraisers people actually remember, we make gatherings worth showing up for.",
     "buttons": [
@@ -11,8 +11,8 @@
         "variant": "secondary"
       },
       {
-        "href": "/plan",
-        "label": "Plan an Event",
+        "href": "/book",
+        "label": "Book a Call",
         "variant": "primary"
       }
     ],
@@ -86,7 +86,7 @@
       }
     ],
     "cta": {
-      "href": "/plan",
+      "href": "/book",
       "label": "Let's Plan Something"
     }
   },
@@ -122,14 +122,9 @@
     "body": "Tell us what you're planning. We'll figure out the most interesting way to bring it to life.",
     "buttons": [
       {
-        "href": "/plan",
-        "label": "Plan an Event",
-        "variant": "primary"
-      },
-      {
         "href": "/book",
         "label": "Book a Call",
-        "variant": "secondary"
+        "variant": "primary"
       }
     ]
   }

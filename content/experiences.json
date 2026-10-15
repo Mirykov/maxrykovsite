@@ -9,20 +9,6 @@
   },
   "services": [
     {
-      "number": "01",
-      "name": "Hosted Game Show",
-      "for": "Groups that want a ready-to-go interactive centerpiece",
-      "includes": [
-        "About 80-minute hosted show (Why'd They Do That?! format)",
-        "Prep and one planning call",
-        "Add comedians from the original show for $200 each"
-      ],
-      "price": "from $1,250",
-      "tag": null,
-      "cta": { "href": "/book?type=custom", "label": "Book a Call" }
-    },
-    {
-      "number": "02",
       "name": "Custom Game Show",
       "for": "Organizations that want a show that feels like theirs",
       "includes": [
@@ -30,12 +16,10 @@
         "Custom rounds, organizational trivia, inside jokes",
         "Planning and live hosting"
       ],
-      "price": "from $2,500",
       "tag": "Most booked",
       "cta": { "href": "/book?type=custom", "label": "Book a Call" }
     },
     {
-      "number": "03",
       "name": "Fully Customized Experience",
       "for": "Events that need a bigger idea",
       "includes": [
@@ -44,33 +28,31 @@
         "Creative planning, coordination, hosting",
         "Collaborators as needed"
       ],
-      "price": "from $5,000",
       "tag": null,
       "cta": { "href": "/book?type=custom", "label": "Book a Call" }
     },
     {
-      "number": "04",
       "name": "Emcee & Event Hosting",
       "for": "Organizers who already have the event planned",
       "includes": ["A sharp, warm, professional host who keeps things moving"],
-      "price": "Ask for a quote",
       "tag": null,
-      "cta": { "href": "/emcee", "label": "Check Availability" }
+      "cta": { "href": "/book?type=host", "label": "Book a Call" },
+      "moreLink": { "href": "/emcee", "label": "See emcee details" }
+    },
+    {
+      "name": "Creative Campaigns",
+      "for": "Nonprofits and community causes",
+      "includes": [
+        "Campaign concepts that cut through the noise",
+        "Fundraising and participation campaigns",
+        "Campaign creative and execution"
+      ],
+      "tag": null,
+      "cta": { "href": "/book?type=custom", "label": "Book a Call" },
+      "moreLink": { "href": "/campaigns", "label": "See campaign work" }
     }
   ],
   "servicesNote": "Final scope, travel, AV, production, and optional performers may affect the quote.",
-  "comparison": {
-    "title": "Compare the shows",
-    "columns": ["Hosted Game Show", "Custom Game Show", "Fully Customized Experience"],
-    "rows": [
-      { "label": "Live hosting", "values": ["Included", "Included", "Included"] },
-      { "label": "Questions written for you", "values": ["Included", "Included", "Included"] },
-      { "label": "Original format", "values": ["—", "Included", "Included"] },
-      { "label": "Custom event concept", "values": ["—", "—", "Included"] },
-      { "label": "Planning calls", "values": ["One call", "Included", "Included"] },
-      { "label": "Add-on comedians", "values": ["Optional", "Optional", "Optional"] }
-    ]
-  },
   "rightPlace": {
     "title": "You're in the right place if…",
     "items": [
@@ -84,12 +66,12 @@
     "title": "Questions people ask before booking",
     "items": [
       {
-        "q": "Do you bring AV?",
-        "a": "If your venue has a suitable setup, there's no equipment charge. If not, rental and delivery are quoted separately and added only with your approval before booking."
+        "q": "How much does it cost?",
+        "a": "Pricing generally ranges from $2,000 to $5,000 depending on the complexity of the event. Event emcee services start at $100/hr, and can range depending on the scope of duties. A 50% deposit reserves your date and starts creative work; the remaining 50% is due after the event."
       },
       {
-        "q": "How does payment work?",
-        "a": "50% deposit to reserve your date and start creative work; the remaining 50% is due after the event."
+        "q": "Do you bring AV?",
+        "a": "If your venue has a suitable setup, there's no equipment charge. If not, rental and delivery are quoted separately and added only with your approval before booking."
       },
       {
         "q": "Do you travel?",
@@ -102,9 +84,6 @@
   "closing": {
     "title": "Not sure what fits?",
     "body": "Tell us about the event.",
-    "buttons": [
-      { "href": "/book", "label": "Book a Call", "variant": "primary" },
-      { "href": "/plan", "label": "Plan an Event", "variant": "secondary" }
-    ]
+    "buttons": [{ "href": "/book", "label": "Book a Call", "variant": "primary" }]
   }
 }

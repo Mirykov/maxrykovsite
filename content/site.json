@@ -5,17 +5,43 @@
   "email": "hello@oddgoodevents.com",
   "emailConfirmed": false,
   "social": [
-    { "label": "Instagram", "href": "https://www.instagram.com/", "confirmed": false },
-    { "label": "LinkedIn", "href": "https://www.linkedin.com/", "confirmed": false }
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/",
+      "confirmed": false
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/",
+      "confirmed": false
+    }
   ],
   "nav": [
-    { "href": "/experiences", "label": "Experiences" },
-    { "href": "/emcee", "label": "Emcee" },
-    { "href": "/campaigns", "label": "Campaigns" },
-    { "href": "/work", "label": "Work" },
-    { "href": "/about", "label": "About" }
+    {
+      "href": "/experiences",
+      "label": "Experiences"
+    },
+    {
+      "href": "/emcee",
+      "label": "Emcee"
+    },
+    {
+      "href": "/campaigns",
+      "label": "Campaigns"
+    },
+    {
+      "href": "/work",
+      "label": "Work"
+    },
+    {
+      "href": "/about",
+      "label": "About"
+    }
   ],
-  "primaryCta": { "href": "/plan", "label": "Plan an Event" },
+  "primaryCta": {
+    "href": "/book",
+    "label": "Let's Work Together"
+  },
   "calendly": {
     "_note": "Paste Max's real Calendly event links here. While empty, /book shows a labeled placeholder instead of the calendar.",
     "host": "",

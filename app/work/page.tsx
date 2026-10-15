@@ -24,7 +24,7 @@ export default function WorkPage() {
         <ul className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-6 lg:grid-cols-3">
           {projects.map((p) => (
             <li key={p.slug}>
-              <ProjectCard project={p} sizes="(min-width: 1024px) 33vw, 50vw" showSubtitle />
+              <ProjectCard project={p} sizes="(min-width: 1024px) 33vw, 50vw" />
             </li>
           ))}
         </ul>
@@ -33,10 +33,7 @@ export default function WorkPage() {
         id="closing"
         title="Want something like this?"
         body="Tell us what you're planning. We'll figure out the most interesting way to bring it to life."
-        buttons={[
-          { href: "/plan", label: "Start a Project", variant: "primary" },
-          { href: "/book", label: "Book a Call", variant: "secondary" },
-        ]}
+        buttons={[{ href: "/book", label: "Book a Call", variant: "primary" }]}
       />
     </>
   );

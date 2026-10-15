@@ -23,16 +23,6 @@
   --color-og-ink: var(--og-ink);
   --color-og-cream: var(--og-cream);
 
-  /* Legacy tokens from the maxrykov.com build, remapped to OddGood colors so
-     the not-yet-rebuilt pages (/work, /start) stay on-brand until replaced. */
-  --color-anchor: var(--og-red);
-  --color-anchor-dark: var(--og-red-dark);
-  --color-accent: var(--og-yellow);
-  --color-navy: var(--og-ink);
-  --color-teal: var(--og-teal-dark);
-  --color-paper: var(--og-cream);
-  --color-ink: var(--og-ink);
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-display: var(--font-fraunces);

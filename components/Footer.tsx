@@ -22,11 +22,6 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
-            <li>
-              <Link href={site.primaryCta.href} className="hover:text-og-yellow">
-                {site.primaryCta.label}
-              </Link>
-            </li>
           </ul>
         </nav>
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import site from "@/content/site.json";
 import { bookCallSchema, callTypes, HONEYPOT_FIELD, type CallType } from "@/lib/inquiry";
@@ -267,9 +266,9 @@ export default function BookCall({ initialType }: { initialType: CallType | null
 
       <p className="border-t-2 border-og-ink/10 px-6 py-4 text-center text-sm">
         Prefer email?{" "}
-        <Link href="/plan" className="font-semibold text-og-teal-dark underline underline-offset-4">
+        <a href={`mailto:${site.email}`} className="font-semibold text-og-teal-dark underline underline-offset-4">
           Send us the details.
-        </Link>
+        </a>
       </p>
     </div>
   );

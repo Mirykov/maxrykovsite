@@ -4,15 +4,23 @@
     "title": "A good event needs a good host.",
     "sub": "Max brings humor, energy, and professionalism to the stage, keeping the program moving and the audience engaged.",
     "buttons": [
-      { "href": "/book?type=host", "label": "Check Availability", "variant": "primary" },
-      { "href": "/plan", "label": "Ask About Your Event", "variant": "secondary" }
+      {
+        "href": "/book?type=host",
+        "label": "Check Availability",
+        "variant": "primary"
+      }
     ],
     "video": "/video/emcee-hero.mp4",
     "poster": "/video/emcee-hero-poster.jpg",
     "videoLabel": "Max hosting a cheering crowd at the Tall Bike Joust"
   },
   "testimonialsTitle": "What people say about Max",
-  "testimonials": ["zulfat-suara", "elizabeth-sanfelippo", "jackie-miller", "bryson-schmidt"],
+  "testimonials": [
+    "zulfat-suara",
+    "elizabeth-sanfelippo",
+    "jackie-miller",
+    "bryson-schmidt"
+  ],
   "helpWith": {
     "title": "Where Max can help",
     "items": [
@@ -30,8 +38,11 @@
     "title": "Already have the event planned? Let's get you a great host.",
     "body": "Send the date, location, event type, audience size, and a little about the program. Max will follow up about availability and fit.",
     "buttons": [
-      { "href": "/book?type=host", "label": "Check Emcee Availability", "variant": "primary" },
-      { "href": "/plan", "label": "Ask About Your Event", "variant": "secondary" }
+      {
+        "href": "/book?type=host",
+        "label": "Book a Call",
+        "variant": "primary"
+      }
     ]
   }
 }

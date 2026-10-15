@@ -1,7 +1,8 @@
 import { amp } from "@/components/og/Amp";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Check, Plus } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Check, Plus } from "lucide-react";
 import content from "@/content/experiences.json";
 import Button from "@/components/og/Button";
 import Burst from "@/components/og/Burst";
@@ -11,7 +12,7 @@ import SectionHeading from "@/components/og/SectionHeading";
 export const metadata: Metadata = {
   title: "Experiences",
   description:
-    "Hosted game shows, custom game shows, fully original event experiences, and emcee hosting in Birmingham. See what's included and starting prices.",
+    "Custom game shows, fully original event experiences, emcee hosting, and creative campaigns in Birmingham. See what's included and book a call.",
 };
 
 function Hero() {
@@ -52,7 +53,7 @@ function Services() {
           const featured = Boolean(s.tag);
           return (
             <li
-              key={s.number}
+              key={s.name}
               className={`relative flex flex-col rounded-3xl bg-white p-6 ${
                 featured ? "border-[3px] border-og-teal shadow-[0_8px_0_var(--og-teal)]" : "border-2 border-og-ink/10"
               }`}
@@ -63,9 +64,6 @@ function Services() {
                   {s.tag}
                 </span>
               )}
-              <span className="font-display mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-og-ink text-2xl font-black text-og-yellow">
-                {s.number}
-              </span>
               <h3 className="font-display mb-2 text-2xl font-bold leading-snug">{amp(s.name)}</h3>
               <p className="mb-5 font-semibold text-og-teal-dark">For {s.for.charAt(0).toLowerCase() + s.for.slice(1)}</p>
               <ul className="mb-6 flex-1 space-y-2.5">
@@ -76,89 +74,28 @@ function Services() {
                   </li>
                 ))}
               </ul>
-              <p className="font-display mb-5 border-t border-og-ink/10 pt-4 text-2xl font-black">{s.price}</p>
-              <Button href={s.cta.href} variant={s.number === "04" ? "secondary" : "primary"} className="w-full !px-3 text-center !text-sm">
-                {s.cta.label}
-              </Button>
+              <div className="space-y-3 border-t border-og-ink/10 pt-5">
+                <Button href={s.cta.href} className="w-full !px-3 text-center !text-sm">
+                  {s.cta.label}
+                </Button>
+                {/* Every card reserves the link row so the Book a Call buttons line up */}
+                <div className="flex h-5 items-center justify-center">
+                  {s.moreLink && (
+                    <Link
+                      href={s.moreLink.href}
+                      className="flex items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-og-teal-dark underline-offset-4 hover:underline"
+                    >
+                      {s.moreLink.label}
+                      <ArrowRight size={15} aria-hidden="true" />
+                    </Link>
+                  )}
+                </div>
+              </div>
             </li>
           );
         })}
       </ul>
       <p className="mt-8 text-sm text-og-ink/70">{content.servicesNote}</p>
-    </section>
-  );
-}
-
-function Cell({ value }: { value: string }) {
-  if (value === "Included") {
-    return (
-      <span className="inline-flex items-center justify-center">
-        <Check size={22} strokeWidth={3} aria-hidden="true" className="text-og-teal-dark" />
-        <span className="sr-only">Included</span>
-      </span>
-    );
-  }
-  if (value === "—") {
-    return (
-      <span>
-        <span aria-hidden="true" className="text-og-ink/35">
-          —
-        </span>
-        <span className="sr-only">Not included</span>
-      </span>
-    );
-  }
-  if (value === "Optional") {
-    return (
-      <span className="inline-flex items-center gap-1 rounded-full bg-og-yellow/60 px-2.5 py-1 text-sm font-semibold">
-        <Plus size={14} strokeWidth={3} aria-hidden="true" />
-        Optional
-      </span>
-    );
-  }
-  return <span className="text-sm font-semibold">{value}</span>;
-}
-
-function Comparison() {
-  const { comparison } = content;
-  return (
-    <section aria-labelledby="compare" className="bg-white/50">
-      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
-        <SectionHeading id="compare" title={comparison.title} />
-        {/* Scrolls sideways inside its own box on narrow phones; the page itself never does */}
-        <div className="overflow-x-auto rounded-3xl border-2 border-og-ink/10 bg-white">
-          <table className="w-full min-w-[34rem] border-collapse text-left">
-            <caption className="sr-only">What&rsquo;s included in each game show and experience tier</caption>
-            <thead>
-              <tr className="border-b-2 border-og-ink/10">
-                <th scope="col" className="p-4 sm:p-5">
-                  <span className="sr-only">Feature</span>
-                </th>
-                {comparison.columns.map((col, i) => (
-                  <th scope="col" key={col} className="p-4 text-center align-bottom sm:p-5">
-                    <span className="eyebrow mb-1 block text-og-teal-dark">0{i + 1}</span>
-                    <span className="font-display text-lg font-bold leading-tight">{amp(col)}</span>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {comparison.rows.map((row) => (
-                <tr key={row.label} className="border-b border-og-ink/10 last:border-0">
-                  <th scope="row" className="p-4 font-semibold sm:p-5">
-                    {row.label}
-                  </th>
-                  {row.values.map((v, i) => (
-                    <td key={i} className="p-4 text-center sm:p-5">
-                      <Cell value={v} />
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
     </section>
   );
 }
@@ -218,7 +155,6 @@ export default function ExperiencesPage() {
     <>
       <Hero />
       <Services />
-      <Comparison />
       <RightPlace />
       <Faq />
       <CtaBand id="closing" {...content.closing} />

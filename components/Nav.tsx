@@ -18,7 +18,7 @@ export default function Nav() {
     <header className="sticky top-0 z-50 border-b border-og-ink/10 bg-og-cream/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 md:h-20">
         <Link href="/" aria-label="OddGood Events home" className="shrink-0">
-          <Logo kind="wordmark" className="h-8 w-auto md:hidden" />
+          <Logo kind="wordmark" className="h-6 w-auto min-[400px]:h-7 md:hidden" />
           <Logo className="hidden h-12 w-auto md:block" />
         </Link>
 
@@ -35,13 +35,13 @@ export default function Nav() {
               {link.label}
             </Link>
           ))}
-          <Button href={site.primaryCta.href} className="!px-5 !py-2.5 text-sm">
+          <Button href={site.primaryCta.href} className="whitespace-nowrap !px-5 !py-2.5 !text-sm">
             {site.primaryCta.label}
           </Button>
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
-          <Button href={site.primaryCta.href} className="!px-4 !py-2 text-sm">
+        <div className="flex items-center gap-1 md:hidden">
+          <Button href={site.primaryCta.href} className="whitespace-nowrap !px-3.5 !py-2 !text-[0.8rem]">
             {site.primaryCta.label}
           </Button>
           <button

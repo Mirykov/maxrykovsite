@@ -170,10 +170,7 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
         id="closing"
         title="Want something like this?"
         body="Tell us what you're planning. We'll figure out the most interesting way to bring it to life."
-        buttons={[
-          { href: "/plan", label: "Discuss a Similar Project", variant: "primary" },
-          { href: "/book", label: "Book a Call", variant: "secondary" },
-        ]}
+        buttons={[{ href: "/book", label: "Book a Call", variant: "primary" }]}
       />
     </>
   );
