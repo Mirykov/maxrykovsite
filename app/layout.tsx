@@ -1,36 +1,49 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
+import { Fraunces, DM_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  axes: ["SOFT", "opsz"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Max Rykov | Making Important Things Impossible to Ignore",
+  title: {
+    default: "OddGood Events | Real Meaningful Fun",
+    template: "%s | OddGood Events",
+  },
   description:
-    "Fundraising, communications, community engagement, and events for mission-driven organizations. We help people care — and give them a reason to act.",
+    "Game shows, custom events, creative campaigns, and emceeing in Birmingham, Alabama. Participatory experiences that get people laughing and connecting.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${inter.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-paper text-ink">
+      <body className="min-h-full flex flex-col bg-og-cream text-og-ink">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-og-ink focus:px-5 focus:py-3 focus:text-white"
+        >
+          Skip to content
+        </a>
         <Nav />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">
+          {children}
+        </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

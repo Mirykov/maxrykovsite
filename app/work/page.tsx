@@ -4,7 +4,7 @@ import CaseStudyCard from "@/components/CaseStudyCard";
 import { caseStudies } from "@/lib/caseStudies";
 
 export const metadata: Metadata = {
-  title: "Selected Work | Max Rykov",
+  title: "Selected Work",
   description: "Case studies in fundraising, communications, community engagement, and events.",
 };
 

@@ -1,66 +1,79 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import PillButton from "./PillButton";
-
-const links = [
-  { href: "/#what-we-do", label: "What We Do" },
-  { href: "/#selected-work", label: "Selected Work" },
-  { href: "/#meet-max", label: "Meet Max" },
-];
+import site from "@/content/site.json";
+import Logo from "./og/Logo";
+import Button from "./og/Button";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur border-b border-ink/10">
-      <div className="mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
-        <Link href="/" className="font-display font-bold uppercase tracking-wide text-lg text-anchor">
-          Max Rykov
+    <header className="sticky top-0 z-50 border-b border-og-ink/10 bg-og-cream/95 backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 md:h-20">
+        <Link href="/" aria-label="OddGood Events home" className="shrink-0">
+          <Logo kind="wordmark" className="h-8 w-auto md:hidden" />
+          <Logo className="hidden h-12 w-auto md:block" />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
+        <nav aria-label="Main" className="hidden items-center gap-7 md:flex">
+          {site.nav.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-display text-sm uppercase tracking-wide text-ink hover:text-anchor transition-colors"
+              aria-current={isActive(link.href) ? "page" : undefined}
+              className={`font-semibold transition-colors hover:text-og-red ${
+                isActive(link.href) ? "text-og-red" : "text-og-ink"
+              }`}
             >
               {link.label}
             </Link>
           ))}
-          <PillButton href="/start" variant="outline-dark" className="!px-5 !py-2">
-            Start a Project
-          </PillButton>
+          <Button href={site.primaryCta.href} className="!px-5 !py-2.5 text-sm">
+            {site.primaryCta.label}
+          </Button>
         </nav>
 
-        <button
-          className="md:hidden"
-          aria-label="Toggle menu"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <Button href={site.primaryCta.href} className="!px-4 !py-2 text-sm">
+            {site.primaryCta.label}
+          </Button>
+          <button
+            className="rounded-full p-2"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-ink/10 px-6 py-4 flex flex-col gap-4 bg-paper">
-          {links.map((link) => (
+        <nav
+          id="mobile-menu"
+          aria-label="Main"
+          className="flex flex-col gap-1 border-t border-og-ink/10 bg-og-cream px-4 py-3 md:hidden"
+        >
+          {site.nav.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-display uppercase tracking-wide text-ink"
+              aria-current={isActive(link.href) ? "page" : undefined}
+              className="rounded-lg px-2 py-3 text-lg font-semibold"
               onClick={() => setOpen(false)}
             >
               {link.label}
             </Link>
           ))}
-          <PillButton href="/start" variant="outline-dark" className="self-start">
-            Start a Project
-          </PillButton>
-        </div>
+        </nav>
       )}
     </header>
   );

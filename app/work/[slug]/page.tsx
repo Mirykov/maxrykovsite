@@ -20,7 +20,7 @@ export async function generateMetadata({
   const caseStudy = getCaseStudy(slug);
   if (!caseStudy) return {};
   return {
-    title: `${caseStudy.title} | Max Rykov`,
+    title: caseStudy.title,
     description: caseStudy.challenge,
   };
 }

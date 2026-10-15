@@ -1,30 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --color-anchor: #6b1e1b;      /* deep maroon — dark anchor */
-  --color-anchor-dark: #4a1512; /* darker shade for hover/depth */
-  --color-accent: #f5c908;      /* gold — bright accent */
-  --color-navy: #273b8a;        /* secondary accent */
-  --color-teal: #047083;        /* secondary accent */
-  --color-paper: #faf6ef;       /* warm off-white body background */
-  --color-ink: #1c1512;         /* warm near-black for body text */
+  /* OddGood brand colors (exact — see brief §3b) */
+  --og-red: #b11f25;       /* "Odd" — primary buttons, main CTAs, key accents */
+  --og-red-dark: #8f181d;  /* hover/pressed state for red buttons */
+  --og-teal: #0097b2;      /* "Good" — large headlines, icons, fills (3.5:1 on white: large text only) */
+  --og-teal-dark: #007a91; /* small teal text and links on light backgrounds (5.0:1) */
+  --og-yellow: #e1ba58;    /* the burst — highlights and tags; never text on light backgrounds */
+  --og-ink: #161616;       /* body text, dark sections */
+  --og-cream: #fbf7f0;     /* default page background */
 
-  --background: var(--color-paper);
-  --foreground: var(--color-ink);
+  --background: var(--og-cream);
+  --foreground: var(--og-ink);
 }
 
 @theme inline {
-  --color-anchor: var(--color-anchor);
-  --color-anchor-dark: var(--color-anchor-dark);
-  --color-accent: var(--color-accent);
-  --color-navy: var(--color-navy);
-  --color-teal: var(--color-teal);
-  --color-paper: var(--color-paper);
-  --color-ink: var(--color-ink);
+  --color-og-red: var(--og-red);
+  --color-og-red-dark: var(--og-red-dark);
+  --color-og-teal: var(--og-teal);
+  --color-og-teal-dark: var(--og-teal-dark);
+  --color-og-yellow: var(--og-yellow);
+  --color-og-ink: var(--og-ink);
+  --color-og-cream: var(--og-cream);
+
+  /* Legacy tokens from the maxrykov.com build, remapped to OddGood colors so
+     the not-yet-rebuilt pages (/work, /start) stay on-brand until replaced. */
+  --color-anchor: var(--og-red);
+  --color-anchor-dark: var(--og-red-dark);
+  --color-accent: var(--og-yellow);
+  --color-navy: var(--og-ink);
+  --color-teal: var(--og-teal-dark);
+  --color-paper: var(--og-cream);
+  --color-ink: var(--og-ink);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-display: var(--font-poppins);
-  --font-body: var(--font-inter);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-dm-sans);
 }
 
 body {
@@ -34,5 +46,48 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-display), Impact, sans-serif;
+  font-family: var(--font-display), Georgia, serif;
+  font-variation-settings: "SOFT" 60;
+}
+
+/* Small-caps labels, letter-spaced like "EVENTS" in the logo */
+.eyebrow {
+  font-family: var(--font-body), Arial, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Focus rings: teal-dark on light backgrounds, yellow inside .on-dark sections */
+:focus-visible {
+  outline: 3px solid var(--og-teal-dark);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.on-dark :focus-visible {
+  outline-color: var(--og-yellow);
+}
+
+/* Burst pop on the primary CTA */
+@keyframes og-burst-pop {
+  0% { opacity: 0; transform: scale(0.4) rotate(-10deg); }
+  60% { opacity: 1; transform: scale(1.15) rotate(0); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.og-burst-hover .og-burst {
+  opacity: 0;
+  transform-origin: 100% 100%;
+}
+.og-burst-hover:hover .og-burst,
+.og-burst-hover:focus-visible .og-burst {
+  animation: og-burst-pop 260ms ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .og-burst-hover:hover .og-burst,
+  .og-burst-hover:focus-visible .og-burst {
+    animation: none;
+    opacity: 1;
+  }
 }

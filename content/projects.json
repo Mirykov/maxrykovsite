@@ -1,0 +1,70 @@
+[
+  {
+    "slug": "whyd-they-do-that",
+    "title": "Why'd They Do That?!",
+    "client": "Saturn Birmingham",
+    "filters": ["Game Shows"],
+    "summary": "Comedy game show about life and politics in Alabama.",
+    "image": null,
+    "imagePlaceholder": "[PHOTO: Why'd They Do That?! crowd reaction]",
+    "featuredOnHome": true
+  },
+  {
+    "slug": "recycled-runway",
+    "title": "Recycled Runway",
+    "client": "Bib & Tucker Sew-Op",
+    "filters": ["Events", "Campaigns"],
+    "summary": "A live fashion-design competition and fundraiser.",
+    "stats": ["$50k+ raised", "700+ attendees"],
+    "image": "/images/work-recycled-runway.jpg",
+    "imageAlt": "A model in a handmade white gown on stage while contestants and the audience watch",
+    "featuredOnHome": true
+  },
+  {
+    "slug": "can-you-repeat-that",
+    "title": "Can You Repeat That?",
+    "client": "Birmingham History Center",
+    "filters": ["Game Shows"],
+    "summary": "Birmingham history game show.",
+    "image": "/images/work-can-you-repeat-that.jpg",
+    "imageAlt": "Local celebrity contestants laughing at game-show tables on stage",
+    "featuredOnHome": true
+  },
+  {
+    "slug": "the-fountys",
+    "title": "The Fountys",
+    "client": "Space One Eleven",
+    "filters": ["Events"],
+    "summary": "Art history awards show.",
+    "image": "/images/work-fountys.jpg",
+    "imageAlt": "Three guests dressed as famous artworks holding gold Founty trophies",
+    "featuredOnHome": true
+  },
+  {
+    "slug": "the-other-awards",
+    "title": "The Other Awards",
+    "client": "Birmingham Education Foundation",
+    "filters": ["Events"],
+    "summary": "Celebrating unsung heroes.",
+    "image": null,
+    "featuredOnHome": false
+  },
+  {
+    "slug": "campaign-for-clean-water",
+    "title": "Campaign for Clean Water",
+    "client": "Central Alabama Water + Alabama Rivers Alliance",
+    "filters": ["Campaigns"],
+    "summary": "Creative environmental advocacy.",
+    "image": null,
+    "featuredOnHome": false
+  },
+  {
+    "slug": "the-other-foundation",
+    "title": "The Other Foundation",
+    "client": "Community grant program",
+    "filters": ["Campaigns"],
+    "summary": "A participatory model of local philanthropy.",
+    "image": null,
+    "featuredOnHome": false
+  }
+]

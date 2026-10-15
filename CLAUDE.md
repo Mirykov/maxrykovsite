@@ -1,89 +1,72 @@
-# Max Rykov — Website Redesign
+# OddGood Events — Website
 
 ## What This Is
 
-A redesign of maxrykov.com (currently a plain single-column WordPress/WPBakery
-site) as a new custom-built site, per a website redesign brief (v11) supplied
-at project kickoff — not included in this repo. Max Rykov runs a small
-creative studio doing fundraising, communications, community engagement, and
-event/emcee work for mission-driven organizations.
+The marketing site for **OddGood Events**, Max Rykov's interactive events
+business in Birmingham, Alabama (game shows, custom events, creative
+campaigns, emceeing). It replaces maxrykov.com. Tagline: *Real Meaningful Fun.*
 
-This file is the build-state summary; the original brief has the full content
-and design rationale (reference site: voteshift.com for the visual system).
+The full build brief is in `docs/oddgood-site-brief.md` — read it before
+building any page. It has the exact copy, colors, contrast rules, sitemap,
+and launch checklist. Use the brief's copy as written (Max tightens it later).
+
+An earlier version of this repo was a maxrykov.com redesign (maroon/gold,
+Poppins). `/work`, `/work/[slug]` and `/start` are still from that build and
+will be replaced; their old color classes (`anchor`, `accent`, `paper`, ...)
+are remapped to OddGood colors in `app/globals.css` until then.
 
 ## Tech Stack
 
-Next.js (App Router, TypeScript) + Tailwind CSS v4 + lucide-react icons.
-No database — the site is static/content-driven except the `/start` form,
-which emails submissions via Resend.
+Next.js 16 (App Router, TypeScript) + Tailwind CSS v4 + lucide-react +
+Vercel Web Analytics. All pages statically rendered. Content lives in
+`/content/*.json`.
 
-## Brand
+## Brand (see brief §3)
 
-Colors pulled from the live maxrykov.com WordPress theme's inline styles:
-- `--color-anchor` `#6b1e1b` — deep maroon, dark anchor (hero, Meet Max, footer accents)
-- `--color-accent` `#f5c908` — gold, bright accent (buttons, headline highlights)
-- `--color-navy` `#273b8a` — secondary section color (Philosophy band)
-- `--color-teal` `#047083` — secondary section color (How We Work band)
-- `--color-paper` `#faf6ef` — warm off-white body background
-- Headline font: Poppins (matches the live site's heading font). Body font: Inter.
+- Tokens in `app/globals.css`: `og-red` #B11F25 (buttons/CTAs), `og-teal`
+  #0097B2 (large text, fills), `og-teal-dark` #007A91 (small teal text),
+  `og-yellow` #E1BA58 (burst, tags — never text on light bg), `og-ink`
+  #161616, `og-cream` #FBF7F0 (page bg).
+- On teal backgrounds use ink text, not white.
+- Fonts: Fraunces (display, `.font-display`) + DM Sans (body). DM Sans was
+  chosen over Nunito because Nunito is nearly the logo's "Good" face and
+  would blur the logo's serif/rounded contrast.
+- `.eyebrow` = small letter-spaced caps label. `.on-dark` on a dark section
+  switches focus rings to yellow.
+- Logo: `public/brand/` — `oddgood-logo.svg` (rebuilt from Max's PNG, text
+  converted to outlines), `-white`, `oddgood-wordmark*.svg` (no "EVENTS"),
+  `oddgood-mark.svg` (O + burst; also `app/icon.svg`, `app/apple-icon.png`).
+  Original AI-generated PNG kept as `oddgood-logo.png` for reference.
+- Components: `components/og/` (Button with buzzer-style primary, Burst,
+  Logo, ComingSoon), `components/ImagePlaceholder.tsx` (solid brand block
+  with a `[PHOTO: ...]` caption).
 
-## Site Map
+## Build Status
 
-```
-/                    Homepage — hero, philosophy, what we do, how we work,
-                     selected work preview, meet max, final CTA
-/work                Full selected-work index (all 5 case studies)
-/work/[slug]         Dedicated case study page (nice, clean-water,
-                     recycled-runway, birmingham-history-center,
-                     the-other-foundation)
-/start               Project intake form -> POST /api/start-project -> Resend
-/api/start-project   API route, emails form submissions via Resend
-```
+- **Home** built in two directions for review: `/` (A, "Poster") and
+  `/home-b` (B, "Stage Lights", noindex). Delete the loser after Max picks.
+  Both render `components/home/HomePage.tsx` with a `variant` prop.
+- `/experiences`, `/emcee`, `/campaigns`, `/about`, `/plan`, `/book` are
+  `ComingSoon` stubs. Build order after approval: Experiences + /book, then
+  Emcee, then the rest (brief §9).
+- Images: `public/images/source/INVENTORY.md` lists everything pulled from
+  maxrykov.com. The originals are gitignored (~51 MB); web-sized copies of
+  the ones in use are in `public/images/`.
 
-Content data lives in `lib/caseStudies.ts` and `lib/services.ts`.
+## Open [CONFIRM] Items
 
-## Known Placeholders — Do Not Treat as Finished
-
-- **Case study "Insight"/"Idea" sections** (`lib/caseStudies.ts`): drafted by
-  Claude as a starting point per the brief's explicit instruction that these
-  need Max's own strategic read, not invented facts. Each is prefixed
-  `DRAFT — replace with Max's own read:` and rendered in italic on the case
-  study page. Replace before launch.
-- **Photos**: hero background, Meet Max photo, and 4 of 5 case study photos
-  (NICE, Clean Water, Recycled Runway, Birmingham History Center) are real —
-  pulled directly from the live maxrykov.com WordPress media library (Jetpack
-  Photon CDN, resized via `?w=&quality=` query params) and stored in
-  `public/images/`. **The Other Foundation** case study still uses
-  `ImagePlaceholder` — no photo for it exists on the live site. Swap any of
-  these for better/different photos by replacing the file in
-  `public/images/` (same filename) or updating the `image` path in
-  `lib/caseStudies.ts` / `app/page.tsx`.
-- **"Freelance quarterback" YouTube video**: `YouTubeEmbed` component in
-  `app/page.tsx` (Meet Max section) has `videoId="REPLACE_ME"` — swap in the
-  real YouTube video ID.
-- **Contact email**: `hello@maxrykov.com` is a placeholder used in `/start`
-  and the API route's `from` address — confirm the real inbox/domain to use.
-
-## Required Setup Before Going Live
-
-- `.env.local` needs `RESEND_API_KEY` and `CONTACT_EMAIL` (see `.env.example`)
-  for the `/start` form to actually send email. Without these, submissions
-  fail gracefully with an error telling the visitor to email directly.
-- Resend's `from` address (`noreply@maxrykov.com` in
-  `app/api/start-project/route.ts`) requires that domain be verified in
-  Resend — same setup pattern as the Other Foundation project.
-- Repo is at github.com/Mirykov/maxrykovsite; Vercel deploy was initiated
-  from the dashboard import flow — check Vercel for current live URL.
+Hero video, Why'd They Do That?! photo, Max portrait, client logos
+(permission), contact email (`hello@oddgoodevents.com` placeholder in
+`content/site.json`), Instagram/LinkedIn handles (hidden until
+`confirmed: true`), Calendly URLs, Resend account, prices, "Most booked"
+tag, domain, FAQ answers. Max may add more images later — use labeled
+placeholders until then.
 
 ## Notes for Claude
 
 - **User is non-technical.** Explain steps clearly. Prefer simple, working
   solutions over clever ones.
-- Don't invent case-study metrics, client language, or outcomes — the facts
-  in `lib/caseStudies.ts` (Challenge/Work/Result) are pulled from the live
-  site and should be double-checked against the original record, not
-  extended.
-- The two-color "alternating full-bleed section background" rhythm from the
-  brief is implemented via plain Tailwind background classes per `<section>`
-  in `app/page.tsx` — keep new sections consistent with that pattern rather
-  than introducing a new background treatment.
+- Don't invent stats, clients, or testimonials. Use `[CONFIRM]` placeholders.
+- Button labels are actions (Plan an Event, Book a Call, ...). Never "Learn More".
+- Review changes on a Vercel Preview (push a branch) before merging to `main`,
+  which deploys to production.

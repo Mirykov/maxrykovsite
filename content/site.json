@@ -1,0 +1,19 @@
+{
+  "name": "OddGood Events",
+  "tagline": "Real Meaningful Fun.",
+  "location": "Based in Birmingham, Alabama",
+  "email": "hello@oddgoodevents.com",
+  "emailConfirmed": false,
+  "social": [
+    { "label": "Instagram", "href": "https://www.instagram.com/", "confirmed": false },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/", "confirmed": false }
+  ],
+  "nav": [
+    { "href": "/experiences", "label": "Experiences" },
+    { "href": "/emcee", "label": "Emcee" },
+    { "href": "/campaigns", "label": "Campaigns" },
+    { "href": "/work", "label": "Work" },
+    { "href": "/about", "label": "About" }
+  ],
+  "primaryCta": { "href": "/plan", "label": "Plan an Event" }
+}

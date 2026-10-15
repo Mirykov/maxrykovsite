@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Original-resolution images pulled from the old site (see INVENTORY.md)
+/public/images/source/*
+!/public/images/source/INVENTORY.md
