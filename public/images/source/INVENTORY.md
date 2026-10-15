@@ -51,10 +51,22 @@ Quality key: **Hero** = sharp and large enough for a full-width hero · **Card**
 | 41 | abridged3.jpg | / | Three panelists laughing at a live talk show | Work gallery | Card | — |
 | 42 | otherawards2.png | /otherawards | Honoree smiling while holding her award | Other Awards card | Card | — |
 
+## Supplied by Max (2026-10-14): Why'd They Do That?!
+
+Photos by **Thomas Diasio** (watermarked; credit him wherever these appear).
+
+| Filename | What it shows | Suggested use | Quality | Used as |
+|---|---|---|---|---|
+| wtdt-crowd-cheering.jpg | Audience cheering, laughing, and filming the stage under purple light | Home hero | Hero | Home hero |
+| wtdt-max-hosting.jpg | Max on stage with mic, arm outstretched | Emcee hero; Home Emcee card | Hero | Home card 02 |
+| wtdt-contestants-celebrate.jpg | Five contestants with medals, arms raised together | WTDT case study hero; Home work card | Hero | Home work card |
+| wtdt-max-and-contestants.jpg | Max hosting, contestants at game-show tables under colored lights | WTDT gallery; Experiences (Hosted Game Show) | Hero | — |
+
+Web copies of #18 (`home-hero-crowd.jpg`) and #33 (`max-hosting-crowd.jpg`) were replaced on Home by the photos above. They're kept for later pages.
+
 ## Gaps (use placeholders until Max supplies)
 
-- **Hero video loop** (10–20 sec, no sound): the Home hero uses a still photo (#18) for now.
-- **Why'd They Do That?!** has no crowd or stage photo. The Home work card is a placeholder.
+- **Hero video loop** (10–20 sec, no sound): the Home hero uses a still photo for now.
 - **Portrait of Max** for About: none suitable. #38 and #30 are stage shots, not portraits.
 - **Client logos**: none on the old site. The "Trusted by" strip uses placeholder text boxes.
 - Can You Repeat That? photos are screenshots (#22, #23, #34), fine for cards but soft at hero size.

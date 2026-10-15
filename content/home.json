@@ -8,8 +8,9 @@
       { "href": "/experiences", "label": "Explore Experiences", "variant": "secondary" },
       { "href": "/plan", "label": "Plan an Event", "variant": "primary" }
     ],
-    "image": "/images/home-hero-crowd.jpg",
-    "imageAlt": "A packed warehouse audience leaning in around the runway at Recycled Runway",
+    "image": "/images/wtdt-crowd-cheering.jpg",
+    "imageAlt": "Audience members cheering, laughing, and filming the stage at Why'd They Do That?!",
+    "imagePosition": "50% 50%",
     "videoSrc": null,
     "videoPlaceholder": "[VIDEO: hero loop coming soon]"
   },
@@ -41,8 +42,8 @@
         "for": "For events that already have a plan.",
         "body": "Professional hosting from Max, with wit, warmth, and the experience to keep the program moving.",
         "cta": { "href": "/emcee", "label": "Book Max as Emcee" },
-        "image": "/images/max-hosting-crowd.jpg",
-        "imageAlt": "Max with a microphone, arm raised, hyping a nighttime crowd"
+        "image": "/images/wtdt-max-hosting.jpg",
+        "imageAlt": "Max on stage with a microphone, arm outstretched toward the audience"
       },
       {
         "number": "03",

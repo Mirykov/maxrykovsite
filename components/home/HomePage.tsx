@@ -8,65 +8,40 @@ import Button, { type ButtonVariant } from "@/components/og/Button";
 import Burst from "@/components/og/Burst";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 
-// Two visual directions for review:
-//   "a" (Poster)       — cream, split hero, teal "How it works" band
-//   "b" (Stage Lights) — full-bleed dark photo hero, ink testimonial band
-export type HomeVariant = "a" | "b";
-
 type Cta = { href: string; label: string; variant?: string };
 
-function Ctas({ buttons, onDark = false }: { buttons: Cta[]; onDark?: boolean }) {
+function Ctas({ buttons }: { buttons: Cta[] }) {
   return (
     <div className="flex flex-wrap gap-4">
-      {buttons.map((b) => {
-        let variant = (b.variant ?? "primary") as ButtonVariant;
-        if (onDark && variant === "secondary") variant = "secondary-light";
-        return (
-          <Button key={b.href} href={b.href} variant={variant}>
-            {b.label}
-          </Button>
-        );
-      })}
+      {buttons.map((b) => (
+        <Button key={b.href} href={b.href} variant={(b.variant ?? "primary") as ButtonVariant}>
+          {b.label}
+        </Button>
+      ))}
     </div>
   );
 }
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
-// On light backgrounds the word gets a yellow marker stroke (ink text stays readable);
-// on dark backgrounds the word itself turns yellow instead.
-function HeroTitle({ className, onDark = false }: { className: string; onDark?: boolean }) {
+function HeroTitle({ className }: { className: string }) {
   const { title, highlight } = home.hero;
   const [before, after] = title.split(highlight);
-  const marker = onDark
-    ? "text-og-yellow"
-    : "bg-[linear-gradient(transparent_62%,var(--og-yellow)_62%,var(--og-yellow)_92%,transparent_92%)]";
   return (
     <h1 className={className}>
       {before}
       <span className="relative inline-block whitespace-nowrap">
         {/* Mirrored so the burst radiates from the word's top-right, clear of the line above */}
         <Burst className="absolute -right-4 -top-3 h-6 w-6 -scale-x-100 sm:-right-6 sm:-top-4 sm:h-8 sm:w-8" />
-        <span className={`relative ${marker}`}>{highlight}</span>
+        <span className="relative bg-[linear-gradient(transparent_62%,var(--og-yellow)_62%,var(--og-yellow)_92%,transparent_92%)]">
+          {highlight}
+        </span>
       </span>
       {after}
     </h1>
   );
 }
 
-function VideoPlaceholderTag({ dark = false }: { dark?: boolean }) {
-  if (home.hero.videoSrc) return null;
-  return (
-    <span
-      className={`eyebrow absolute bottom-3 right-3 rounded-full px-3 py-1.5 text-[0.65rem] tracking-[0.15em] ${
-        dark ? "bg-og-ink/80 text-og-yellow" : "bg-og-cream/90 text-og-ink"
-      }`}
-    >
-      {home.hero.videoPlaceholder}
-    </span>
-  );
-}
-
-function HeroA() {
+function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:grid-cols-[1.15fr_1fr] md:pb-24 md:pt-20">
@@ -88,33 +63,15 @@ function HeroA() {
               priority
               sizes="(min-width: 768px) 45vw, 100vw"
               className="object-cover"
+              style={{ objectPosition: home.hero.imagePosition }}
             />
-            <VideoPlaceholderTag />
+            {!home.hero.videoSrc && (
+              <span className="eyebrow absolute bottom-3 right-3 rounded-full bg-og-cream/90 px-3 py-1.5 text-[0.65rem] tracking-[0.15em] text-og-ink">
+                {home.hero.videoPlaceholder}
+              </span>
+            )}
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function HeroB() {
-  return (
-    <section className="on-dark relative flex min-h-[88vh] items-end overflow-hidden bg-og-ink text-white">
-      <Image
-        src={home.hero.image}
-        alt={home.hero.imageAlt}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-og-ink via-og-ink/80 to-og-ink/55" />
-      <VideoPlaceholderTag dark />
-      <div className="relative mx-auto w-full max-w-6xl px-4 pb-20 pt-32 sm:px-6 md:pb-28">
-        <p className="eyebrow mb-6 text-og-yellow">{home.hero.eyebrow}</p>
-        <HeroTitle onDark className="font-display mb-6 max-w-4xl text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl" />
-        <p className="mb-9 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">{home.hero.sub}</p>
-        <Ctas buttons={home.hero.buttons} onDark />
       </div>
     </section>
   );
@@ -143,16 +100,11 @@ function LogoStrip() {
   );
 }
 
-function SectionHeading({ id, eyebrow, title, onDark = false }: { id: string; eyebrow?: string; title: string; onDark?: boolean }) {
+function SectionHeading({ id, title }: { id: string; title: string }) {
   return (
-    <div className="mb-10 max-w-3xl">
-      {eyebrow && (
-        <p className={`eyebrow mb-3 ${onDark ? "text-og-yellow" : "text-og-teal-dark"}`}>{eyebrow}</p>
-      )}
-      <h2 id={id} className="font-display text-3xl font-black leading-tight tracking-tight sm:text-5xl">
-        {title}
-      </h2>
-    </div>
+    <h2 id={id} className="font-display mb-10 max-w-3xl text-3xl font-black leading-tight tracking-tight sm:text-5xl">
+      {title}
+    </h2>
   );
 }
 
@@ -220,30 +172,33 @@ function SelectedWork() {
   return (
     <section aria-labelledby="work" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
       <SectionHeading id="work" title={home.work.title} />
-      <ul className="mb-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {featured.map((p) => (
-          <li key={p.slug}>
+      <ul className="mb-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-6 lg:grid-cols-5">
+        {featured.map((p, i) => {
+          // With an odd count, the last card spans the full two-column row on small screens
+          const wide = featured.length % 2 === 1 && i === featured.length - 1;
+          return (
+          <li key={p.slug} className={wide ? "col-span-2 lg:col-span-1" : ""}>
             <Link href="/work" className="group block">
-              <div className="relative mb-4 aspect-[4/5] overflow-hidden rounded-3xl">
+              <div className={`relative mb-4 overflow-hidden rounded-3xl ${wide ? "aspect-[3/2] lg:aspect-[4/5]" : "aspect-[4/5]"}`}>
                 {p.image ? (
                   <Image
                     src={p.image}
                     alt={p.imageAlt ?? ""}
                     fill
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    sizes={wide ? "(min-width: 1024px) 20vw, 100vw" : "(min-width: 1024px) 20vw, 50vw"}
                     className="object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                    style={{ objectPosition: p.imagePosition }}
                   />
                 ) : (
-                  <ImagePlaceholder label={p.imagePlaceholder ?? `[PHOTO: ${p.title}]`} tone="red" className="h-full w-full" />
+                  <ImagePlaceholder label={`[PHOTO: ${p.title}]`} tone="red" className="h-full w-full" />
                 )}
               </div>
-              <h3 className="font-display text-xl font-bold leading-snug group-hover:text-og-red">
-                {p.title}
-              </h3>
+              <h3 className="font-display text-lg font-bold leading-snug group-hover:text-og-red sm:text-xl">{p.title}</h3>
               <p className="text-sm font-semibold text-og-teal-dark">{p.client}</p>
             </Link>
           </li>
-        ))}
+          );
+        })}
       </ul>
       <Button href={home.work.cta.href} variant="secondary">
         {home.work.cta.label}
@@ -252,18 +207,14 @@ function SelectedWork() {
   );
 }
 
-function HowItWorks({ variant }: { variant: HomeVariant }) {
-  const band = variant === "a";
+function HowItWorks() {
   return (
-    <section aria-labelledby="how" className={band ? "bg-og-teal text-og-ink" : ""}>
+    <section aria-labelledby="how" className="bg-og-teal text-og-ink">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <SectionHeading id="how" title={home.howItWorks.title} />
         <ol className="mb-12 grid gap-6 md:grid-cols-3">
           {home.howItWorks.steps.map((step, i) => (
-            <li
-              key={step.title}
-              className={`rounded-3xl p-7 ${band ? "bg-og-cream" : "border-2 border-og-ink/10 bg-white"}`}
-            >
+            <li key={step.title} className="rounded-3xl bg-og-cream p-7">
               {/* Scorecard-style step number */}
               <span className="font-display mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-og-ink text-3xl font-black text-og-yellow">
                 {String(i + 1).padStart(2, "0")}
@@ -279,11 +230,10 @@ function HowItWorks({ variant }: { variant: HomeVariant }) {
   );
 }
 
-function FeaturedTestimonial({ variant }: { variant: HomeVariant }) {
+function FeaturedTestimonial() {
   const t = testimonials.find((x) => x.id === home.featuredTestimonial)!;
-  const dark = variant === "b";
   return (
-    <section aria-label="What people say" className={dark ? "on-dark bg-og-ink text-white" : ""}>
+    <section aria-label="What people say">
       <figure className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 md:py-28">
         <span aria-hidden="true" className="font-display absolute -top-2 left-2 text-[9rem] leading-none text-og-yellow sm:left-0 md:top-6">
           &ldquo;
@@ -293,19 +243,18 @@ function FeaturedTestimonial({ variant }: { variant: HomeVariant }) {
         </blockquote>
         <figcaption className="mt-8">
           <span className="block font-bold">{t.name}</span>
-          <span className={dark ? "text-white/70" : "text-og-ink/70"}>{t.role}</span>
+          <span className="text-og-ink/70">{t.role}</span>
         </figcaption>
       </figure>
     </section>
   );
 }
 
-function Closing({ variant }: { variant: HomeVariant }) {
-  const dark = variant === "b";
+function Closing() {
   return (
-    <section aria-labelledby="closing" className={dark ? "bg-og-yellow" : "border-t border-og-ink/10 bg-white/50"}>
+    <section aria-labelledby="closing" className="border-t border-og-ink/10 bg-white/50">
       <div className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 md:py-28">
-        <Burst className="mx-auto mb-4 h-12 w-12" color={dark ? "var(--og-ink)" : undefined} />
+        <Burst className="mx-auto mb-4 h-12 w-12" />
         <h2 id="closing" className="font-display mb-6 text-3xl font-black leading-tight tracking-tight sm:text-5xl">
           {home.closing.title}
         </h2>
@@ -318,17 +267,17 @@ function Closing({ variant }: { variant: HomeVariant }) {
   );
 }
 
-export default function HomePage({ variant = "a" }: { variant?: HomeVariant }) {
+export default function HomePage() {
   return (
     <>
-      {variant === "a" ? <HeroA /> : <HeroB />}
+      <Hero />
       <LogoStrip />
       <ChooseYourFun />
       <Problem />
       <SelectedWork />
-      <HowItWorks variant={variant} />
-      <FeaturedTestimonial variant={variant} />
-      <Closing variant={variant} />
+      <HowItWorks />
+      <FeaturedTestimonial />
+      <Closing />
     </>
   );
 }

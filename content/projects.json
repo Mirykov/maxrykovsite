@@ -1,12 +1,12 @@
 [
   {
-    "slug": "whyd-they-do-that",
-    "title": "Why'd They Do That?!",
-    "client": "Saturn Birmingham",
-    "filters": ["Game Shows"],
-    "summary": "Comedy game show about life and politics in Alabama.",
-    "image": null,
-    "imagePlaceholder": "[PHOTO: Why'd They Do That?! crowd reaction]",
+    "slug": "the-fountys",
+    "title": "The Fountys",
+    "client": "Space One Eleven",
+    "filters": ["Events"],
+    "summary": "Art history awards show.",
+    "image": "/images/work-fountys.jpg",
+    "imageAlt": "Three guests dressed as famous artworks holding gold Founty trophies",
     "featuredOnHome": true
   },
   {
@@ -21,6 +21,24 @@
     "featuredOnHome": true
   },
   {
+    "slug": "whyd-they-do-that",
+    "title": "Why'd They Do That?!",
+    "client": "Saturn Birmingham",
+    "filters": ["Game Shows"],
+    "summary": "Comedy game show about life and politics in Alabama.",
+    "description": "\"Why'd They Do That?!\" a Game Show About Life and Politics in Alabama was a romp through the quizzical, nonsensical, and downright ridiculous moments in the annals of Alabama that make us all ask ourselves \"why'd they do that?!\" Members of local Democratic organizations, elected officials, and comedians competed in this uproarious game show, scoring points for both creativity and correct answers.",
+    "image": "/images/wtdt-contestants-celebrate.jpg",
+    "imageAlt": "Five contestants wearing medals hold hands and raise their arms in celebration on stage",
+    "imagePosition": "45% 50%",
+    "gallery": [
+      { "src": "/images/wtdt-crowd-cheering.jpg", "alt": "Audience members cheering, laughing, and filming the stage" },
+      { "src": "/images/wtdt-max-hosting.jpg", "alt": "Max on stage with a microphone, arm outstretched toward the audience" },
+      { "src": "/images/wtdt-max-and-contestants.jpg", "alt": "Max hosting while contestants stand behind game-show tables under colored stage lights" }
+    ],
+    "photoCredit": "Thomas Diasio",
+    "featuredOnHome": true
+  },
+  {
     "slug": "can-you-repeat-that",
     "title": "Can You Repeat That?",
     "client": "Birmingham History Center",
@@ -31,23 +49,15 @@
     "featuredOnHome": true
   },
   {
-    "slug": "the-fountys",
-    "title": "The Fountys",
-    "client": "Space One Eleven",
-    "filters": ["Events"],
-    "summary": "Art history awards show.",
-    "image": "/images/work-fountys.jpg",
-    "imageAlt": "Three guests dressed as famous artworks holding gold Founty trophies",
-    "featuredOnHome": true
-  },
-  {
     "slug": "the-other-awards",
     "title": "The Other Awards",
     "client": "Birmingham Education Foundation",
     "filters": ["Events"],
     "summary": "Celebrating unsung heroes.",
-    "image": null,
-    "featuredOnHome": false
+    "image": "/images/work-other-awards.jpg",
+    "imageAlt": "An honoree smiling as she holds her award on stage",
+    "imagePosition": "72% 50%",
+    "featuredOnHome": true
   },
   {
     "slug": "campaign-for-clean-water",

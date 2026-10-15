@@ -43,9 +43,9 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
 
 ## Build Status
 
-- **Home** built in two directions for review: `/` (A, "Poster") and
-  `/home-b` (B, "Stage Lights", noindex). Delete the loser after Max picks.
-  Both render `components/home/HomePage.tsx` with a `variant` prop.
+- **Home** built and approved (2026-10-14): Max chose the "Poster" direction
+  (cream, split hero, teal "How it works" band) over a full-bleed dark-photo
+  alternative. Keep new pages consistent with it. `components/home/HomePage.tsx`.
 - `/experiences`, `/emcee`, `/campaigns`, `/about`, `/plan`, `/book` are
   `ComingSoon` stubs. Build order after approval: Experiences + /book, then
   Emcee, then the rest (brief §9).
@@ -53,9 +53,13 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   maxrykov.com. The originals are gitignored (~51 MB); web-sized copies of
   the ones in use are in `public/images/`.
 
+- Featured work (Home), in Max's order: The Fountys, Recycled Runway, Why'd
+  They Do That?!, Can You Repeat That?, The Other Awards. **NICE ("Growing an
+  Organization") is dropped from the site** at Max's request — don't add it back.
+
 ## Open [CONFIRM] Items
 
-Hero video, Why'd They Do That?! photo, Max portrait, client logos
+Hero video, Max portrait, client logos
 (permission), contact email (`hello@oddgoodevents.com` placeholder in
 `content/site.json`), Instagram/LinkedIn handles (hidden until
 `confirmed: true`), Calendly URLs, Resend account, prices, "Most booked"

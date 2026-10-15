@@ -16,8 +16,8 @@ export default function WorkPage() {
           Selected Work
         </h1>
         <p className="text-ink/70 max-w-2xl mb-12 text-lg">
-          Five deep, specific stories — each one proof of experience and an
-          example of the kind of problem we can help solve.
+          Specific stories — each one proof of experience and an example of
+          the kind of problem we can help solve.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">

@@ -16,23 +16,6 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "nice",
-    title: "Growing an Organization",
-    client: "Nashville International Center for Empowerment (NICE)",
-    hook: "Refugee and Immigrant Services",
-    image: "/images/case-nice.jpg",
-    challenge:
-      "As Director of Development & Communications (2021–2025), Max needed to expand NICE's fundraising capacity and build public understanding of refugee and immigrant needs in Middle Tennessee — including through the Afghan and Ukrainian resettlement surges.",
-    insightLabel: "The Insight",
-    insight:
-      "DRAFT — replace with Max's own read: During the resettlement surges, refugees were mostly a headline — an abstract, sometimes politicized, topic. The fundraising and communications problem wasn't a lack of awareness, it was a lack of local, personal specificity. Donors in Middle Tennessee needed to see refugees as their new neighbors before a dollar ask would land.",
-    work: "Expanded the grants strategy. Refined individual and corporate giving programs. Upgraded marketing and communications. Used storytelling to reshape how Middle Tennessee talked about refugees and immigrants.",
-    result:
-      "Annual budget grew from $2.9M (2021) to $11.4M (2025) — a 4× increase. 1,000+ new donors acquired. Increased volunteer support.",
-    biggerIdea:
-      "Growing an organization isn't just about asking more people for more money. It's about giving people a compelling reason to believe in where the organization is going — and making it easier for them to come along.",
-  },
-  {
     slug: "clean-water",
     title: "Campaign for Clean Water",
     client: "Central Alabama Water + Alabama Rivers Alliance",
