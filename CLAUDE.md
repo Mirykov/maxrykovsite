@@ -33,8 +33,10 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   would blur the logo's serif/rounded contrast.
 - `.eyebrow` = small letter-spaced caps label. `.on-dark` on a dark section
   switches focus rings to yellow.
-- Logo: `public/brand/` — `oddgood-logo.svg` (rebuilt from Max's PNG, text
-  converted to outlines), `-white`, `oddgood-wordmark*.svg` (no "EVENTS"),
+- Logo: `public/brand/` — `oddgood-logo.svg` (rebuilt from Max's PNG:
+  "Odd" is Fraunces Black and "EVENTS" is Montserrat, both converted to
+  outlines; **"Good" is traced from the original PNG** because Max wants it
+  to look exactly like the original and no font matched), `-white`, `oddgood-wordmark*.svg` (no "EVENTS"),
   `oddgood-mark.svg` (O + burst; also `app/icon.svg`, `app/apple-icon.png`).
   Original AI-generated PNG kept as `oddgood-logo.png` for reference.
 - Components: `components/og/` (Button with buzzer-style primary, Burst,
