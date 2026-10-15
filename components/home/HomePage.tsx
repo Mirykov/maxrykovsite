@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import home from "@/content/home.json";
 import { projects } from "@/lib/projects";
 import ProjectCard from "@/components/ProjectCard";
-import Button from "@/components/og/Button";
 import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
@@ -142,9 +141,8 @@ function HowItWorks() {
   return (
     <section aria-labelledby="how" className="bg-og-teal text-og-ink">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
-        {/* Gold heading on teal is a trial (Max asked to see it); contrast is ~1.9:1, below the 3:1 large-text minimum */}
-        <SectionHeading id="how" title={home.howItWorks.title} className="[&_h2]:text-og-yellow" />
-        <ol className="mb-12 grid gap-6 md:grid-cols-3">
+        <SectionHeading id="how" title={home.howItWorks.title} />
+        <ol className="grid gap-6 md:grid-cols-3">
           {home.howItWorks.steps.map((step, i) => (
             <li key={step.title} className="rounded-3xl bg-og-cream p-7">
               {/* Scorecard-style step number */}
@@ -156,10 +154,6 @@ function HowItWorks() {
             </li>
           ))}
         </ol>
-        {/* Centered on the page, which puts it under the middle step on desktop */}
-        <div className="flex justify-center">
-          <Button href={home.howItWorks.cta.href}>{home.howItWorks.cta.label}</Button>
-        </div>
       </div>
     </section>
   );

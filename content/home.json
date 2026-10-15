@@ -84,11 +84,7 @@
         "title": "Make it happen.",
         "body": "Max leads and brings in collaborators when the project needs them."
       }
-    ],
-    "cta": {
-      "href": "/book",
-      "label": "Let's Plan Something"
-    }
+    ]
   },
   "closing": {
     "title": "Your event can be the one people talk about afterward.",
@@ -96,7 +92,7 @@
     "buttons": [
       {
         "href": "/book",
-        "label": "Book a Call",
+        "label": "Let's Plan Something",
         "variant": "primary"
       }
     ]
