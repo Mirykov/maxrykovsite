@@ -62,7 +62,9 @@ Photos by **Thomas Diasio** (watermarked; credit him wherever these appear).
 | wtdt-contestants-celebrate.jpg | Five contestants with medals, arms raised together | WTDT case study hero; Home work card | Hero | Home work card |
 | wtdt-max-and-contestants.jpg | Max hosting, contestants at game-show tables under colored lights | WTDT gallery; Experiences (Hosted Game Show) | Hero | — |
 
-Also supplied (2026-10-15): `tall-bike-joust.png`, a big nighttime outdoor crowd around a tall bike joust (613×490, small). Used in Home "Another dinner and a few speeches?", replacing #39, which was a NICE event.
+Also supplied (2026-10-15), both small:
+- `tall-bike-joust-host.png` (606×486): a host with a mic firing up a cheering crowd on hay bales at night. **Used in Home "Another dinner and a few speeches?"**, replacing #39, which was a NICE event.
+- `tall-bike-joust.png` (613×490): a wide shot of the nighttime crowd around the tall bike joust. Tried first in that slot, then replaced by the host photo.
 
 Web copies of #18 (`home-hero-crowd.jpg`) and #33 (`max-hosting-crowd.jpg`) were replaced on Home by the photos above. They're kept for later pages.
 
