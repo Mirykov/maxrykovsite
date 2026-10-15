@@ -28,7 +28,7 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   `og-yellow` #E1BA58 (burst, tags — never text on light bg), `og-ink`
   #161616, `og-cream` #FBF7F0 (page bg).
 - On teal backgrounds use ink text, not white.
-- Fonts: Fraunces (display, `.font-display`) + DM Sans (body). DM Sans was
+- Fonts: Fraunces (display, `.font-display`) + Poppins (body, Max's pick on 2026-10-15; it matches the old maxrykov.com headings). DM Sans was the first pick and was
   chosen over Nunito because Nunito is nearly the logo's "Good" face and
   would blur the logo's serif/rounded contrast.
 - Wrap Fraunces headline text in `amp()` (`components/og/Amp.tsx`) so any

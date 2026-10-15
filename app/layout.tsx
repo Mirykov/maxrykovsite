@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, DM_Sans } from "next/font/google";
+import { Fraunces, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import Nav from "@/components/Nav";
@@ -24,9 +24,12 @@ const frauncesAmp = localFont({
   declarations: [{ prop: "unicode-range", value: "U+0026" }],
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+// Body and UI text. Poppins (Max's pick) matches the old maxrykov.com headings.
+// It isn't a variable font, so each weight the site uses is listed.
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -42,7 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${frauncesAmp.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${frauncesAmp.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-og-cream text-og-ink">
         <a

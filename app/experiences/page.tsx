@@ -77,7 +77,7 @@ function Services() {
                 ))}
               </ul>
               <p className="font-display mb-5 border-t border-og-ink/10 pt-4 text-2xl font-black">{s.price}</p>
-              <Button href={s.cta.href} variant={s.number === "04" ? "secondary" : "primary"} className="w-full !px-3 text-[0.95rem]">
+              <Button href={s.cta.href} variant={s.number === "04" ? "secondary" : "primary"} className="w-full !px-3 text-center !text-sm">
                 {s.cta.label}
               </Button>
             </li>

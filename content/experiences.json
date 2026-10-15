@@ -55,7 +55,7 @@
       "includes": ["A sharp, warm, professional host who keeps things moving"],
       "price": "Ask for a quote",
       "tag": null,
-      "cta": { "href": "/emcee", "label": "Check Emcee Availability" }
+      "cta": { "href": "/emcee", "label": "Check Availability" }
     }
   ],
   "servicesNote": "Final scope, travel, AV, production, and optional performers may affect the quote.",
