@@ -9,7 +9,6 @@ import Button from "@/components/og/Button";
 import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
-import CategoryCarousel from "@/components/og/CategoryCarousel";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -55,21 +54,6 @@ function Hero() {
             />
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function WorkedWith() {
-  const { workedWith } = home;
-  return (
-    <section aria-labelledby="worked-with" className="overflow-hidden">
-      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
-        <h2 id="worked-with" className="font-display mb-4 max-w-3xl text-3xl font-black leading-tight tracking-tight sm:text-5xl">
-          {amp(workedWith.title)}
-        </h2>
-        <p className="mb-8 max-w-2xl text-lg text-og-ink/80">{workedWith.sub}</p>
-        <CategoryCarousel categories={workedWith.categories} label="Organizations by category" />
       </div>
     </section>
   );
@@ -158,7 +142,8 @@ function HowItWorks() {
   return (
     <section aria-labelledby="how" className="bg-og-teal text-og-ink">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
-        <SectionHeading id="how" title={home.howItWorks.title} />
+        {/* Gold heading on teal is a trial (Max asked to see it); contrast is ~1.9:1, below the 3:1 large-text minimum */}
+        <SectionHeading id="how" title={home.howItWorks.title} className="[&_h2]:text-og-yellow" />
         <ol className="mb-12 grid gap-6 md:grid-cols-3">
           {home.howItWorks.steps.map((step, i) => (
             <li key={step.title} className="rounded-3xl bg-og-cream p-7">
@@ -171,7 +156,10 @@ function HowItWorks() {
             </li>
           ))}
         </ol>
-        <Button href={home.howItWorks.cta.href}>{home.howItWorks.cta.label}</Button>
+        {/* Centered on the page, which puts it under the middle step on desktop */}
+        <div className="flex justify-center">
+          <Button href={home.howItWorks.cta.href}>{home.howItWorks.cta.label}</Button>
+        </div>
       </div>
     </section>
   );
@@ -185,7 +173,6 @@ export default function HomePage() {
       <Problem />
       <SelectedWork />
       <HowItWorks />
-      <WorkedWith />
       <CtaBand id="closing" {...home.closing} />
     </>
   );

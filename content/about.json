@@ -5,23 +5,108 @@
   "greeting": "Hi, I'm Max.",
   "paragraphs": [
     [
-      { "text": "For over 13 years, I have been creating, producing, and hosting fun events that boost awareness, engagement, and raise money for important causes. There's nothing that lights me up as much as seeing people having meaningful, whimsical fun together while celebrating something they care about. I think that's something we all crave, and as adults - we don't get to do that enough." }
+      {
+        "text": "For over 13 years, I have been creating, producing, and hosting fun events that boost awareness, engagement, and raise money for important causes. There's nothing that lights me up as much as seeing people having meaningful, whimsical fun together while celebrating something they care about. I think that's something we all crave, and as adults - we don't get to do that enough."
+      }
     ],
     [
-      { "text": "My professional career has included marketing, non-profit development leadership, and city government communications. I'm also " },
-      { "text": "America's only freelance quarterback", "href": "https://www.youtube.com/watch?v=jRe-6CudWIM" },
-      { "text": "." }
+      {
+        "text": "My professional career has included marketing, non-profit development leadership, and city government communications. I'm also "
+      },
+      {
+        "text": "America's only freelance quarterback",
+        "href": "https://www.youtube.com/watch?v=jRe-6CudWIM"
+      },
+      {
+        "text": "."
+      }
     ],
     [
-      { "text": "I'm also the founder of " },
-      { "text": "The Other Foundation", "href": "https://otherfoundationbham.org/" },
-      { "text": ", a giving circle organization that awards monthly micro-grants to community projects that make life better for people in Birmingham, Alabama." }
+      {
+        "text": "I'm also the founder of "
+      },
+      {
+        "text": "The Other Foundation",
+        "href": "https://otherfoundationbham.org/"
+      },
+      {
+        "text": ", a giving circle organization that awards monthly micro-grants to community projects that make life better for people in Birmingham, Alabama."
+      }
     ]
   ],
   "image": "/images/about-max-stage.jpg",
   "imageAlt": "Max in a red blazer on stage, pointing at the audience with a microphone in hand",
+  "workedWith": {
+    "title": "Here are some of the organizations I've worked with",
+    "sub": "Range of services include: fundraising, marketing, communications, outreach, event hosting, and community engagement.",
+    "categories": [
+      {
+        "name": "Government",
+        "organizations": [
+          "Birmingham City Council",
+          "Central Alabama Water",
+          "Birmingham-Jefferson County Transit Authority"
+        ]
+      },
+      {
+        "name": "Immigrant Rights",
+        "organizations": [
+          "Nashville International Center for Empowerment",
+          "Tennessee Immigrant & Refugee Rights Coalition"
+        ]
+      },
+      {
+        "name": "Advocacy",
+        "organizations": [
+          "Tennessee Riverkeeper",
+          "Alabama Rivers Alliance",
+          "Redemptive Cycles"
+        ]
+      },
+      {
+        "name": "Arts",
+        "organizations": [
+          "Birmingham Museum of Art",
+          "Studio by the Tracks",
+          "InToto Creative Arts",
+          "The Lyric Theatre"
+        ]
+      },
+      {
+        "name": "Arts (continued)",
+        "organizations": [
+          "Bib & Tucker Sew Op",
+          "Desert Island Supply Co.",
+          "Space One Eleven Arts Center"
+        ]
+      },
+      {
+        "name": "Education",
+        "organizations": [
+          "Alabama Holocaust Education Center",
+          "Birmingham History Center",
+          "Birmingham Education Foundation"
+        ]
+      },
+      {
+        "name": "Social Services",
+        "organizations": [
+          "United Way of Greater Nashville",
+          "The Crisis Center",
+          "Alabama Equality",
+          "Offender Alumni Association"
+        ]
+      }
+    ]
+  },
   "closing": {
     "title": "Your event can be the one people talk about afterward.",
-    "buttons": [{ "href": "/book", "label": "Book a Call", "variant": "primary" }]
+    "buttons": [
+      {
+        "href": "/book",
+        "label": "Book a Call",
+        "variant": "primary"
+      }
+    ]
   }
 }
