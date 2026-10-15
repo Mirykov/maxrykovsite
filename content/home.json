@@ -22,16 +22,6 @@
     "videoSrc": null,
     "videoPlaceholder": "[VIDEO: hero loop coming soon]"
   },
-  "logoStrip": {
-    "label": "Trusted by",
-    "clients": [
-      "Birmingham History Center",
-      "Space One Eleven",
-      "Bib & Tucker Sew-Op",
-      "Central Alabama Water",
-      "Birmingham Education Foundation"
-    ]
-  },
   "chooseYourFun": {
     "title": "Choose your kind of fun",
     "cards": [
@@ -103,7 +93,33 @@
       "label": "Let's Plan Something"
     }
   },
-  "featuredTestimonial": "zulfat-suara",
+  "trustedBy": {
+    "label": "Trusted by",
+    "organizations": [
+      "Birmingham City Council",
+      "Central Alabama Water",
+      "Birmingham-Jefferson County Transit Authority",
+      "Nashville International Center for Empowerment",
+      "Tennessee Immigrant & Refugee Rights Coalition",
+      "Tennessee Riverkeeper",
+      "Alabama Rivers Alliance",
+      "Redemptive Cycles",
+      "Birmingham Museum of Art",
+      "Studio by the Tracks",
+      "InToto Creative Arts",
+      "The Lyric Theatre",
+      "Bib & Tucker Sew Op",
+      "Desert Island Supply Co.",
+      "Space One Eleven Arts Center",
+      "Alabama Holocaust Education Center",
+      "Birmingham History Center",
+      "Birmingham Education Foundation",
+      "United Way of Greater Nashville",
+      "The Crisis Center",
+      "Alabama Equality",
+      "Offender Alumni Association"
+    ]
+  },
   "closing": {
     "title": "Your event can be the one people talk about afterward.",
     "body": "Tell us what you're planning. We'll figure out the most interesting way to bring it to life.",

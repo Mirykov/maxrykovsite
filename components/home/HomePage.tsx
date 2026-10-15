@@ -5,11 +5,11 @@ import { ArrowRight } from "lucide-react";
 import home from "@/content/home.json";
 import { projects } from "@/lib/projects";
 import ProjectCard from "@/components/ProjectCard";
-import testimonials from "@/content/testimonials.json";
 import Button from "@/components/og/Button";
 import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
+import Marquee from "@/components/og/Marquee";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -66,25 +66,13 @@ function Hero() {
   );
 }
 
-function LogoStrip() {
+function TrustedBy() {
   return (
-    <section aria-labelledby="trusted-by" className="border-y border-og-ink/10 bg-white/50">
-      <div className="mx-auto flex max-w-6xl flex-col gap-5 px-4 py-8 sm:px-6 lg:flex-row lg:items-center lg:gap-10">
-        <h2 id="trusted-by" className="eyebrow shrink-0 text-og-ink/60">
-          {home.logoStrip.label}
-        </h2>
-        <ul className="grid flex-1 grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {home.logoStrip.clients.map((client) => (
-            <li
-              key={client}
-              title="Logo placeholder: swap in the real logo once permission is confirmed"
-              className="flex h-16 items-center justify-center rounded-lg border-2 border-dashed border-og-ink/15 px-3 text-center text-sm font-semibold leading-tight text-og-ink/55"
-            >
-              {client}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <section aria-labelledby="trusted-by" className="py-16 md:py-20">
+      <h2 id="trusted-by" className="eyebrow mb-8 text-center text-og-ink/60">
+        {home.trustedBy.label}
+      </h2>
+      <Marquee items={home.trustedBy.organizations} label="Organizations Max has worked with" />
     </section>
   );
 }
@@ -187,36 +175,15 @@ function HowItWorks() {
   );
 }
 
-function FeaturedTestimonial() {
-  const t = testimonials.find((x) => x.id === home.featuredTestimonial)!;
-  return (
-    <section aria-label="What people say">
-      <figure className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 md:py-28">
-        <span aria-hidden="true" className="font-display absolute -top-2 left-2 text-[9rem] leading-none text-og-yellow sm:left-0 md:top-6">
-          &ldquo;
-        </span>
-        <blockquote className="font-display relative text-2xl font-medium leading-snug sm:text-[2rem]">
-          <p>{t.quote}</p>
-        </blockquote>
-        <figcaption className="mt-8">
-          <span className="block font-bold">{t.name}</span>
-          <span className="text-og-ink/70">{t.role}</span>
-        </figcaption>
-      </figure>
-    </section>
-  );
-}
-
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <LogoStrip />
       <ChooseYourFun />
       <Problem />
       <SelectedWork />
       <HowItWorks />
-      <FeaturedTestimonial />
+      <TrustedBy />
       <CtaBand id="closing" {...home.closing} />
     </>
   );
