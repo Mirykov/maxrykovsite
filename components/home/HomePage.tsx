@@ -10,7 +10,6 @@ import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
 import Marquee from "@/components/og/Marquee";
-import HeroSlideshow from "./HeroSlideshow";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -45,8 +44,15 @@ function Hero() {
         </div>
         <div className="relative">
           <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] bg-og-teal sm:-right-6 sm:-top-6" />
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[5/6]">
-            <HeroSlideshow slides={home.hero.slides} />
+          <div className="relative aspect-[5/6] overflow-hidden rounded-[2rem]">
+            <Image
+              src={home.hero.image}
+              alt={home.hero.imageAlt}
+              fill
+              priority
+              sizes="(min-width: 768px) 45vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

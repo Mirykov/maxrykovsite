@@ -82,10 +82,12 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   Work page for now (likely belong on Campaigns).
 - `next.config.ts` redirects old maxrykov.com paths (/fountys, /runway, ...)
   and the earlier redesign's case-study URLs.
-- **Home hero** is a crossfading photo slideshow (`components/home/HeroSlideshow.tsx`,
-  slides in `content/home.json` → `hero.slides`), Max's alternative to a GIF.
-  It stands in for the brief's hero video; it has a pause button and shows
-  only the first photo for reduced motion.
+- **Home hero** is one static photo, `hero-recycled-runway.jpg`: the three
+  Recycled Runway participants with the giant sign, cropped 5:6 to center them
+  and cut out a bystander's arm. The hero frame is 5:6 on every screen size to
+  match. Max tried a crossfading slideshow first (commit 98dcb45) and found it
+  too busy "for now", so it may come back. The brief's hero video is still
+  optional.
 - **Home "Trusted by"** sits below "How it works": a scrolling text marquee
   (`components/og/Marquee.tsx`, pause button + static list for reduced motion)
   of the 22 organizations from the old maxrykov.com/work page, without their
