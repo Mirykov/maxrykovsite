@@ -23,6 +23,7 @@
     ],
     "image": "/images/work/the-fountys-1.jpg",
     "imageAlt": "Three guests dressed as famous artworks holding gold Founty trophies",
+    "imageMaxWidth": 900,
     "gallery": [
       { "src": "/images/work/the-fountys-2.jpg", "alt": "Artists dressed as Dalí, Frida Kahlo, and Van Gogh posing with a Founty" },
       { "src": "/images/work/the-fountys-3.jpg", "alt": "A guest in costume posing with a red rotary phone" },
@@ -60,7 +61,7 @@
     "title": "Why'd They Do That?!",
     "subtitle": "A Game Show About Life and Politics in Alabama",
     "partnerLabel": "Client",
-    "partner": "Saturn Birmingham",
+    "partner": "Blueprint Alabama",
     "challenge": null,
     "project": [
       "\"Why'd They Do That?!\" a Game Show About Life and Politics in Alabama was a romp through the quizzical, nonsensical, and downright ridiculous moments in the annals of Alabama that make us all ask ourselves \"why'd they do that?!\"",

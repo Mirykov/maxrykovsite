@@ -62,15 +62,17 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
         </header>
 
         <div className="mx-auto max-w-6xl px-4 pt-10 sm:px-6 md:pt-14">
-          <div className="relative">
+          <div className="relative" style={{ maxWidth: project.imageMaxWidth }}>
             <div aria-hidden="true" className="absolute -right-3 -top-3 h-full w-full rounded-[2rem] bg-og-teal sm:-right-5 sm:-top-5" />
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] sm:aspect-[16/9]">
+            <div
+              className={`relative overflow-hidden rounded-[2rem] ${project.imageMaxWidth ? "aspect-[3/2]" : "aspect-[4/3] sm:aspect-[16/9]"}`}
+            >
               <Image
                 src={project.image}
                 alt={project.imageAlt}
                 fill
                 priority
-                sizes="(min-width: 1152px) 1104px, 100vw"
+                sizes={project.imageMaxWidth ? `${project.imageMaxWidth}px` : "(min-width: 1152px) 1104px, 100vw"}
                 className="object-cover"
                 style={{ objectPosition: project.imagePosition }}
               />

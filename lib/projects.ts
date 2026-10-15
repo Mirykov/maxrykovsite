@@ -15,6 +15,8 @@ export type Project = {
   image: string;
   imageAlt: string;
   imagePosition?: string;
+  // Pixel width of the hero photo when it's too small to fill the page width without going soft
+  imageMaxWidth?: number;
   // Optional different photo for cards (e.g. when the page's wide hero crops badly in a portrait card)
   cardImage?: string;
   cardImageAlt?: string;
