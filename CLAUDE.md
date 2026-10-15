@@ -31,6 +31,8 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
 - Fonts: Fraunces (display, `.font-display`) + DM Sans (body). DM Sans was
   chosen over Nunito because Nunito is nearly the logo's "Good" face and
   would blur the logo's serif/rounded contrast.
+- Wrap Fraunces headline text in `amp()` (`components/og/Amp.tsx`) so any
+  "&" renders as a classic ampersand. Fraunces' default "&" looks like "@".
 - `.eyebrow` = small letter-spaced caps label. `.on-dark` on a dark section
   switches focus rings to yellow.
 - Logo: `public/brand/` — `oddgood-logo.svg` (rebuilt from Max's PNG:
