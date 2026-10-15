@@ -63,8 +63,16 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   `lib/inquiry.ts`) with zod validation, honeypot (`website`), in-memory rate
   limit, and Resend. Env: `RESEND_API_KEY`, `INQUIRY_TO_EMAIL`,
   `INQUIRY_FROM_EMAIL` (see `.env.example`).
-- `/emcee`, `/campaigns`, `/about`, `/plan` are still `ComingSoon` stubs —
-  Max is reviewing the site before those are built.
+- **Emcee** (`/emcee`, `content/emcee.json`): an experiment Max asked for, with
+  a hero video (`public/video/emcee-hero.mp4`, the Tall Bike Joust hosting
+  reel). It's 1600px wide, 30fps, color-boosted, 2.7 MB with sound, and has a
+  poster frame at 6.4s. It plays muted on a loop with sound and pause buttons
+  (`components/HeroVideo.tsx`); reduced motion shows the poster. The page also
+  has all four testimonials, "Where Max can help" chips, and a closing booking
+  CTA. The brief's side-by-side Calendly + emcee form is not built yet; the
+  buttons go to /book?type=host and /plan. The original video is
+  `Downloads/TBJ Short.mp4` (69 MB, 1080p60).
+- `/campaigns`, `/about`, `/plan` are still `ComingSoon` stubs.
 - Images: `public/images/source/INVENTORY.md` lists everything pulled from
   maxrykov.com. The originals are gitignored (~51 MB); web-sized copies of
   the ones in use are in `public/images/`.
@@ -92,8 +100,8 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   (`components/og/Marquee.tsx`, pause button + static list for reduced motion)
   of the 22 organizations from the old maxrykov.com/work page, without their
   category headings (`content/home.json` → `trustedBy`).
-- **Testimonials are off the Home page** at Max's request. All four
-  (`content/testimonials.json`) belong on the Emcee page.
+- **Testimonials are off the Home page** at Max's request. All four live
+  on the Emcee page (`content/testimonials.json`).
 
 ## Open [CONFIRM] Items
 
