@@ -124,7 +124,9 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
 site.** After a change is built and checked, push it to `oddgood-redesign` and
 fast-forward `main` to it; there's no need to ask first.
 
-Published to production (`main` → https://maxrykovsite.vercel.app) on
+**Live at https://www.oddgoodevents.com** (since 2026-10-20). The domain is registered at WordPress.com, with DNS records there: A `@` → 216.198.79.1 and CNAME `www` → Vercel. The bare domain 308-redirects to www. maxrykovsite.vercel.app still works.
+
+First published to production (`main` → https://maxrykovsite.vercel.app) on
 2026-10-15 so Max can share it for feedback. The `oddgood-redesign` preview
 is behind Vercel login. Unfinished bits are hidden on the public site, not
 shown as notes: FAQ items with `a: null`, a project's `descriptionPlaceholder`,
