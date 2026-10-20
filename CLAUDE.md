@@ -120,6 +120,10 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
 
 ## Live Site
 
+**Max's standing instruction (2026-10-20): publish every update to the public
+site.** After a change is built and checked, push it to `oddgood-redesign` and
+fast-forward `main` to it; there's no need to ask first.
+
 Published to production (`main` → https://maxrykovsite.vercel.app) on
 2026-10-15 so Max can share it for feedback. The `oddgood-redesign` preview
 is behind Vercel login. Unfinished bits are hidden on the public site, not
