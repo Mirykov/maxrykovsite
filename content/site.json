@@ -4,7 +4,7 @@
   "tagline": "Real Meaningful Fun.",
   "location": "Based in Birmingham, Alabama",
   "email": "hello@oddgoodevents.com",
-  "emailConfirmed": false,
+  "emailConfirmed": true,
   "social": [
     {
       "label": "Instagram",
