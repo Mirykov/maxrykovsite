@@ -17,17 +17,35 @@
       "Best Selfie: Frida Kahlo"
     ],
     "stats": [
-      { "value": "3,000+", "label": "Votes Cast" },
-      { "value": "200+", "label": "Attendees" },
-      { "value": "32", "label": "Participants" }
+      {
+        "value": "3,000+",
+        "label": "Votes Cast"
+      },
+      {
+        "value": "200+",
+        "label": "Attendees"
+      },
+      {
+        "value": "32",
+        "label": "Participants"
+      }
     ],
     "image": "/images/work/the-fountys-1.jpg",
     "imageAlt": "Three guests dressed as famous artworks holding gold Founty trophies",
     "imageMaxWidth": 900,
     "gallery": [
-      { "src": "/images/work/the-fountys-2.jpg", "alt": "Artists dressed as Dalí, Frida Kahlo, and Van Gogh posing with a Founty" },
-      { "src": "/images/work/the-fountys-3.jpg", "alt": "A guest in costume posing with a red rotary phone" },
-      { "src": "/images/work/the-fountys-4.jpg", "alt": "Artists in Van Gogh and Frida Kahlo costumes at the microphone" }
+      {
+        "src": "/images/work/the-fountys-2.jpg",
+        "alt": "Artists dressed as Dalí, Frida Kahlo, and Van Gogh posing with a Founty"
+      },
+      {
+        "src": "/images/work/the-fountys-3.jpg",
+        "alt": "A guest in costume posing with a red rotary phone"
+      },
+      {
+        "src": "/images/work/the-fountys-4.jpg",
+        "alt": "Artists in Van Gogh and Frida Kahlo costumes at the microphone"
+      }
     ],
     "featuredOnHome": true
   },
@@ -42,17 +60,38 @@
       "I created, organized, marketed, and emceed an event that highlighted the work of local seamstresses. Teams signed up and were assigned a seamstress and a model. Each team was provided with a mystery box of garments and had 90 minutes to sew together a custom outfit, culminating in a runway fashion show judged by local style influencers."
     ],
     "stats": [
-      { "value": "$50k+", "label": "Funds Raised" },
-      { "value": "700+", "label": "Attendees" },
-      { "value": "50+", "label": "Participants/Year" }
+      {
+        "value": "$50k+",
+        "label": "Funds Raised"
+      },
+      {
+        "value": "700+",
+        "label": "Attendees"
+      },
+      {
+        "value": "50+",
+        "label": "Participants/Year"
+      }
     ],
     "image": "/images/work/recycled-runway-1.jpg",
     "imageAlt": "A model in a handmade white gown on stage while contestants and the audience watch",
     "gallery": [
-      { "src": "/images/work/recycled-runway-2.jpg", "alt": "A runway model walking past a packed, cheering audience" },
-      { "src": "/images/work/recycled-runway-3.jpg", "alt": "Guests laughing and holding a Recycled Runway sign" },
-      { "src": "/images/work/recycled-runway-4.jpg", "alt": "Contestants scrambling with garments during the sewing challenge" },
-      { "src": "/images/work/recycled-runway-5.jpg", "alt": "A packed warehouse audience around the runway" }
+      {
+        "src": "/images/work/recycled-runway-2.jpg",
+        "alt": "A runway model walking past a packed, cheering audience"
+      },
+      {
+        "src": "/images/work/recycled-runway-3.jpg",
+        "alt": "Guests laughing and holding a Recycled Runway sign"
+      },
+      {
+        "src": "/images/work/recycled-runway-4.jpg",
+        "alt": "Contestants scrambling with garments during the sewing challenge"
+      },
+      {
+        "src": "/images/work/recycled-runway-5.jpg",
+        "alt": "A packed warehouse audience around the runway"
+      }
     ],
     "featuredOnHome": true
   },
@@ -72,9 +111,18 @@
     "imageAlt": "Five contestants wearing medals hold hands and raise their arms in celebration on stage",
     "imagePosition": "45% 50%",
     "gallery": [
-      { "src": "/images/work/whyd-they-do-that-2.jpg", "alt": "Audience members cheering, laughing, and filming the stage" },
-      { "src": "/images/work/whyd-they-do-that-3.jpg", "alt": "Max on stage with a microphone, arm outstretched toward the audience" },
-      { "src": "/images/work/whyd-they-do-that-4.jpg", "alt": "Max hosting while contestants stand behind game-show tables under colored stage lights" }
+      {
+        "src": "/images/work/whyd-they-do-that-2.jpg",
+        "alt": "Audience members cheering, laughing, and filming the stage"
+      },
+      {
+        "src": "/images/work/whyd-they-do-that-3.jpg",
+        "alt": "Max on stage with a microphone, arm outstretched toward the audience"
+      },
+      {
+        "src": "/images/work/whyd-they-do-that-4.jpg",
+        "alt": "Max hosting while contestants stand behind game-show tables under colored stage lights"
+      }
     ],
     "photoCredit": "Thomas Diasio",
     "featuredOnHome": true
@@ -90,17 +138,38 @@
       "I wrote, produced, and emceed a sold-out game show about The Magic City called \"Can You Repeat That?\" at the historic Virginia Samford Theater, featuring local luminaries like James Spann, Frank Stitt, former mayor Richard Arrington Jr, and then mayor William Bell."
     ],
     "stats": [
-      { "value": "$10k+", "label": "Ticket Sales" },
-      { "value": "312+", "label": "Attendees" },
-      { "value": "14", "label": "Contestants" }
+      {
+        "value": "$10k+",
+        "label": "Ticket Sales"
+      },
+      {
+        "value": "312+",
+        "label": "Attendees"
+      },
+      {
+        "value": "14",
+        "label": "Contestants"
+      }
     ],
     "image": "/images/work/can-you-repeat-that-1.jpg",
     "imageAlt": "Local celebrity contestants laughing at game-show tables on stage",
     "gallery": [
-      { "src": "/images/work/can-you-repeat-that-2.jpg", "alt": "A full theater audience facing the lit game-show stage" },
-      { "src": "/images/work/can-you-repeat-that-3.jpg", "alt": "Contestants at their tables while Max hosts from the podium" },
-      { "src": "/images/work/can-you-repeat-that-4.jpg", "alt": "A wide view of the game show on the Virginia Samford Theater stage" },
-      { "src": "/images/work/can-you-repeat-that-5.jpg", "alt": "The Can You Repeat That? show poster" }
+      {
+        "src": "/images/work/can-you-repeat-that-2.jpg",
+        "alt": "A full theater audience facing the lit game-show stage"
+      },
+      {
+        "src": "/images/work/can-you-repeat-that-3.jpg",
+        "alt": "Contestants at their tables while Max hosts from the podium"
+      },
+      {
+        "src": "/images/work/can-you-repeat-that-4.jpg",
+        "alt": "A wide view of the game show on the Virginia Samford Theater stage"
+      },
+      {
+        "src": "/images/work/can-you-repeat-that-5.jpg",
+        "alt": "The Can You Repeat That? show poster"
+      }
     ],
     "featuredOnHome": true
   },
@@ -115,16 +184,31 @@
       "I wrote, produced, and emceed the Other Awards to celebrate unsung heroes in the Birmingham community in categories like: \"Best Birmingham City School Teacher\", \"Most Passionate Neighborhood Association Attendee\", \"Best Service Industry Worker\", and more."
     ],
     "stats": [
-      { "value": "11k+", "label": "Votes Cast" },
-      { "value": "300+", "label": "Attendees" },
-      { "value": "24", "label": "Presenters" }
+      {
+        "value": "11k+",
+        "label": "Votes Cast"
+      },
+      {
+        "value": "300+",
+        "label": "Attendees"
+      },
+      {
+        "value": "24",
+        "label": "Presenters"
+      }
     ],
     "image": "/images/work/the-other-awards-1.jpg",
     "imageAlt": "An honoree smiling as she holds her award on stage",
     "imagePosition": "72% 50%",
     "gallery": [
-      { "src": "/images/work/the-other-awards-2.jpg", "alt": "Award winners hugging on stage" },
-      { "src": "/images/work/the-other-awards-3.jpg", "alt": "An award presentation on stage with the honoree's photo on screen" }
+      {
+        "src": "/images/work/the-other-awards-2.jpg",
+        "alt": "Award winners hugging on stage"
+      },
+      {
+        "src": "/images/work/the-other-awards-3.jpg",
+        "alt": "An award presentation on stage with the honoree's photo on screen"
+      }
     ],
     "featuredOnHome": true
   },
@@ -135,19 +219,48 @@
     "partnerLabel": null,
     "partner": null,
     "challenge": null,
-    "project": [],
-    "descriptionPlaceholder": "[CONFIRM: Max to add the description for Romantically Challenged]",
-    "stats": [],
+    "project": [
+      "For seven years, Romantically Challenged was Birmingham’s most enchanting and rambunctious dating game show. In an era where apps dominated the dating landscape, the event provided a welcome respite from swiping fatigue.",
+      "Hundreds of people applied each year to be contestants, and the ones selected to be on the show answered a variety of questions and performed a host of silly challenges to win the hearts of featured bachelors and bachelorettes. Along with Max, the event was co-hosted by two of Birmingham’s favorite drag queens, Sharon Cocx and Reese Eve Cocx.",
+      "Over the years, proceeds from the event benefited a number of organizations, including Equality Alabama and the Crisis Center."
+    ],
+    "stats": [
+      {
+        "value": "300+",
+        "label": "Attendees Each Year"
+      },
+      {
+        "value": "20+",
+        "label": "Contestants Each Year"
+      },
+      {
+        "value": "Innumerable",
+        "label": "Laughs"
+      }
+    ],
     "image": "/images/work/romantically-challenged-4.jpg",
     "imageAlt": "Max and his drag queen co-host on stage while a woman in the audience cheers",
     "cardImage": "/images/work/romantically-challenged-1.jpg",
     "cardImageAlt": "Max and a drag queen co-host laughing on stage with a contestant",
     "cardImagePosition": "50% 30%",
     "gallery": [
-      { "src": "/images/work/romantically-challenged-1.jpg", "alt": "Max and a drag queen co-host laughing on stage with a contestant" },
-      { "src": "/images/work/romantically-challenged-3.jpg", "alt": "A contestant reacting in mock horror as the co-host holds out the microphone" },
-      { "src": "/images/work/romantically-challenged-2.jpg", "alt": "Max hosting in front of red curtains and Valentine's Day balloons" },
-      { "src": "/images/work/romantically-challenged-5.jpg", "alt": "Two drag queens and a contestant posing with a giant pink teddy bear" }
+      {
+        "src": "/images/work/romantically-challenged-1.jpg",
+        "alt": "Max and a drag queen co-host laughing on stage with a contestant",
+        "position": "50% 12%"
+      },
+      {
+        "src": "/images/work/romantically-challenged-3.jpg",
+        "alt": "A contestant reacting in mock horror as the co-host holds out the microphone"
+      },
+      {
+        "src": "/images/work/romantically-challenged-2.jpg",
+        "alt": "Max hosting in front of red curtains and Valentine's Day balloons"
+      },
+      {
+        "src": "/images/work/romantically-challenged-5.jpg",
+        "alt": "Two drag queens and a contestant posing with a giant pink teddy bear"
+      }
     ],
     "featuredOnHome": true
   }

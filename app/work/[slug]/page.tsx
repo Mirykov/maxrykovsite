@@ -120,7 +120,14 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
                   // Label comes first in the markup (as <dl> requires) but shows below the number
                   <div key={s.label} className="on-dark flex flex-col-reverse rounded-2xl bg-og-ink p-4 text-white sm:p-5">
                     <dt className="mt-1 text-sm font-semibold text-white/80">{s.label}</dt>
-                    <dd className="font-display text-3xl font-black text-og-yellow sm:text-4xl">{s.value}</dd>
+                    {/* Word values like "Innumerable" get a smaller size so they fit the narrow tiles */}
+                    <dd
+                      className={`font-display font-black text-og-yellow ${
+                        s.value.length > 6 ? "text-2xl sm:text-[1.6rem] lg:text-3xl" : "text-3xl sm:text-4xl"
+                      }`}
+                    >
+                      {s.value}
+                    </dd>
                   </div>
                 ))}
               </dl>
@@ -139,6 +146,7 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
                     fill
                     sizes={project.gallery.length === 3 ? "(min-width: 640px) 33vw, 100vw" : "(min-width: 640px) 50vw, 100vw"}
                     className="object-cover"
+                    style={{ objectPosition: photo.position }}
                   />
                 </li>
               ))}

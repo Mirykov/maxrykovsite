@@ -10,7 +10,6 @@ export type Project = {
   project: string[];
   highlightsTitle?: string;
   highlights?: string[];
-  descriptionPlaceholder?: string;
   stats: { value: string; label: string }[];
   image: string;
   imageAlt: string;
@@ -21,7 +20,7 @@ export type Project = {
   cardImage?: string;
   cardImageAlt?: string;
   cardImagePosition?: string;
-  gallery: { src: string; alt: string }[];
+  gallery: { src: string; alt: string; position?: string }[];
   photoCredit?: string;
   featuredOnHome: boolean;
 };
