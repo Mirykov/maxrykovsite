@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import site from "@/content/site.json";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -33,6 +34,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: {
     default: "OddGood Events | Real Meaningful Fun",
     template: "%s | OddGood Events",
