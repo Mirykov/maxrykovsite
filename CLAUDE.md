@@ -71,9 +71,9 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   limit, and Resend. Env: `RESEND_API_KEY`, `INQUIRY_TO_EMAIL`,
   `INQUIRY_FROM_EMAIL` (see `.env.example`).
 - **Emcee** (`/emcee`, `content/emcee.json`): an experiment Max asked for, with
-  a hero video (`public/video/emcee-hero.mp4`, the Tall Bike Joust hosting
+  a hero video (`public/video/emcee-hero-v2.mp4`, the Tall Bike Joust hosting
   reel). It's 1600px wide, 30fps, color-boosted, 2.7 MB with sound, and has a
-  poster frame at 6.4s. It plays muted on a loop with sound and pause buttons
+  poster frame at 6.4s. It plays silently on a loop with no buttons (Max removed the sound and pause controls on 2026-10-21; the audio track is stripped)
   (`components/HeroVideo.tsx`); reduced motion shows the poster. The page also
   has all four testimonials, "Where Max can help" chips, and a closing booking
   CTA. The brief's side-by-side Calendly + emcee form is not built yet; the
