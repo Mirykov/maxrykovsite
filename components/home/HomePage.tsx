@@ -8,6 +8,9 @@ import ProjectCard from "@/components/ProjectCard";
 import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
+import Marquee from "@/components/og/Marquee";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+import testimonials from "@/content/testimonials.json";
 import { headlineBurstClass, markerClass } from "@/components/og/Highlight";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
@@ -157,6 +160,37 @@ function HowItWorks() {
   );
 }
 
+function TrustedBy() {
+  return (
+    <section aria-labelledby="trusted-by" className="border-y border-og-ink/10 bg-white/50 py-14 md:py-16">
+      <h2 id="trusted-by" className="eyebrow mb-8 text-center text-og-ink/60">
+        {home.trustedBy.label}
+      </h2>
+      <Marquee items={home.trustedBy.organizations} label="Organizations that have worked with OddGood Events" />
+    </section>
+  );
+}
+
+function Testimonials() {
+  const { testimonials: t } = home;
+  const quotes = t.ids.map((id) => testimonials.find((q) => q.id === id)!);
+  return (
+    <section aria-labelledby="home-testimonials" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
+      <SectionHeading id="home-testimonials" title={t.title} />
+      {/* Carousel left, photo right on desktop; on phones the photo follows the carousel */}
+      <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-14">
+        <TestimonialCarousel quotes={quotes} />
+        <div className="relative mx-auto mr-4 w-full max-w-md sm:mr-6 lg:max-w-none">
+          <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] bg-og-teal sm:-right-6 sm:-top-6" />
+          <div className="relative aspect-square overflow-hidden rounded-[2rem]">
+            <Image src={t.image} alt={t.imageAlt} fill sizes="(min-width: 1024px) 45vw, 448px" className="object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -164,7 +198,9 @@ export default function HomePage() {
       <ChooseYourFun />
       <Problem />
       <SelectedWork />
+      <TrustedBy />
       <HowItWorks />
+      <Testimonials />
       <CtaBand id="closing" {...home.closing} />
     </>
   );

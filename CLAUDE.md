@@ -109,14 +109,8 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   match. Max tried a crossfading slideshow first (commit 98dcb45) and found it
   too busy "for now", so it may come back. The brief's hero video is still
   optional.
-- **"Organizations I've worked with"** (moved from Home to the About page on Max's request): a
-  swipeable carousel of category cards with arrow buttons
-  (`components/og/CategoryCarousel.tsx`, `content/about.json` → `workedWith`),
-  using the categories and wording from the old maxrykov.com/work page. Arts
-  is split across two cards so heights stay even. This replaced an
-  auto-scrolling marquee, which Max dropped on 2026-10-15.
-- **Testimonials are off the Home page** at Max's request. All four live
-  on the Emcee page (`content/testimonials.json`).
+- **Home "Trusted by" ticker** after Selected work (`components/og/Marquee.tsx`, `content/home.json` → `trustedBy`): Max's list of 12 organizations; it has a pause button and is static for reduced motion. The About page no longer lists organizations (Max removed it on 2026-10-21).
+- **Home testimonials** after How it works: `TestimonialCarousel` (Zulfat and Jackie) with Max's honoree photo on the right (`content/home.json` → `testimonials`).
 
 ## Live Site
 

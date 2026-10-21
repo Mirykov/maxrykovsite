@@ -68,6 +68,23 @@
   "work": {
     "title": "Selected work"
   },
+  "trustedBy": {
+    "label": "Trusted by",
+    "organizations": [
+      "Desert Island Supply Co.",
+      "Space One Eleven Arts Center",
+      "Birmingham Museum of Art",
+      "Bib & Tucker Sew Op",
+      "Birmingham History Center",
+      "Birmingham Education Foundation",
+      "The Crisis Center",
+      "Nashville International Center for Empowerment",
+      "Alabama Rivers Alliance",
+      "Athletic Alabama",
+      "Redemptive Cycles",
+      "Central Alabama Water"
+    ]
+  },
   "howItWorks": {
     "title": "How it works",
     "steps": [
@@ -84,6 +101,15 @@
         "body": "We lead the project, from idea to execution."
       }
     ]
+  },
+  "testimonials": {
+    "title": "What people say",
+    "ids": [
+      "zulfat-suara",
+      "jackie-miller"
+    ],
+    "image": "/images/home-max-honoree.jpg",
+    "imageAlt": "Max with his arm around a beaming honoree on stage, microphone in hand"
   },
   "closing": {
     "title": "Your event can be the one people can’t stop talking about.",

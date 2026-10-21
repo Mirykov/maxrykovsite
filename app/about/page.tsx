@@ -3,7 +3,6 @@ import Image from "next/image";
 import content from "@/content/about.json";
 import { amp } from "@/components/og/Amp";
 import CtaBand from "@/components/og/CtaBand";
-import CategoryCarousel from "@/components/og/CategoryCarousel";
 
 export const metadata: Metadata = {
   title: "About",
@@ -74,16 +73,6 @@ export default function AboutPage() {
               style={{ objectPosition: "50% 30%" }}
             />
           </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="worked-with" className="overflow-hidden bg-white/50">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
-          <h2 id="worked-with" className="font-display mb-4 max-w-3xl text-3xl font-black leading-tight tracking-tight sm:text-5xl">
-            {amp(content.workedWith.title)}
-          </h2>
-          <p className="mb-8 max-w-2xl text-lg text-og-ink/80">{content.workedWith.sub}</p>
-          <CategoryCarousel categories={content.workedWith.categories} label="Organizations by category" />
         </div>
       </section>
 
