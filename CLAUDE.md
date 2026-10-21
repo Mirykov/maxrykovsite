@@ -134,6 +134,8 @@ the footer/booking email (until `emailConfirmed: true` in `content/site.json`),
 and social links (until `confirmed`). Book a Call step 2 says "Online
 scheduling is coming soon" until the Calendly links are added.
 
+Email: hello@oddgoodevents.com is WordPress.com Professional Email (Titan MX/SPF records; don't touch them). Resend is verified for oddgoodevents.com (records `resend._domainkey`, `rsend`, `send`), and the Vercel env vars are set. Lead emails come from "OddGood Website <noreply@oddgoodevents.com>". A live test on 2026-10-20 arrived.
+
 ## Open [CONFIRM] Items
 
 Max portrait, contact email (`hello@oddgoodevents.com` placeholder in
