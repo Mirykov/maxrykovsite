@@ -8,13 +8,8 @@
   "social": [
     {
       "label": "Instagram",
-      "href": "https://www.instagram.com/",
-      "confirmed": false
-    },
-    {
-      "label": "LinkedIn",
-      "href": "https://www.linkedin.com/",
-      "confirmed": false
+      "href": "https://www.instagram.com/oddgoodevents/",
+      "confirmed": true
     }
   ],
   "nav": [
