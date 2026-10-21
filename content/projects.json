@@ -150,20 +150,16 @@
         "label": "Contestants"
       }
     ],
-    "image": "/images/work/can-you-repeat-that-crowd-v2.jpg",
+    "image": "/images/work/can-you-repeat-that-crowd-v3.jpg",
     "imageAlt": "A packed theater audience facing the lit Can You Repeat That? stage at the Virginia Samford Theater",
     "gallery": [
       {
+        "src": "/images/work/can-you-repeat-that-panel.jpg",
+        "alt": "Local celebrity contestants laughing at their game-show tables on stage"
+      },
+      {
         "src": "/images/work/can-you-repeat-that-3.jpg",
         "alt": "Contestants at their tables while Max hosts from the podium"
-      },
-      {
-        "src": "/images/work/can-you-repeat-that-4.jpg",
-        "alt": "A wide view of the game show on the Virginia Samford Theater stage"
-      },
-      {
-        "src": "/images/work/can-you-repeat-that-5.jpg",
-        "alt": "The Can You Repeat That? show poster"
       }
     ],
     "featuredOnHome": true,
