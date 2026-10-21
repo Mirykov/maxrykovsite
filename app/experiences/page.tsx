@@ -121,16 +121,32 @@ function RightPlace() {
     <section aria-labelledby="right-place" className="bg-og-teal text-og-ink">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <SectionHeading id="right-place" title={rightPlace.title} />
-        <ul className="grid gap-4 md:grid-cols-2">
-          {rightPlace.items.map((item) => (
-            <li key={item} className="flex items-start gap-4 rounded-3xl bg-og-cream p-6 text-lg font-semibold">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-og-red text-white">
-                <Check size={20} strokeWidth={3} aria-hidden="true" />
-              </span>
-              <span className="pt-1">{item}</span>
-            </li>
-          ))}
-        </ul>
+        {/* Checklist left, photo right on desktop; on phones the photo follows the list */}
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <ul className="grid gap-4">
+            {rightPlace.items.map((item) => (
+              <li key={item} className="flex items-start gap-4 rounded-3xl bg-og-cream p-6 text-lg font-semibold">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-og-red text-white">
+                  <Check size={20} strokeWidth={3} aria-hidden="true" />
+                </span>
+                <span className="pt-1">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="relative mr-4 sm:mr-6">
+            {/* Yellow offset block; the teal band behind would hide a teal one */}
+            <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] bg-og-yellow sm:-right-6 sm:-top-6" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem]">
+              <Image
+                src={rightPlace.image}
+                alt={rightPlace.imageAlt}
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
