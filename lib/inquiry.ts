@@ -8,7 +8,7 @@ const required = (label: string, max = 200) => text(max).min(1, `Please add your
 const email = z.string().trim().pipe(z.email("Please enter a valid email address."));
 
 export const callTypes = {
-  host: { label: "I need a host", minutes: 15 },
+  host: { label: "I need a host", minutes: 30 },
   custom: { label: "I want to create something custom", minutes: 30 },
 } as const;
 export type CallType = keyof typeof callTypes;

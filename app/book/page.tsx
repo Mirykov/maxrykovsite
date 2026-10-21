@@ -4,7 +4,7 @@ import BookCall from "@/components/book/BookCall";
 export const metadata: Metadata = {
   title: "Book a Call",
   description:
-    "Book a 15-minute call about hosting or a 30-minute call about a custom game show or event with OddGood Events. No pitch, no pressure.",
+    "Book a 30-minute call with OddGood Events about hosting your event or creating a custom game show, experience, or campaign. No pitch, no pressure.",
 };
 
 export default async function BookPage({ searchParams }: PageProps<"/book">) {

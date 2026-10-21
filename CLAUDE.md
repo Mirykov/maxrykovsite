@@ -136,11 +136,13 @@ scheduling is coming soon" until the Calendly links are added.
 
 Email: hello@oddgoodevents.com is WordPress.com Professional Email (Titan MX/SPF records; don't touch them). Resend is verified for oddgoodevents.com (records `resend._domainkey`, `rsend`, `send`), and the Vercel env vars are set. Lead emails come from "OddGood Website <noreply@oddgoodevents.com>". A live test on 2026-10-20 arrived.
 
+Calendly: Max is on the free plan (one event type), so both call types open https://calendly.com/hello-oddgoodevents/30min ("OddGood Events Intro Call", 30 min), connected to his Google Calendar. The site lists both as 30-minute calls.
+
 ## Open [CONFIRM] Items
 
 Max portrait, contact email (`hello@oddgoodevents.com` placeholder in
 `content/site.json`), Instagram/LinkedIn handles (hidden until
-`confirmed: true`), Calendly URLs, Resend account, prices, "Most booked"
+`confirmed: true`), Resend account, prices, "Most booked"
 tag, domain, FAQ answers. Max may add more images later — use labeled
 placeholders until then.
 

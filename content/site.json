@@ -44,8 +44,8 @@
     "label": "Let's Work Together"
   },
   "calendly": {
-    "_note": "Paste Max's real Calendly event links here. While empty, /book shows a labeled placeholder instead of the calendar.",
-    "host": "",
-    "custom": ""
+    "_note": "Calendly links for each call type. Max is on the free plan (one event type), so both use the same 30-minute link.",
+    "host": "https://calendly.com/hello-oddgoodevents/30min",
+    "custom": "https://calendly.com/hello-oddgoodevents/30min"
   }
 }
