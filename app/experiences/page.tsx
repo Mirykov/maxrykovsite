@@ -35,7 +35,6 @@ function Hero() {
             priority
             sizes="(min-width: 768px) 45vw, 100vw"
             className="object-cover"
-            style={{ objectPosition: hero.imagePosition }}
           />
         </div>
       </div>
@@ -101,6 +100,21 @@ function Services() {
   );
 }
 
+// Two photos side by side under the offerings, both cropped to 3:2 so they match
+function Photos() {
+  return (
+    <section aria-label="Photos from past events" className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 md:pb-28">
+      <ul className="grid gap-6 sm:grid-cols-2">
+        {content.photos.map((photo) => (
+          <li key={photo.src} className="relative aspect-[3/2] overflow-hidden rounded-[2rem]">
+            <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 function RightPlace() {
   const { rightPlace } = content;
   return (
@@ -155,6 +169,7 @@ export default function ExperiencesPage() {
     <>
       <Hero />
       <Services />
+      <Photos />
       <RightPlace />
       <Faq />
       <CtaBand id="closing" {...content.closing} />

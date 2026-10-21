@@ -3,9 +3,8 @@
     "eyebrow": "Experiences",
     "title": "Your event, way more fun.",
     "sub": "From ready-to-go game shows to fully original experiences, we make it easier for people to participate, and harder for them to forget the event.",
-    "image": "/images/wtdt-max-and-contestants.jpg",
-    "imageAlt": "Max hosting a game show while contestants stand behind tables under colored stage lights",
-    "imagePosition": "62% 50%",
+    "image": "/images/exp-hero-hairspray.jpg",
+    "imageAlt": "Recycled Runway contestants parading down the runway, laughing, one spraying a can of hairspray overhead",
     "highlight": "way more fun."
   },
   "services": [
@@ -75,6 +74,16 @@
     }
   ],
   "servicesNote": "Final scope, travel, AV, production, and optional performers may affect the quote.",
+  "photos": [
+    {
+      "src": "/images/exp-game-show-panel.jpg",
+      "alt": "A game show contestant doubled over laughing at her table on stage between two fellow panelists"
+    },
+    {
+      "src": "/images/exp-stage-dancers.jpg",
+      "alt": "Dancers performing joyfully on stage in front of a bright backdrop"
+    }
+  ],
   "rightPlace": {
     "title": "You're in the right place if…",
     "items": [
