@@ -7,6 +7,7 @@ import content from "@/content/experiences.json";
 import Button from "@/components/og/Button";
 import Burst from "@/components/og/Burst";
 import CtaBand from "@/components/og/CtaBand";
+import { highlight } from "@/components/og/Highlight";
 import SectionHeading from "@/components/og/SectionHeading";
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ function Hero() {
     <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:grid-cols-[1.1fr_1fr] md:pb-20 md:pt-20">
       <div>
         <p className="eyebrow mb-6 text-og-teal-dark">{hero.eyebrow}</p>
-        <h1 className="font-display mb-6 text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-6xl">{amp(hero.title)}</h1>
+        <h1 className="font-display mb-6 text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-6xl">{highlight(hero.title, hero.highlight)}</h1>
         <p className="max-w-xl text-lg leading-relaxed text-og-ink/80 sm:text-xl">{hero.sub}</p>
       </div>
       <div className="relative">

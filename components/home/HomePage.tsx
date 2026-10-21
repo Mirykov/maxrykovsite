@@ -8,6 +8,7 @@ import ProjectCard from "@/components/ProjectCard";
 import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
+import { highlight, markerClass } from "@/components/og/Highlight";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -19,9 +20,7 @@ function HeroTitle({ className }: { className: string }) {
       <span className="relative inline-block whitespace-nowrap">
         {/* Mirrored so the burst radiates from the word's top-right; sized in em so it never reaches the line above */}
         <Burst className="absolute -right-[0.42em] top-[0.02em] h-[0.4em] w-[0.4em] -scale-x-100" />
-        <span className="relative bg-[linear-gradient(transparent_62%,var(--og-yellow)_62%,var(--og-yellow)_92%,transparent_92%)]">
-          {highlight}
-        </span>
+        <span className={`relative ${markerClass}`}>{highlight}</span>
       </span>
       {after}
     </h1>
@@ -33,10 +32,9 @@ function Hero() {
     <section className="relative overflow-hidden">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:grid-cols-[1.15fr_1fr] md:pb-24 md:pt-20">
         <div>
-          <p className="eyebrow mb-6 text-og-teal-dark">{home.hero.eyebrow}</p>
           <HeroTitle className="font-display mb-6 text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-[4rem]" />
           <p className="mb-9 max-w-xl text-lg leading-relaxed text-og-ink/80 sm:text-xl">
-            {home.hero.sub}
+            {highlight(home.hero.sub, home.hero.subHighlight)}
           </p>
           <Ctas buttons={home.hero.buttons} />
         </div>

@@ -1,11 +1,12 @@
 {
   "hero": {
     "eyebrow": "Experiences",
-    "title": "Your event. Less predictable.",
+    "title": "Your event, way more fun.",
     "sub": "From ready-to-go game shows to fully original experiences, we make it easier for people to participate, and harder for them to forget the event.",
     "image": "/images/wtdt-max-and-contestants.jpg",
     "imageAlt": "Max hosting a game show while contestants stand behind tables under colored stage lights",
-    "imagePosition": "62% 50%"
+    "imagePosition": "62% 50%",
+    "highlight": "way more fun."
   },
   "services": [
     {
@@ -17,49 +18,70 @@
         "Planning and live hosting"
       ],
       "tag": "Most booked",
-      "cta": { "href": "/book?type=custom", "label": "Book a Call" }
+      "cta": {
+        "href": "/book?type=custom",
+        "label": "Book a Call"
+      }
     },
     {
       "name": "Fully Customized Experience",
       "for": "Events that need a bigger idea",
       "includes": [
         "Original concept and event design",
-        "Tailored activities",
+        "Tailored activities for your group",
         "Creative planning, coordination, hosting",
-        "Collaborators as needed"
+        "Additional collaborators as needed"
       ],
       "tag": null,
-      "cta": { "href": "/book?type=custom", "label": "Book a Call" }
+      "cta": {
+        "href": "/book?type=custom",
+        "label": "Book a Call"
+      }
     },
     {
       "name": "Emcee & Event Hosting",
       "for": "Organizers who already have the event planned",
-      "includes": ["A sharp, warm, professional host who keeps things moving"],
+      "includes": [
+        "A sharp, warm, professional host who helps you exceed your event goals.",
+        "Strategy and run of show consultation that helps you get the most out of your event."
+      ],
       "tag": null,
-      "cta": { "href": "/book?type=host", "label": "Book a Call" },
-      "moreLink": { "href": "/emcee", "label": "See emcee details" }
+      "cta": {
+        "href": "/book?type=host",
+        "label": "Book a Call"
+      },
+      "moreLink": {
+        "href": "/emcee",
+        "label": "See emcee details"
+      }
     },
     {
       "name": "Creative Campaigns",
-      "for": "Nonprofits and community causes",
+      "for": "Nonprofits and community organizations",
       "includes": [
         "Campaign concepts that cut through the noise",
         "Fundraising and participation campaigns",
         "Campaign creative and execution"
       ],
       "tag": null,
-      "cta": { "href": "/book?type=custom", "label": "Book a Call" },
-      "moreLink": { "href": "/campaigns", "label": "See campaign work" }
+      "cta": {
+        "href": "/book?type=custom",
+        "label": "Book a Call"
+      },
+      "moreLink": {
+        "href": "/campaigns",
+        "label": "See campaign work"
+      }
     }
   ],
   "servicesNote": "Final scope, travel, AV, production, and optional performers may affect the quote.",
   "rightPlace": {
     "title": "You're in the right place if…",
     "items": [
-      "Your last event was \"fine,\" and you want more than fine.",
-      "You want people participating, not just watching.",
-      "You'd like the event to say something about your team or your mission.",
-      "You want one creative lead who handles it start to finish."
+      "Your last event was \"fine,\" and you want more than just fine.",
+      "You want to build momentum or raise more money for your cause.",
+      "You'd like people to feel excited and energized about your mission.",
+      "You want a creative lead who handles it start to finish."
     ]
   },
   "faq": {
@@ -67,7 +89,7 @@
     "items": [
       {
         "q": "How much does it cost?",
-        "a": "Pricing generally ranges from $2,000 to $5,000 depending on the complexity of the event. Event emcee services start at $100/hr, and can range depending on the scope of duties. A 50% deposit reserves your date and starts creative work; the remaining 50% is due after the event."
+        "a": "Pricing generally ranges from $2,000 to $5,000 depending on the complexity of the event. Event emcee services start at $100/hr, and can range depending on the scope of duties. A 50% deposit reserves your date and starts creative work; the remaining 50% is due at the conclusion of the engagement."
       },
       {
         "q": "Do you bring AV?",
@@ -77,13 +99,25 @@
         "q": "Do you travel?",
         "a": "Yes. Travel outside the Birmingham area is discussed and approved in advance."
       },
-      { "q": "How far ahead should we book?", "a": null },
-      { "q": "How big a group can you handle?", "a": null }
+      {
+        "q": "How far ahead should we book?",
+        "a": "As soon as you know when you’d like to hold your event or launch your campaign."
+      },
+      {
+        "q": "How big a group can you handle?",
+        "a": "Group size depends on the size and accommodations of the venue selected for the event."
+      }
     ]
   },
   "closing": {
     "title": "Not sure what fits?",
     "body": "Tell us about the event.",
-    "buttons": [{ "href": "/book", "label": "Book a Call", "variant": "primary" }]
+    "buttons": [
+      {
+        "href": "/book",
+        "label": "Book a Call",
+        "variant": "primary"
+      }
+    ]
   }
 }

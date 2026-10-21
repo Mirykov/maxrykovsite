@@ -1,9 +1,8 @@
 {
   "hero": {
-    "eyebrow": "OddGood Events · Real Meaningful Fun.",
     "title": "We create unique experiences that get people laughing, participating, and connecting.",
     "highlight": "laughing",
-    "sub": "From company parties that break the usual mold to nonprofit fundraisers people actually remember, we make gatherings worth showing up for.",
+    "sub": "From nonprofit fundraisers people actually remember, to company parties your team can’t wait to attend, we make gatherings that are meaningful, a bit odd, and really fun.",
     "buttons": [
       {
         "href": "/experiences",
@@ -17,7 +16,8 @@
       }
     ],
     "image": "/images/hero-recycled-runway.jpg",
-    "imageAlt": "Three Recycled Runway participants shrieking with excitement as they hold up a giant Recycled Runway sign"
+    "imageAlt": "Three Recycled Runway participants shrieking with excitement as they hold up a giant Recycled Runway sign",
+    "subHighlight": "really fun"
   },
   "chooseYourFun": {
     "title": "Choose your kind of fun",
@@ -38,7 +38,7 @@
         "number": "02",
         "title": "Emcee & Event Hosting",
         "for": "For events that already have a plan.",
-        "body": "Professional hosting from Max, with wit, warmth, and the experience to keep the program moving.",
+        "body": "Professional hosting with wit, warmth, and the expertise to help you exceed your event goals.",
         "cta": {
           "href": "/emcee",
           "label": "Book Max as Emcee"
@@ -49,8 +49,8 @@
       {
         "number": "03",
         "title": "Creative Campaigns",
-        "for": "Especially for nonprofits and community causes.",
-        "body": "Unexpected campaign ideas that help a cause stand out and invite people to take part.",
+        "for": "For nonprofits and community organizations.",
+        "body": "Unexpected campaign ideas and strategy that activate people to support your cause.",
         "cta": {
           "href": "/campaigns",
           "label": "Explore Creative Campaigns"
@@ -62,7 +62,7 @@
   },
   "problem": {
     "title": "Another dinner and a few speeches?",
-    "body": "There's nothing wrong with a traditional event. But if you want people to participate, connect, and remember the experience, there are more interesting ways to do it.",
+    "body": "There's nothing wrong with a traditional event. But if you want people to participate, connect, and leave energized - we can provide an experience that’s both meaningful and fun.",
     "image": "/images/tall-bike-joust-aerial.jpg",
     "imageAlt": "An aerial view of a huge nighttime crowd cheering around the hay-bale arena at the Tall Bike Joust"
   },
@@ -74,21 +74,21 @@
     "steps": [
       {
         "title": "Tell us what you're planning.",
-        "body": "Share the occasion, audience, goals, date, and budget if known."
+        "body": "Share the occasion, audience, goals, and target date."
       },
       {
         "title": "Shape the right idea.",
-        "body": "We recommend an existing format or develop a custom approach."
+        "body": "We recommend an existing format or develop a custom concept."
       },
       {
         "title": "Make it happen.",
-        "body": "Max leads and brings in collaborators when the project needs them."
+        "body": "We lead the project, from idea to execution."
       }
     ]
   },
   "closing": {
-    "title": "Your event can be the one people talk about afterward.",
-    "body": "Tell us what you're planning. We'll figure out the most interesting way to bring it to life.",
+    "title": "Your event can be the one people can’t stop talking about.",
+    "body": "Tell us what you're planning. We'll figure out the most fun way to bring it to life.",
     "buttons": [
       {
         "href": "/book",

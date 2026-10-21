@@ -36,7 +36,7 @@ function Offerings() {
       <h2 id="offerings" className="sr-only">
         How we help with campaigns
       </h2>
-      <ul className="grid gap-6 md:grid-cols-3">
+      <ul className="grid gap-6 md:grid-cols-2">
         {content.offerings.map((o) => (
           <li key={o.title} className="rounded-3xl border-2 border-og-teal bg-white p-7">
             <h3 className="font-display mb-2 text-2xl font-bold leading-snug">{amp(o.title)}</h3>
