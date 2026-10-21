@@ -21,6 +21,8 @@ export type Project = {
   cardImageAlt?: string;
   cardImagePosition?: string;
   gallery: { src: string; alt: string; position?: string }[];
+  // Gallery frame shape as a CSS aspect-ratio, e.g. "3 / 2" (default "4 / 3")
+  galleryAspect?: string;
   photoCredit?: string;
   featuredOnHome: boolean;
 };

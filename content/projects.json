@@ -155,18 +155,21 @@
     "gallery": [
       {
         "src": "/images/work/can-you-repeat-that-panel.jpg",
-        "alt": "Local celebrity contestants laughing at their game-show tables on stage"
+        "alt": "Local celebrity contestants laughing at their game-show tables on stage",
+        "position": "50% 55%"
       },
       {
-        "src": "/images/work/can-you-repeat-that-3.jpg",
-        "alt": "Contestants at their tables while Max hosts from the podium"
+        "src": "/images/work/can-you-repeat-that-stage.jpg",
+        "alt": "Contestants at their tables applauding while Max hosts from the podium on the Virginia Samford Theater stage",
+        "position": "35% 50%"
       }
     ],
     "featuredOnHome": true,
     "cardImage": "/images/work/can-you-repeat-that-panel.jpg",
     "cardImageAlt": "Local celebrity contestants laughing at game-show tables on stage",
     "imageMaxWidth": 1104,
-    "imagePosition": "50% 60%"
+    "imagePosition": "50% 60%",
+    "galleryAspect": "3 / 2"
   },
   {
     "slug": "the-other-awards",

@@ -139,7 +139,11 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
           <section aria-label="Photos" className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 md:pb-24">
             <ul className={`grid gap-4 ${project.gallery.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
               {project.gallery.map((photo) => (
-                <li key={photo.src} className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                <li
+                  key={photo.src}
+                  className="relative overflow-hidden rounded-3xl"
+                  style={{ aspectRatio: project.galleryAspect ?? "4 / 3" }}
+                >
                   <Image
                     src={photo.src}
                     alt={photo.alt}
