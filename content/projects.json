@@ -150,12 +150,12 @@
         "label": "Contestants"
       }
     ],
-    "image": "/images/work/can-you-repeat-that-1.jpg",
-    "imageAlt": "Local celebrity contestants laughing at game-show tables on stage",
+    "image": "/images/work/can-you-repeat-that-2.jpg",
+    "imageAlt": "A packed theater audience facing the lit Can You Repeat That? stage at the Virginia Samford Theater",
     "gallery": [
       {
-        "src": "/images/work/can-you-repeat-that-2.jpg",
-        "alt": "A full theater audience facing the lit game-show stage"
+        "src": "/images/work/can-you-repeat-that-1.jpg",
+        "alt": "Local celebrity contestants laughing at game-show tables on stage"
       },
       {
         "src": "/images/work/can-you-repeat-that-3.jpg",
@@ -170,7 +170,11 @@
         "alt": "The Can You Repeat That? show poster"
       }
     ],
-    "featuredOnHome": true
+    "featuredOnHome": true,
+    "cardImage": "/images/work/can-you-repeat-that-1.jpg",
+    "cardImageAlt": "Local celebrity contestants laughing at game-show tables on stage",
+    "imageMaxWidth": 900,
+    "imagePosition": "50% 60%"
   },
   {
     "slug": "the-other-awards",
