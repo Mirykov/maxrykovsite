@@ -8,7 +8,7 @@ import ProjectCard from "@/components/ProjectCard";
 import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
-import { highlight, markerClass } from "@/components/og/Highlight";
+import { headlineBurstClass, highlight, markerClass } from "@/components/og/Highlight";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -19,7 +19,7 @@ function HeroTitle({ className }: { className: string }) {
       {before}
       <span className="relative inline-block whitespace-nowrap">
         {/* Mirrored so the burst radiates from the word's top-right; sized in em so it never reaches the line above */}
-        <Burst className="absolute -right-[0.42em] top-[0.02em] h-[0.4em] w-[0.4em] -scale-x-100" />
+        <Burst className={headlineBurstClass} />
         <span className={`relative ${markerClass}`}>{highlight}</span>
       </span>
       {after}
