@@ -49,7 +49,7 @@ export default function EmceePage() {
           <TestimonialCarousel quotes={quotes} />
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div aria-hidden="true" className="absolute -bottom-4 -left-4 h-full w-full rounded-[2rem] bg-og-yellow sm:-bottom-6 sm:-left-6" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
+            <div className="relative aspect-square overflow-hidden rounded-[2rem]">
               <Image
                 src={content.testimonialsImage}
                 alt={content.testimonialsImageAlt}
