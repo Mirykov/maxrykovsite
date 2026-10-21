@@ -19,6 +19,7 @@ export default function WorkPage() {
           {highlight(
             "We believe that building community and buy-in for worthy causes is most effective when it's genuinely fun.",
             "genuinely fun",
+            { burst: true },
           )}
         </h1>
         <p className="mb-14 max-w-2xl text-lg leading-relaxed text-og-ink/80 sm:text-xl">

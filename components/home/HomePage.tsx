@@ -8,7 +8,7 @@ import ProjectCard from "@/components/ProjectCard";
 import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
-import { headlineBurstClass, highlight, markerClass } from "@/components/og/Highlight";
+import { headlineBurstClass, markerClass } from "@/components/og/Highlight";
 
 // Splits the H1 around the highlighted word so it can get the yellow marker + burst
 function HeroTitle({ className }: { className: string }) {
@@ -34,7 +34,7 @@ function Hero() {
         <div>
           <HeroTitle className="font-display mb-6 text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-[4rem]" />
           <p className="mb-9 max-w-xl text-lg leading-relaxed text-og-ink/80 sm:text-xl">
-            {highlight(home.hero.sub, home.hero.subHighlight)}
+            {home.hero.sub}
           </p>
           <Ctas buttons={home.hero.buttons} />
         </div>
