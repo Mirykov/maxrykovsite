@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import content from "@/content/emcee.json";
 import testimonials from "@/content/testimonials.json";
+import Image from "next/image";
 import HeroVideo from "@/components/HeroVideo";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { Ctas } from "@/components/og/CtaBand";
 import CtaBand from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
@@ -42,24 +44,22 @@ export default function EmceePage() {
 
       <section aria-labelledby="testimonials" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <SectionHeading id="testimonials" title={content.testimonialsTitle} />
-        <ul className="grid gap-6 md:grid-cols-2">
-          {quotes.map((t) => (
-            <li key={t.id}>
-              <figure className="flex h-full flex-col rounded-3xl border-2 border-og-ink/10 bg-white p-7 sm:p-8">
-                <span aria-hidden="true" className="font-display mb-2 text-6xl leading-none text-og-yellow">
-                  &ldquo;
-                </span>
-                <blockquote className="flex-1 text-lg leading-relaxed text-og-ink/85">
-                  <p>{t.quote}</p>
-                </blockquote>
-                <figcaption className="mt-6 border-t border-og-ink/10 pt-4">
-                  <span className="block font-bold">{t.name}</span>
-                  <span className="text-og-ink/70">{t.role}</span>
-                </figcaption>
-              </figure>
-            </li>
-          ))}
-        </ul>
+        {/* Carousel left, photo right on desktop; on phones the photo follows the carousel */}
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-14">
+          <TestimonialCarousel quotes={quotes} />
+          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div aria-hidden="true" className="absolute -bottom-4 -left-4 h-full w-full rounded-[2rem] bg-og-yellow sm:-bottom-6 sm:-left-6" />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
+              <Image
+                src={content.testimonialsImage}
+                alt={content.testimonialsImageAlt}
+                fill
+                sizes="(min-width: 1024px) 45vw, 448px"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       <section aria-labelledby="help" className="bg-og-teal text-og-ink">
