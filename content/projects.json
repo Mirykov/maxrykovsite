@@ -106,7 +106,20 @@
       "\"Why'd They Do That?!\" a Game Show About Life and Politics in Alabama was a romp through the quizzical, nonsensical, and downright ridiculous moments in the annals of Alabama that make us all ask ourselves \"why'd they do that?!\" - all to help energize voters ahead of critical midterm elections across the state.",
       "Members of local Democratic organizations, elected officials, and comedians competed in this uproarious game show, scoring points for both creativity and correct answers."
     ],
-    "stats": [],
+    "stats": [
+      {
+        "value": "5",
+        "label": "Teams"
+      },
+      {
+        "value": "25",
+        "label": "Contestants"
+      },
+      {
+        "value": "200+",
+        "label": "Attendees"
+      }
+    ],
     "image": "/images/work/whyd-they-do-that-1.jpg",
     "imageAlt": "Five contestants wearing medals hold hands and raise their arms in celebration on stage",
     "imagePosition": "45% 50%",
