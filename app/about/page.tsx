@@ -42,8 +42,13 @@ export default function AboutPage() {
       <section className="mx-auto grid max-w-6xl items-start gap-12 px-4 pb-20 pt-12 sm:px-6 md:grid-cols-[1.15fr_1fr] md:pb-28 md:pt-20 lg:gap-16">
         <div>
           <p className="eyebrow mb-6 text-og-teal-dark">{content.eyebrow}</p>
-          <h1 className="font-display mb-6 text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-6xl">
-            {amp(content.title)}
+          <h1 className="font-display mb-6 text-[2.1rem] font-black leading-[1.05] tracking-tight min-[400px]:text-[2.3rem] sm:text-6xl">
+            {/* Each sentence starts its own line (Max: "Odd" shouldn't end a line apart from "approaches") */}
+            {content.title.split(/(?<=\.)\s+/).map((sentence) => (
+              <span key={sentence} className="block">
+                {amp(sentence)}
+              </span>
+            ))}
           </h1>
           <p className="mb-12 text-lg leading-relaxed text-og-ink/80 sm:text-xl">{content.lead}</p>
 
