@@ -103,12 +103,7 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   Work page for now (likely belong on Campaigns).
 - `next.config.ts` redirects old maxrykov.com paths (/fountys, /runway, ...)
   and the earlier redesign's case-study URLs.
-- **Home hero** is one static photo, `hero-recycled-runway.jpg`: the three
-  Recycled Runway participants with the giant sign, cropped 5:6 to center them
-  and cut out a bystander's arm. The hero frame is 5:6 on every screen size to
-  match. Max tried a crossfading slideshow first (commit 98dcb45) and found it
-  too busy "for now", so it may come back. The brief's hero video is still
-  optional.
+- **Home hero** (2026-10-22): on phones the order is headline, then the 4:5 photo frame (height capped with svh so the whole frame fits on the first screen), then intro + buttons. Desktop keeps headline/intro left and the frame right. A future hero video should be exported 4:5 (1080×1350) to drop into the same frame uncropped.
 - **Home "Trusted by" ticker** after Selected work (`components/og/Marquee.tsx`, `content/home.json` → `trustedBy`): Max's list of 12 organizations; it has a pause button and is static for reduced motion. The About page no longer lists organizations (Max removed it on 2026-10-21).
 - **Home testimonials** after How it works: `TestimonialCarousel` (Zulfat and Jackie) with Max's honoree photo on the right (`content/home.json` → `testimonials`).
 

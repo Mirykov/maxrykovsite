@@ -33,17 +33,14 @@ function HeroTitle({ className }: { className: string }) {
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:grid-cols-[1.15fr_1fr] md:pb-24 md:pt-20">
-        <div>
-          <HeroTitle className="font-display mb-6 text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-[4rem]" />
-          <p className="mb-9 max-w-xl text-lg leading-relaxed text-og-ink/80 sm:text-xl">
-            {home.hero.sub}
-          </p>
-          <Ctas buttons={home.hero.buttons} />
-        </div>
-        <div className="relative">
+      {/* Phones: headline, then the photo/video sized to fit the first screen, then intro + buttons.
+          Desktop: headline and intro stacked on the left, photo/video on the right. */}
+      <div className="mx-auto grid max-w-6xl gap-y-7 px-4 pb-16 pt-6 sm:px-6 md:grid-cols-[1.15fr_1fr] md:grid-rows-[1fr_auto] md:gap-x-12 md:gap-y-6 md:pb-24 md:pt-20">
+        <HeroTitle className="font-display text-[2.15rem] font-black min-[420px]:text-[2.5rem] leading-[1.05] tracking-tight sm:text-5xl md:self-end lg:text-[4rem]" />
+        <div className="relative mx-auto md:col-start-2 md:row-span-2 md:row-start-1 md:mx-0 md:self-center">
           <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] bg-og-teal sm:-right-6 sm:-top-6" />
-          <div className="relative aspect-[5/6] overflow-hidden rounded-[2rem]">
+          {/* 4:5 frame. On phones its height is capped so the whole frame fits below the headline on the first screen. */}
+          <div className="relative aspect-[4/5] h-[clamp(15rem,calc(100svh-20.5rem),calc((100vw-3.5rem)*1.25))] min-[420px]:h-[clamp(15rem,calc(100svh-22.5rem),calc((100vw-3.5rem)*1.25))] overflow-hidden rounded-[2rem] md:h-auto md:w-full">
             <Image
               src={home.hero.image}
               alt={home.hero.imageAlt}
@@ -53,6 +50,10 @@ function Hero() {
               className="object-cover"
             />
           </div>
+        </div>
+        <div className="md:col-start-1 md:row-start-2 md:self-start">
+          <p className="mb-9 max-w-xl text-lg leading-relaxed text-og-ink/80 sm:text-xl">{home.hero.sub}</p>
+          <Ctas buttons={home.hero.buttons} />
         </div>
       </div>
     </section>
