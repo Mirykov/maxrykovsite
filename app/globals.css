@@ -94,8 +94,7 @@ body {
   width: max-content;
   animation: og-marquee 60s linear infinite;
 }
-.og-marquee:hover .og-marquee-track,
-.og-marquee.is-paused .og-marquee-track {
+.og-marquee:hover .og-marquee-track {
   animation-play-state: paused;
 }
 
@@ -116,8 +115,7 @@ body {
     justify-content: center;
     row-gap: 0.75rem;
   }
-  .og-marquee-dup,
-  .og-marquee-toggle {
+  .og-marquee-dup {
     display: none !important;
   }
   .og-burst-hover:hover .og-burst,
