@@ -16,6 +16,7 @@
       }
     ],
     "image": "/images/hero-recycled-runway.jpg",
+    "imageMobile": "/images/hero-recycled-runway-wide.jpg",
     "imageAlt": "Three Recycled Runway participants shrieking with excitement as they hold up a giant Recycled Runway sign"
   },
   "chooseYourFun": {
