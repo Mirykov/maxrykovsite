@@ -17,6 +17,9 @@
     ],
     "image": "/images/hero-recycled-runway.jpg",
     "imageMobile": "/images/hero-recycled-runway-32.jpg",
+    "videoDesktop": "/video/home-hero-desktop.mp4",
+    "videoDesktopPoster": "/video/home-hero-desktop-poster.jpg",
+    "videoDesktopLabel": "Highlights from OddGood events: a cheering runway parade, drag queen co-hosts with a giant teddy bear, a crowd filming the stage, and celebrating contestants",
     "imageAlt": "Three Recycled Runway participants shrieking with excitement as they hold up a giant Recycled Runway sign"
   },
   "chooseYourFun": {

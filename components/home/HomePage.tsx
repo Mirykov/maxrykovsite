@@ -9,6 +9,7 @@ import CtaBand, { Ctas } from "@/components/og/CtaBand";
 import SectionHeading from "@/components/og/SectionHeading";
 import Burst from "@/components/og/Burst";
 import Marquee from "@/components/og/Marquee";
+import HeroVideo from "@/components/HeroVideo";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import testimonials from "@/content/testimonials.json";
 import { headlineBurstClass, markerClass } from "@/components/og/Highlight";
@@ -52,7 +53,12 @@ function Hero() {
             />
           </div>
           <div className="relative hidden aspect-[4/5] overflow-hidden rounded-[2rem] md:block">
-            <Image src={home.hero.image} alt={home.hero.imageAlt} fill priority sizes="45vw" className="object-cover" />
+            <HeroVideo
+              src={home.hero.videoDesktop}
+              poster={home.hero.videoDesktopPoster}
+              label={home.hero.videoDesktopLabel}
+              media="(min-width: 768px)"
+            />
           </div>
         </div>
         <div className="md:col-start-1 md:row-start-2 md:self-start">
