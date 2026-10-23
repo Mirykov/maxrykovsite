@@ -36,9 +36,9 @@ function Hero() {
       {/* Max wants the headline, photo/video, intro AND buttons all on the first screen.
           Phones: headline, then a full-width 16:9 frame, then intro + buttons, all sized to fit.
           Desktop: headline/intro/buttons on the left; a 4:5 frame on the right capped to the window height. */}
-      <div className="mx-auto grid max-w-6xl gap-y-4 px-4 pb-12 pt-4 sm:px-6 md:min-h-[calc(100svh-5rem)] md:grid-cols-[1.15fr_1fr] md:grid-rows-[1fr_auto] md:items-center md:gap-x-12 md:gap-y-6 md:py-8">
-        <HeroTitle className="font-display text-[1.9rem] font-black leading-[1.04] tracking-tight min-[420px]:text-[2.1rem] sm:text-5xl md:self-end lg:text-[3.5rem] lg:[@media(max-height:760px)]:text-[2.9rem]" />
-        <div className="relative mr-4 sm:mr-6 md:col-start-2 md:row-span-2 md:row-start-1 md:mr-0 md:ml-auto md:w-full md:max-w-[calc((100svh-10rem)*0.8)]">
+      <div className="mx-auto grid max-w-6xl gap-y-4 px-4 pb-12 pt-4 sm:px-6 md:min-h-[calc(100svh-5rem)] md:grid-cols-[1.15fr_1fr] md:grid-rows-[auto_auto] md:content-center md:gap-x-12 md:gap-y-6 md:py-8">
+        <HeroTitle className="font-display text-[1.9rem] font-black leading-[1.04] tracking-tight mb-4 min-[420px]:text-[2.1rem] sm:mb-6 sm:text-5xl md:mb-0 md:self-end lg:text-[3.5rem] lg:[@media(max-height:760px)]:text-[2.9rem]" />
+        <div className="relative mr-4 sm:mr-6 md:col-start-2 md:row-span-2 md:row-start-1 md:mr-0 md:ml-auto md:self-center md:w-full md:max-w-[calc((100svh-10rem)*0.8)]">
           <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[1.75rem] bg-og-teal sm:-right-6 sm:-top-6 md:rounded-[2rem]" />
           <div className="relative aspect-video overflow-hidden rounded-[1.75rem] md:hidden">
             <Image
