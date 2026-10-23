@@ -33,15 +33,14 @@ function HeroTitle({ className }: { className: string }) {
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Phones: headline, then the photo/video sized to fit the first screen, then intro + buttons.
-          Desktop: headline and intro stacked on the left, photo/video on the right. */}
-      <div className="mx-auto grid max-w-6xl gap-y-7 px-4 pb-16 pt-6 sm:px-6 md:grid-cols-[1.15fr_1fr] md:grid-rows-[1fr_auto] md:gap-x-12 md:gap-y-6 md:pb-24 md:pt-20">
-        <HeroTitle className="font-display text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-5xl md:self-end lg:text-[4rem]" />
-        <div className="relative mr-4 sm:mr-6 md:col-start-2 md:row-span-2 md:row-start-1 md:mr-0 md:self-center">
-          <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] bg-og-teal sm:-right-6 sm:-top-6" />
-          {/* Phones: full-width 4:3 frame, matching the "Choose your kind of fun" card photos, with its own wider crop.
-              Desktop: 4:5 frame beside the headline. */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] md:hidden">
+      {/* Max wants the headline, photo/video, intro AND buttons all on the first screen.
+          Phones: headline, then a full-width 16:9 frame, then intro + buttons, all sized to fit.
+          Desktop: headline/intro/buttons on the left; a 4:5 frame on the right capped to the window height. */}
+      <div className="mx-auto grid max-w-6xl gap-y-4 px-4 pb-12 pt-4 sm:px-6 md:min-h-[calc(100svh-5rem)] md:grid-cols-[1.15fr_1fr] md:grid-rows-[1fr_auto] md:items-center md:gap-x-12 md:gap-y-6 md:py-8">
+        <HeroTitle className="font-display text-[1.9rem] font-black leading-[1.04] tracking-tight min-[420px]:text-[2.1rem] sm:text-5xl md:self-end lg:text-[3.5rem] lg:[@media(max-height:760px)]:text-[2.9rem]" />
+        <div className="relative mr-4 sm:mr-6 md:col-start-2 md:row-span-2 md:row-start-1 md:mr-0 md:ml-auto md:w-full md:max-w-[calc((100svh-10rem)*0.8)]">
+          <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[1.75rem] bg-og-teal sm:-right-6 sm:-top-6 md:rounded-[2rem]" />
+          <div className="relative aspect-video overflow-hidden rounded-[1.75rem] md:hidden">
             <Image
               src={home.hero.imageMobile}
               alt={home.hero.imageAlt}
@@ -52,12 +51,15 @@ function Hero() {
             />
           </div>
           <div className="relative hidden aspect-[4/5] overflow-hidden rounded-[2rem] md:block">
-            <Image src={home.hero.image} alt={home.hero.imageAlt} fill sizes="45vw" className="object-cover" />
+            <Image src={home.hero.image} alt={home.hero.imageAlt} fill priority sizes="45vw" className="object-cover" />
           </div>
         </div>
         <div className="md:col-start-1 md:row-start-2 md:self-start">
-          <p className="mb-9 max-w-xl text-lg leading-relaxed text-og-ink/80 sm:text-xl">{home.hero.sub}</p>
-          <Ctas buttons={home.hero.buttons} />
+          <p className="mb-4 max-w-xl text-[0.95rem] leading-relaxed text-og-ink/80 sm:text-lg md:mb-8 lg:text-xl lg:[@media(max-height:760px)]:mb-5 lg:[@media(max-height:760px)]:text-lg">{home.hero.sub}</p>
+          <Ctas
+            buttons={home.hero.buttons}
+            className="gap-3 max-sm:[&>a]:!px-5 max-sm:[&>a]:!py-3 max-sm:[&>a]:!text-[0.95rem] sm:gap-4"
+          />
         </div>
       </div>
     </section>
