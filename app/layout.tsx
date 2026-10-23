@@ -41,6 +41,19 @@ export const metadata: Metadata = {
   },
   description:
     "Game shows, custom events, creative campaigns, and emceeing in Birmingham, Alabama. Participatory experiences that get people laughing and connecting.",
+  // One shared preview everywhere: the image comes from app/opengraph-image.jpg and app/twitter-image.jpg
+  openGraph: {
+    type: "website",
+    siteName: "OddGood Events",
+    locale: "en_US",
+    title: "OddGood Events | Real Meaningful Fun",
+    description: "Game shows, custom events, creative campaigns, and emceeing in Birmingham, Alabama.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OddGood Events | Real Meaningful Fun",
+    description: "Game shows, custom events, creative campaigns, and emceeing in Birmingham, Alabama.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
