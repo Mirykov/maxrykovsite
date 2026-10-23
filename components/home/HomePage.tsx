@@ -43,20 +43,18 @@ function Hero() {
           <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[1.75rem] bg-og-teal sm:-right-6 sm:-top-6 md:rounded-[2rem]" />
           {/* Taller 3:2 on larger phones (e.g. 440x765, Max's iPhone), 16:9 on smaller ones so everything still fits */}
           <div className="relative aspect-video overflow-hidden rounded-[1.75rem] min-[420px]:[@media(min-height:740px)]:aspect-[3/2] md:hidden">
-            <Image
-              src={home.hero.imageMobile}
-              alt={home.hero.imageAlt}
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover"
+            <HeroVideo
+              src={home.hero.videoPhone}
+              poster={home.hero.videoPhonePoster}
+              label={home.hero.videoLabel}
+              media="(max-width: 767px)"
             />
           </div>
           <div className="relative hidden aspect-[4/5] overflow-hidden rounded-[2rem] md:block">
             <HeroVideo
               src={home.hero.videoDesktop}
               poster={home.hero.videoDesktopPoster}
-              label={home.hero.videoDesktopLabel}
+              label={home.hero.videoLabel}
               media="(min-width: 768px)"
             />
           </div>
