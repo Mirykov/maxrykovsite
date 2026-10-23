@@ -270,7 +270,8 @@
       },
       {
         "src": "/images/work/romantically-challenged-5.jpg",
-        "alt": "Two drag queens and a contestant posing with a giant pink teddy bear"
+        "alt": "Two drag queens and a contestant posing with a giant pink teddy bear",
+        "position": "50% 10%"
       }
     ],
     "featuredOnHome": true
