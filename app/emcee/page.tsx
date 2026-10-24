@@ -21,23 +21,32 @@ export default function EmceePage() {
 
   return (
     <>
-      <section className="mx-auto max-w-6xl px-4 pt-12 sm:px-6 md:pt-20">
-        <div className="mb-12 grid gap-8 md:mb-16 md:grid-cols-[1.3fr_1fr] md:items-end">
-          <div>
-            <p className="eyebrow mb-6 text-og-teal-dark">{amp(hero.eyebrow)}</p>
-            <h1 className="font-display text-[2.5rem] font-black leading-[1.05] tracking-tight sm:text-6xl">
+      {/* Same layout and sizes as the home hero (components/home/HomePage.tsx), at Max's request:
+          phones get headline, then the 16:9 video, then intro + button; desktop puts the text on the
+          left and a 4:5 crop of the video (following Max through each shot) on the right. */}
+      <section className="relative overflow-hidden">
+        <div className="mx-auto grid max-w-6xl gap-y-4 px-4 pb-12 pt-4 sm:px-6 md:min-h-[calc(100svh-5rem)] md:grid-cols-[1.15fr_1fr] md:grid-rows-[auto_1fr] md:content-center md:gap-x-12 md:gap-y-6 md:py-8">
+          <div className="mb-4 sm:mb-6 md:mb-0 md:self-start">
+            <p className="eyebrow mb-3 text-og-teal-dark md:mb-5">{amp(hero.eyebrow)}</p>
+            <h1 className="font-display text-[1.9rem] font-black leading-[1.04] tracking-tight min-[420px]:text-[2.1rem] min-[420px]:[@media(min-height:740px)]:text-[2.25rem] sm:text-5xl lg:text-[clamp(2.9rem,calc((100svh-14rem)/7.4),4rem)]">
               {amp(hero.title)}
             </h1>
           </div>
-          <div>
-            <p className="mb-8 text-lg leading-relaxed text-og-ink/80 sm:text-xl">{hero.sub}</p>
-            <Ctas buttons={hero.buttons} />
+          <div className="relative mr-4 sm:mr-6 md:col-start-2 md:row-span-2 md:row-start-1 md:mr-0 md:ml-auto md:self-start md:w-full md:max-w-[calc((100svh-10rem)*0.8)]">
+            <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-[1.75rem] bg-og-teal sm:-right-6 sm:-top-6 md:rounded-[2rem]" />
+            <div className="relative aspect-video overflow-hidden rounded-[1.75rem] bg-og-ink md:hidden">
+              <HeroVideo src={hero.video} poster={hero.poster} label={hero.videoLabel} media="(max-width: 767px)" />
+            </div>
+            <div className="relative hidden aspect-[4/5] overflow-hidden rounded-[2rem] bg-og-ink md:block">
+              <HeroVideo src={hero.videoTall} poster={hero.posterTall} label={hero.videoLabel} media="(min-width: 768px)" />
+            </div>
           </div>
-        </div>
-        <div className="relative">
-          <div aria-hidden="true" className="absolute -right-3 -top-3 h-full w-full rounded-[2rem] bg-og-teal sm:-right-5 sm:-top-5" />
-          <div className="relative aspect-video overflow-hidden rounded-[2rem] bg-og-ink">
-            <HeroVideo src={hero.video} poster={hero.poster} label={hero.videoLabel} />
+          <div className="md:col-start-1 md:row-start-2 md:self-start">
+            <p className="mb-4 max-w-xl text-[0.95rem] leading-relaxed text-og-ink/80 sm:text-lg md:mb-8 lg:text-xl lg:[@media(max-height:760px)]:mb-5 lg:[@media(max-height:760px)]:text-lg">{hero.sub}</p>
+            <Ctas
+              buttons={hero.buttons}
+              className="gap-3 max-sm:[&>a]:!px-5 max-sm:[&>a]:!py-3 max-sm:[&>a]:!text-[0.95rem] sm:gap-4"
+            />
           </div>
         </div>
       </section>

@@ -70,7 +70,7 @@ Vercel Web Analytics. All pages statically rendered. Content lives in
   `lib/inquiry.ts`) with zod validation, honeypot (`website`), in-memory rate
   limit, and Resend. Env: `RESEND_API_KEY`, `INQUIRY_TO_EMAIL`,
   `INQUIRY_FROM_EMAIL` (see `.env.example`).
-- **Emcee** (`/emcee`, `content/emcee.json`): an experiment Max asked for, with
+- **Emcee** (`/emcee`, `content/emcee.json`): since 2026-10-24 the hero uses the home hero's layout and sizes (text left, 4:5 video right on desktop; headline, 16:9 video, then intro on phones). Desktop plays `public/video/emcee-hero-tall.mp4`, a 1080x1350 crop of `Downloads/TBJ Short.mp4` that pans to follow Max in each of its three shots (cuts at 3.63s and 8.13s), graded to match. Originally an experiment Max asked for, with
   a hero video (`public/video/emcee-hero-v2.mp4`, the Tall Bike Joust hosting
   reel). It's 1600px wide, 30fps, color-boosted, 2.7 MB with sound, and has a
   poster frame at 6.4s. It plays silently on a loop with no buttons (Max removed the sound and pause controls on 2026-10-21; the audio track is stripped)
