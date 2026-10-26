@@ -37,7 +37,7 @@ export default function TestimonialCarousel({ quotes }: { quotes: Quote[] }) {
             </blockquote>
             <figcaption className="mt-6 border-t border-og-ink/10 pt-4">
               <span className="block font-bold">{t.name}</span>
-              <span className="text-og-ink/70">{t.role}</span>
+              {t.role && <span className="text-og-ink/70">{t.role}</span>}
             </figcaption>
           </figure>
         ))}
