@@ -16,7 +16,7 @@
         "Custom rounds, organizational trivia, inside jokes",
         "Planning and live hosting"
       ],
-      "tag": "Most booked",
+      "tag": null,
       "cta": {
         "href": "/book?type=custom",
         "label": "Book a Call"

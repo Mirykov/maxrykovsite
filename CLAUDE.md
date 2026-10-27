@@ -131,8 +131,8 @@ Calendly: Max is on the free plan (one event type), so both call types open http
 
 Max portrait, contact email (`hello@oddgoodevents.com` placeholder in
 `content/site.json`), Instagram/LinkedIn handles (hidden until
-`confirmed: true`), Resend account, prices, "Most booked"
-tag, domain, FAQ answers. Max may add more images later — use labeled
+`confirmed: true`), Resend account, prices,
+domain, FAQ answers (the "Most booked" tag was removed on 2026-10-26). Max may add more images later — use labeled
 placeholders until then.
 
 ## Notes for Claude
